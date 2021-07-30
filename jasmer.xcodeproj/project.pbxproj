@@ -17,7 +17,13 @@
 		0F72C93326B1572B007CB470 /* customView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C93226B1572B007CB470 /* customView.xib */; };
 		0F72C93626B15737007CB470 /* customViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C93526B15737007CB470 /* customViewController.swift */; };
 		0F72C94C26B26D9A007CB470 /* StoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */; };
-		0F72C95526B26E6C007CB470 /* ChapterSelectionStorybooard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C95426B26E6C007CB470 /* ChapterSelectionStorybooard.storyboard */; };
+		0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */; };
+		0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */; };
+		0F72C95E26B27513007CB470 /* settingPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C95D26B27513007CB470 /* settingPopUp.xib */; };
+		0F72C96126B27529007CB470 /* settingPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C96026B27529007CB470 /* settingPopUpController.swift */; };
+		0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C98F26B2A55B007CB470 /* storyModel.swift */; };
+		0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C99226B2B22A007CB470 /* StoryViewController.swift */; };
+		0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C99526B2B6DA007CB470 /* PausePopUp.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +39,13 @@
 		0F72C93226B1572B007CB470 /* customView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customView.xib; sourceTree = "<group>"; };
 		0F72C93526B15737007CB470 /* customViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customViewController.swift; sourceTree = "<group>"; };
 		0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryStoryboard.storyboard; sourceTree = "<group>"; };
-		0F72C95426B26E6C007CB470 /* ChapterSelectionStorybooard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChapterSelectionStorybooard.storyboard; sourceTree = "<group>"; };
+		0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChapterSelectionStoryboard.storyboard; sourceTree = "<group>"; };
+		0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterSelectionViewController.swift; sourceTree = "<group>"; };
+		0F72C95D26B27513007CB470 /* settingPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingPopUp.xib; sourceTree = "<group>"; };
+		0F72C96026B27529007CB470 /* settingPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPopUpController.swift; sourceTree = "<group>"; };
+		0F72C98F26B2A55B007CB470 /* storyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
+		0F72C99226B2B22A007CB470 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		0F72C99526B2B6DA007CB470 /* PausePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 		0F72C92F26B156DF007CB470 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0F72C98F26B2A55B007CB470 /* storyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,8 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				0F72C93226B1572B007CB470 /* customView.xib */,
+				0F72C95D26B27513007CB470 /* settingPopUp.xib */,
 				0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */,
-				0F72C95426B26E6C007CB470 /* ChapterSelectionStorybooard.storyboard */,
+				0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */,
+				0F72C99526B2B6DA007CB470 /* PausePopUp.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				0F72C93526B15737007CB470 /* customViewController.swift */,
+				0F72C96026B27529007CB470 /* settingPopUpController.swift */,
+				0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */,
+				0F72C99226B2B22A007CB470 /* StoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
+				0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */,
 				0F72C93326B1572B007CB470 /* customView.xib in Resources */,
-				0F72C95526B26E6C007CB470 /* ChapterSelectionStorybooard.storyboard in Resources */,
+				0F72C95E26B27513007CB470 /* settingPopUp.xib in Resources */,
+				0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
 				0F72C94C26B26D9A007CB470 /* StoryStoryboard.storyboard in Resources */,
 				0F72C91F26B156D7007CB470 /* Main.storyboard in Resources */,
@@ -181,7 +201,11 @@
 			files = (
 				0F72C91C26B156D7007CB470 /* ViewController.swift in Sources */,
 				0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */,
+				0F72C96126B27529007CB470 /* settingPopUpController.swift in Sources */,
+				0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
+				0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */,
+				0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */,
 				0F72C93626B15737007CB470 /* customViewController.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
 			);
