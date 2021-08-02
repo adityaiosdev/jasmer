@@ -7,18 +7,19 @@
 
 import UIKit
 
-class ChapterSelectionViewController: UIViewController {
+class ChapterSelectionViewController: UIViewController  {
+    
+    let chapters = ["Jason", "JasonTransparent"]
 
+    @IBOutlet weak var chapterCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        chapterCollectionView.delegate = self
+        chapterCollectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func settingButtonClicked(_ sender: UIButton) {
-        customViewController.instance.showAlert()
-    }
     
     @IBAction func chapterSelectedClicked(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToStory", sender: self)
@@ -33,4 +34,22 @@ class ChapterSelectionViewController: UIViewController {
     }
     */
 
+}
+extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return chapters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = chapterCollectionView.dequeueReusableCell(withReuseIdentifier: "chapterCell", for: indexPath) as! ChapterCell
+        cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
+        return cell
+    }
+    
+    
 }
