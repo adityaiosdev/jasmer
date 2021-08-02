@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuH-Rw-aJs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuH-Rw-aJs">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -17,11 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChapterSelectionBg" translatesAutoresizingMaskIntoConstraints="NO" id="taB-6G-tj1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChapterSelectionBg" translatesAutoresizingMaskIntoConstraints="NO" id="taB-6G-tj1">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-5I-dhz">
                                 <rect key="frame" x="385.5" y="30" width="125" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="13R-zX-BcZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Chapter">
                                     <color key="titleColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -31,29 +35,29 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-cO-19c">
-                                <rect key="frame" x="44" y="112" width="808" height="210"/>
+                                <rect key="frame" x="52" y="115" width="808" height="248"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="adt-Cb-CW0">
-                                    <size key="itemSize" width="238" height="209"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="adt-Cb-CW0">
+                                    <size key="itemSize" width="252" height="247"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chapterCell" id="qSw-cF-oWU" customClass="ChapterCell" customModule="jasmer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="209"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3ns-fd-M9f">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="209"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7TF-za-vgi">
+                                            <rect key="frame" x="0.0" y="0.0" width="252" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTd-Qa-4xM">
-                                                    <rect key="frame" x="8" y="8" width="240" height="128"/>
+                                                    <rect key="frame" x="16" y="16" width="220" height="123"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="238" height="209"/>
+                                        <size key="customSize" width="252" height="247"/>
                                         <connections>
                                             <outlet property="chapterImage" destination="BTd-Qa-4xM" id="1GK-Hf-6U3"/>
                                         </connections>
@@ -64,16 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="LnD-uZ-bMY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gH6-5I-dhz" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="30" id="D3J-cG-A5y"/>
-                            <constraint firstItem="taB-6G-tj1" firstAttribute="leading" secondItem="Bgb-bN-cTR" secondAttribute="leading" id="H32-uX-YiE"/>
-                            <constraint firstItem="taB-6G-tj1" firstAttribute="top" secondItem="Bgb-bN-cTR" secondAttribute="top" id="J3y-c6-5SZ"/>
-                            <constraint firstAttribute="trailing" secondItem="taB-6G-tj1" secondAttribute="trailing" id="OBr-Af-xWF"/>
-                            <constraint firstItem="y9o-cO-19c" firstAttribute="top" secondItem="gH6-5I-dhz" secondAttribute="bottom" constant="27" id="RoR-M4-w92"/>
-                            <constraint firstItem="gH6-5I-dhz" firstAttribute="centerX" secondItem="Bgb-bN-cTR" secondAttribute="centerX" id="dZO-YY-oHa"/>
-                            <constraint firstItem="LnD-uZ-bMY" firstAttribute="trailing" secondItem="y9o-cO-19c" secondAttribute="trailing" id="hnS-pG-Elu"/>
-                            <constraint firstItem="LnD-uZ-bMY" firstAttribute="bottom" secondItem="y9o-cO-19c" secondAttribute="bottom" constant="71" id="jjf-Rj-AkV"/>
-                            <constraint firstItem="y9o-cO-19c" firstAttribute="leading" secondItem="LnD-uZ-bMY" secondAttribute="leading" id="pIK-Jn-OEv"/>
-                            <constraint firstAttribute="bottom" secondItem="taB-6G-tj1" secondAttribute="bottom" id="yPC-4m-5v3"/>
+                            <constraint firstItem="y9o-cO-19c" firstAttribute="top" secondItem="gH6-5I-dhz" secondAttribute="bottom" constant="30" id="S8y-89-zzG"/>
+                            <constraint firstItem="gH6-5I-dhz" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="30" id="UJS-ld-3Rx"/>
+                            <constraint firstItem="y9o-cO-19c" firstAttribute="trailing" secondItem="LnD-uZ-bMY" secondAttribute="trailing" constant="8" id="h9i-ul-FE4"/>
+                            <constraint firstItem="y9o-cO-19c" firstAttribute="leading" secondItem="LnD-uZ-bMY" secondAttribute="leading" constant="8" id="hJu-Kd-ikB"/>
+                            <constraint firstItem="gH6-5I-dhz" firstAttribute="centerX" secondItem="LnD-uZ-bMY" secondAttribute="centerX" id="hQb-BL-FR5"/>
+                            <constraint firstItem="LnD-uZ-bMY" firstAttribute="bottom" secondItem="y9o-cO-19c" secondAttribute="bottom" constant="30" id="s90-Te-NHl"/>
                         </constraints>
                     </view>
                     <connections>
