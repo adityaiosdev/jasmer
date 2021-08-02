@@ -9,7 +9,7 @@ import UIKit
 
 class StoryViewController: UIViewController , PausePopUpControllerDelegate{
     
-    
+    //adding new branch adit
     @IBOutlet weak var personNameLbl: UILabel!
     @IBOutlet weak var conversationPersonLbl: UILabel!
     @IBOutlet weak var personImage1: UIImageView!
