@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F1E53FB26B5950D005FDB29 /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C91C26B156D7007CB470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91B26B156D7007CB470 /* ViewController.swift */; };
@@ -20,12 +19,12 @@
 		0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */; };
 		0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C98F26B2A55B007CB470 /* storyModel.swift */; };
 		0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C99226B2B22A007CB470 /* StoryViewController.swift */; };
-		0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C99526B2B6DA007CB470 /* PausePopUp.xib */; };
 		0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */; };
+		8248D0F126B96141006CDACB /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8248D0F026B96141006CDACB /* PausePopUp.xib */; };
+		8248D0F326B96173006CDACB /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248D0F226B96173006CDACB /* PausePopUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +39,9 @@
 		0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterSelectionViewController.swift; sourceTree = "<group>"; };
 		0F72C98F26B2A55B007CB470 /* storyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
 		0F72C99226B2B22A007CB470 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		0F72C99526B2B6DA007CB470 /* PausePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 		0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
+		8248D0F026B96141006CDACB /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
+		8248D0F226B96173006CDACB /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +100,9 @@
 		0F72C93026B156E8007CB470 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8248D0F026B96141006CDACB /* PausePopUp.xib */,
 				0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */,
 				0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */,
-				0F72C99526B2B6DA007CB470 /* PausePopUp.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 		0F72C93126B156EF007CB470 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */,
+				8248D0F226B96173006CDACB /* PausePopUpController.swift */,
 				0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */,
 				0F72C99226B2B22A007CB470 /* StoryViewController.swift */,
 				0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */,
@@ -176,9 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
-				0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */,
 				0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
+				8248D0F126B96141006CDACB /* PausePopUp.xib in Resources */,
 				0F72C94C26B26D9A007CB470 /* StoryStoryboard.storyboard in Resources */,
 				0F72C91F26B156D7007CB470 /* Main.storyboard in Resources */,
 			);
@@ -196,10 +196,10 @@
 				0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
 				0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */,
+				8248D0F326B96173006CDACB /* PausePopUpController.swift in Sources */,
 				0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */,
 				0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
-				0F1E53FB26B5950D005FDB29 /* PausePopUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

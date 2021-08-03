@@ -29,6 +29,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate{
         //        personNameBox.layer.cornerRadius = 5
         PausePopUpController.instance.delegate = self
         currentConversation = 0
+        imageView.removeFromSuperview()
         checkTalkingPerson()
         personNameLbl.text = storyNext[0].personName
         backgroundImage.image = storyNext[0].backgroundImage
@@ -80,20 +81,22 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate{
     
     func checkTalkingPerson(){
         if storyNext[currentConversation].talkingPerson == .person1{
+            imageView.removeFromSuperview()
             personImage1.image = storyNext[currentConversation].personImage1
             personImage2.image = storyNext[currentConversation].personImage2
-            imageView.image = storyNext[currentConversation].personImage2
             imageView.frame = personImage2.bounds
+            imageView.image = storyNext[currentConversation].personImage2
             imageView.image =  personImage2.image?.withRenderingMode(.alwaysTemplate)
             imageView.contentMode = .scaleAspectFit
             imageView.tintColor = UIColor(white: 0.5, alpha: 0.5)
             personImage2.addSubview(imageView)
         }
         else{
+            imageView.removeFromSuperview()
             personImage1.image = storyNext[currentConversation].personImage1
             personImage2.image = storyNext[currentConversation].personImage2
-            imageView.image = storyNext[currentConversation].personImage1
             imageView.frame = personImage1.bounds
+            imageView.image = storyNext[currentConversation].personImage1
             imageView.image =  personImage1.image?.withRenderingMode(.alwaysTemplate)
             imageView.contentMode = .scaleAspectFit
             imageView.tintColor = UIColor(white: 0.5, alpha: 0.5)
