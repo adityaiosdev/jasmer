@@ -22,6 +22,8 @@
 		0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C99226B2B22A007CB470 /* StoryViewController.swift */; };
 		0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C99526B2B6DA007CB470 /* PausePopUp.xib */; };
 		0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */; };
+		0F9870B226B8FD6F00609CB7 /* ChoicesPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */; };
+		0F9870B526B8FF5600609CB7 /* ChoicesPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		0F72C99226B2B22A007CB470 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		0F72C99526B2B6DA007CB470 /* PausePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 		0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
+		0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesPopUp.xib; sourceTree = "<group>"; };
+		0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesPopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */,
+				0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */,
 				0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */,
 				0F72C99526B2B6DA007CB470 /* PausePopUp.xib */,
 			);
@@ -114,6 +119,7 @@
 				0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */,
 				0F72C99226B2B22A007CB470 /* StoryViewController.swift */,
 				0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */,
+				0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9870B226B8FD6F00609CB7 /* ChoicesPopUp.xib in Resources */,
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
 				0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */,
 				0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */,
@@ -196,6 +203,7 @@
 				0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
 				0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */,
+				0F9870B526B8FF5600609CB7 /* ChoicesPopUpController.swift in Sources */,
 				0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */,
 				0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
