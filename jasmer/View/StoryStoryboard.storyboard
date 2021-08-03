@@ -107,10 +107,8 @@
                     <connections>
                         <outlet property="backgroundImage" destination="W04-pD-gap" id="B0Z-Cx-ueU"/>
                         <outlet property="conversationBox" destination="l2S-aE-TFk" id="FXS-Kt-PLB"/>
-                        <outlet property="conversationPersonLbl" destination="ea4-zb-U6s" id="ApV-2l-G2q"/>
                         <outlet property="personImage1" destination="CS3-Uq-Oa3" id="aQr-vb-9W3"/>
                         <outlet property="personImage2" destination="wP2-yd-kGm" id="fIl-I2-JrC"/>
-                        <outlet property="personNameLbl" destination="cL9-kQ-3h7" id="cpB-Mf-ITm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4u-MW-Z31" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
