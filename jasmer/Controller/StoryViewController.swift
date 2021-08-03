@@ -7,9 +7,28 @@
 
 import UIKit
 
-class StoryViewController: UIViewController , PausePopUpControllerDelegate{
+class StoryViewController: UIViewController , PausePopUpControllerDelegate, ChoicesPopUpControllerDelegate{
+    
+    func firstChoice() {
+        ChoicesPopUpController.instance.choicesView.removeFromSuperview()
+        firstchoice = true
+        nextBtnClicked(nextBtn)
+    }
+    
+    func secondChoice() {
+        ChoicesPopUpController.instance.choicesView.removeFromSuperview()
+    }
+    
+    func thirdChoice() {
+        ChoicesPopUpController.instance.choicesView.removeFromSuperview()
+    }
+    
     
     //adding new branch adit
+    var firstchoice : Bool = false
+    var secondchoice : Bool = false
+    var thirdchoice : Bool = false
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var personNameLbl: UILabel!
     @IBOutlet weak var conversationPersonLbl: UILabel!
     @IBOutlet weak var personImage1: UIImageView!
@@ -38,6 +57,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate{
         conversationBox.layer.zPosition = 0
         //        personNameBox.layer.zPosition = -100
         conversationBox.layer.borderWidth = 2
+        personNameBox.layer.cornerRadius = 5
     }
     
     @IBAction func pauseBtnClicked(_ sender: UIButton) {
@@ -47,6 +67,9 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate{
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         if currentConversation >= 0 && currentConversation < storyNext.count - 1 {
             currentConversation += 1
+            if storyNext[currentConversation].storyLineCategory == .choices{
+                ChoicesPopUpController.instance.showAlert()
+            }
             imageView.removeFromSuperview()
             checkTalkingPerson()
             print(currentConversation)
@@ -60,6 +83,17 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate{
     @IBAction func backBtnClicked(_ sender: UIButton) {
         if currentConversation > 0 && currentConversation < storyNext.count {
             currentConversation -= 1
+            if storyNext[currentConversation].storyLineCategory == .choices{
+                ChoicesPopUpController.instance.showAlert()
+            }
+            if firstchoice == true{
+                if storyNext[currentConversation].storyLineCategory == .firstchoice {
+                    checkTalkingPerson()
+                    personNameLbl.text = storyNext[currentConversation].personName
+                    conversationPersonLbl.text = storyNext[currentConversation].conversationPerson
+                    backgroundImage.image = storyNext[currentConversation].backgroundImage
+                }
+            }
             checkTalkingPerson()
             personNameLbl.text = storyNext[currentConversation].personName
             conversationPersonLbl.text = storyNext[currentConversation].conversationPerson

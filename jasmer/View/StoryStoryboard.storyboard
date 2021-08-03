@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,13 +50,6 @@
                                         <color key="textColor" red="0.98440722530000002" green="1" blue="0.99458192869999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-kQ-3h7">
-                                        <rect key="frame" x="18" y="8" width="246" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3136991858" green="0.30979761480000001" blue="0.30980429050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.98440722530000002" green="1" blue="0.99458192869999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,6 +67,20 @@
                                     <action selector="nextBtnClicked:" destination="kDz-hf-0kb" eventType="touchUpInside" id="FS2-QR-Nqu"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-Jg-8DS">
+                                <rect key="frame" x="132" y="206" width="258" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-kQ-3h7">
+                                        <rect key="frame" x="20" y="11" width="258" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46392273899999997" green="0.61290216450000001" blue="0.86277562379999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kVD-8W-0ih"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,8 +112,10 @@
                         <outlet property="backgroundImage" destination="W04-pD-gap" id="B0Z-Cx-ueU"/>
                         <outlet property="conversationBox" destination="l2S-aE-TFk" id="FXS-Kt-PLB"/>
                         <outlet property="conversationPersonLbl" destination="ea4-zb-U6s" id="ApV-2l-G2q"/>
+                        <outlet property="nextBtn" destination="et8-c8-9hX" id="htM-2v-WiM"/>
                         <outlet property="personImage1" destination="CS3-Uq-Oa3" id="aQr-vb-9W3"/>
                         <outlet property="personImage2" destination="wP2-yd-kGm" id="fIl-I2-JrC"/>
+                        <outlet property="personNameBox" destination="Py7-Jg-8DS" id="I68-zS-fat"/>
                         <outlet property="personNameLbl" destination="cL9-kQ-3h7" id="cpB-Mf-ITm"/>
                     </connections>
                 </viewController>
