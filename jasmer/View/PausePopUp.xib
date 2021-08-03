@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 6cb00a9 (Fix autolayout)
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,15 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-
                 <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="371-YQ-pt5">
                     <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pot-2F-Yce">
-                            <rect key="frame" x="270" y="135" width="304" height="60"/>
+                            <rect key="frame" x="297" y="126" width="250" height="60"/>
                             <color key="backgroundColor" red="0.47479003669999997" green="0.60202234980000002" blue="0.82355695959999997" alpha="0.90302160402007448" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="QeJ-RQ-OYi"/>
+                                <constraint firstAttribute="width" constant="250" id="dsE-JT-uq8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                             <state key="normal" title="Lanjut">
@@ -43,9 +38,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tog-zi-FvN">
-                            <rect key="frame" x="270" y="225" width="304" height="60"/>
+                            <rect key="frame" x="297" y="204" width="250" height="60"/>
                             <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="0.95377668166002694" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstAttribute="width" constant="250" id="UxY-JC-aBl"/>
                                 <constraint firstAttribute="height" constant="60" id="bOJ-hR-QZI"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -59,14 +55,10 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14830370770384935" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstItem="pot-2F-Yce" firstAttribute="centerX" secondItem="371-YQ-pt5" secondAttribute="centerX" id="Fr4-bZ-7ua"/>
-                        <constraint firstAttribute="trailing" secondItem="tog-zi-FvN" secondAttribute="trailing" constant="270" id="GZI-8Z-5vA"/>
-                        <constraint firstItem="pot-2F-Yce" firstAttribute="leading" secondItem="371-YQ-pt5" secondAttribute="leading" constant="270" id="Kmf-YL-QHp"/>
-                        <constraint firstAttribute="trailing" secondItem="pot-2F-Yce" secondAttribute="trailing" constant="270" id="ZuZ-W3-lNf"/>
-                        <constraint firstItem="tog-zi-FvN" firstAttribute="top" secondItem="pot-2F-Yce" secondAttribute="bottom" constant="30" id="c00-Zr-h4Q"/>
-                        <constraint firstItem="tog-zi-FvN" firstAttribute="centerX" secondItem="371-YQ-pt5" secondAttribute="centerX" id="mNn-Lo-TJz"/>
-                        <constraint firstItem="pot-2F-Yce" firstAttribute="top" secondItem="371-YQ-pt5" secondAttribute="top" constant="135" id="nMN-cY-sZ8"/>
-                        <constraint firstItem="tog-zi-FvN" firstAttribute="leading" secondItem="371-YQ-pt5" secondAttribute="leading" constant="270" id="w1I-GP-2rA"/>
+                        <constraint firstItem="pot-2F-Yce" firstAttribute="centerX" secondItem="371-YQ-pt5" secondAttribute="centerX" id="7tk-cN-FZW"/>
+                        <constraint firstItem="tog-zi-FvN" firstAttribute="centerY" secondItem="371-YQ-pt5" secondAttribute="centerY" multiplier="1.2" id="MYd-fT-bDM"/>
+                        <constraint firstItem="tog-zi-FvN" firstAttribute="centerX" secondItem="371-YQ-pt5" secondAttribute="centerX" id="fFU-Zz-Fhs"/>
+                        <constraint firstItem="pot-2F-Yce" firstAttribute="centerY" secondItem="371-YQ-pt5" secondAttribute="centerY" multiplier="0.8" id="sI1-Bp-bkV"/>
                     </constraints>
                 </view>
             </subviews>
@@ -74,18 +66,15 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="371-YQ-pt5" secondAttribute="trailing" id="2v4-aj-gEy"/>
+                <constraint firstItem="371-YQ-pt5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="81r-2e-tqE"/>
+                <constraint firstAttribute="bottom" secondItem="371-YQ-pt5" secondAttribute="bottom" id="LOK-jP-7sU"/>
                 <constraint firstItem="371-YQ-pt5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UTz-tn-Mwc"/>
+                <constraint firstItem="371-YQ-pt5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a8e-RY-z2A"/>
                 <constraint firstAttribute="bottom" secondItem="371-YQ-pt5" secondAttribute="bottom" id="nNl-fU-Ehv"/>
                 <constraint firstItem="371-YQ-pt5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u6h-ak-lAF"/>
+                <constraint firstAttribute="trailing" secondItem="371-YQ-pt5" secondAttribute="trailing" id="vuL-2v-wNy"/>
             </constraints>
             <point key="canvasLocation" x="105.92417061611374" y="83.07692307692308"/>
         </view>
     </objects>
-    <resources>
-        <image name="Chapters pause" width="544" height="108"/>
-        <image name="Resume pause" width="541" height="109"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
