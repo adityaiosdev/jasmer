@@ -9,7 +9,7 @@ import UIKit
 
 class ChapterSelectionViewController: UIViewController  {
     
-    let chapters = ["Jason", "JasonTransparent"]
+    let chapters = ["Jason", "JasonTransparent","EmakJason","EmakJason"]
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
             cell.chapterLabel.layer.cornerRadius = 5
             cell.chapterLock.isHidden = true
             cell.layer.cornerRadius = 10
-            cell.layer.borderWidth = 2
+            cell.layer.borderWidth = 4
             cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }else {
         cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
@@ -64,7 +64,7 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
         cell.chapterLock.isHidden = false
         cell.chapterLock.layer.opacity = 1
         cell.layer.cornerRadius = 10
-        cell.layer.borderWidth = 2
+        cell.layer.borderWidth = 4
         cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
         return cell

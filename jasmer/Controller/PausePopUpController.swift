@@ -41,9 +41,9 @@ class PausePopUpController: UIView {
 //        addSubview(customView)
 //        customView.frame = self.bounds
 //        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        pauseView.bounds = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        
-        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        pauseView.frame = UIScreen.main.bounds
+//
+//        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     /*
     // Only override draw() if you perform custom drawing.

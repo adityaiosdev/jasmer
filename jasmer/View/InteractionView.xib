@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InteractionView" customModule="jasmer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="616" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhI-Yx-Hu8" userLabel="ConversationBox">
+                    <rect key="frame" x="0.0" y="10" width="616" height="202"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-qa-7cg">
+                            <rect key="frame" x="20" y="14" width="576" height="188"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cem-ej-qyC">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="70" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" name="ConversationBox"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="KGC-qa-7cg" secondAttribute="trailing" constant="20" id="0Fp-Eh-edi"/>
+                        <constraint firstAttribute="bottom" secondItem="KGC-qa-7cg" secondAttribute="bottom" id="8XQ-tT-84g"/>
+                        <constraint firstItem="KGC-qa-7cg" firstAttribute="top" secondItem="rhI-Yx-Hu8" secondAttribute="top" constant="14" id="M3M-Od-AMf"/>
+                        <constraint firstItem="KGC-qa-7cg" firstAttribute="leading" secondItem="rhI-Yx-Hu8" secondAttribute="leading" constant="20" id="P9w-ZV-Cy8"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IOP-rj-dY5">
+                    <rect key="frame" x="20" y="-6" width="91" height="21"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <color key="backgroundColor" name="Blue"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rhI-Yx-Hu8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1kh-eM-XsZ"/>
+                <constraint firstItem="rhI-Yx-Hu8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2d5-qW-yII"/>
+                <constraint firstAttribute="bottom" secondItem="rhI-Yx-Hu8" secondAttribute="bottom" id="NNF-hR-loI"/>
+                <constraint firstItem="IOP-rj-dY5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ejp-63-jSJ"/>
+                <constraint firstItem="IOP-rj-dY5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="rlW-d6-TRv"/>
+                <constraint firstItem="rhI-Yx-Hu8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="skl-lj-6df"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="interactionBox" destination="rhI-Yx-Hu8" id="t8b-7H-XRY"/>
+                <outlet property="interactionCollectionView" destination="KGC-qa-7cg" id="fzT-6e-iXO"/>
+                <outlet property="nameLabel" destination="IOP-rj-dY5" id="2lV-rv-4oR"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="106"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.45882352941176469" green="0.61960784313725492" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ConversationBox">
+            <color red="0.32549019607843138" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

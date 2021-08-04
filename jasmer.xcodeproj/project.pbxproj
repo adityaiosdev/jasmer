@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F1E53FB26B5950D005FDB29 /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C91C26B156D7007CB470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91B26B156D7007CB470 /* ViewController.swift */; };
@@ -15,19 +14,24 @@
 		0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C92026B156D7007CB470 /* jasmer.xcdatamodeld */; };
 		0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C92326B156D8007CB470 /* Assets.xcassets */; };
 		0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C92526B156D8007CB470 /* LaunchScreen.storyboard */; };
-		0F72C94C26B26D9A007CB470 /* StoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */; };
-		0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */; };
-		0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */; };
 		0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C98F26B2A55B007CB470 /* storyModel.swift */; };
-		0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C99226B2B22A007CB470 /* StoryViewController.swift */; };
-		0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F72C99526B2B6DA007CB470 /* PausePopUp.xib */; };
-		0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */; };
-		0F9870B226B8FD6F00609CB7 /* ChoicesPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */; };
-		0F9870B526B8FF5600609CB7 /* ChoicesPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */; };
+		0F9870C126BA590600609CB7 /* ChapterSelectionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870C026BA590600609CB7 /* ChapterSelectionStoryboard.storyboard */; };
+		0F9870C426BA592300609CB7 /* ChapterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870C326BA592300609CB7 /* ChapterSelectionViewController.swift */; };
+		0F9870C726BA595100609CB7 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870C626BA595100609CB7 /* ChapterCell.swift */; };
+		828DFA1526B993BB00F98C4B /* Storyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA1426B993BB00F98C4B /* Storyline.swift */; };
+		828DFA1C26B993ED00F98C4B /* InteractionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828DFA1626B993EC00F98C4B /* InteractionCollectionViewCell.xib */; };
+		828DFA1E26B993ED00F98C4B /* ConversationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828DFA1826B993ED00F98C4B /* ConversationView.xib */; };
+		828DFA1F26B993ED00F98C4B /* InteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828DFA1926B993ED00F98C4B /* InteractionView.xib */; };
+		828DFA2026B993ED00F98C4B /* StoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828DFA1A26B993ED00F98C4B /* StoryStoryboard.storyboard */; };
+		828DFA2126B993ED00F98C4B /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828DFA1B26B993ED00F98C4B /* PausePopUp.xib */; };
+		828DFA2726B9940E00F98C4B /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2326B9940D00F98C4B /* ConversationView.swift */; };
+		828DFA2826B9940E00F98C4B /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2426B9940E00F98C4B /* InteractionView.swift */; };
+		828DFA2926B9940E00F98C4B /* InteractionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2526B9940E00F98C4B /* InteractionCollectionViewCell.swift */; };
+		828DFA2D26B9942300F98C4B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2B26B9942300F98C4B /* StoryViewController.swift */; };
+		828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2C26B9942300F98C4B /* PausePopUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,15 +41,21 @@
 		0F72C92326B156D8007CB470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F72C92626B156D8007CB470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F72C92826B156D8007CB470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryStoryboard.storyboard; sourceTree = "<group>"; };
-		0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChapterSelectionStoryboard.storyboard; sourceTree = "<group>"; };
-		0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterSelectionViewController.swift; sourceTree = "<group>"; };
 		0F72C98F26B2A55B007CB470 /* storyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
-		0F72C99226B2B22A007CB470 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		0F72C99526B2B6DA007CB470 /* PausePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
-		0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
-		0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesPopUp.xib; sourceTree = "<group>"; };
-		0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesPopUpController.swift; sourceTree = "<group>"; };
+		0F9870C026BA590600609CB7 /* ChapterSelectionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChapterSelectionStoryboard.storyboard; sourceTree = "<group>"; };
+		0F9870C326BA592300609CB7 /* ChapterSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterSelectionViewController.swift; sourceTree = "<group>"; };
+		0F9870C626BA595100609CB7 /* ChapterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChapterCell.swift; path = ../ChapterCell.swift; sourceTree = "<group>"; };
+		828DFA1426B993BB00F98C4B /* Storyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyline.swift; sourceTree = "<group>"; };
+		828DFA1626B993EC00F98C4B /* InteractionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionCollectionViewCell.xib; sourceTree = "<group>"; };
+		828DFA1826B993ED00F98C4B /* ConversationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationView.xib; sourceTree = "<group>"; };
+		828DFA1926B993ED00F98C4B /* InteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionView.xib; sourceTree = "<group>"; };
+		828DFA1A26B993ED00F98C4B /* StoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryStoryboard.storyboard; sourceTree = "<group>"; };
+		828DFA1B26B993ED00F98C4B /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
+		828DFA2326B9940D00F98C4B /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		828DFA2426B9940E00F98C4B /* InteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		828DFA2526B9940E00F98C4B /* InteractionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionCollectionViewCell.swift; sourceTree = "<group>"; };
+		828DFA2B26B9942300F98C4B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		828DFA2C26B9942300F98C4B /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 		0F72C92F26B156DF007CB470 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				828DFA1426B993BB00F98C4B /* Storyline.swift */,
 				0F72C98F26B2A55B007CB470 /* storyModel.swift */,
 			);
 			path = Model;
@@ -104,10 +115,12 @@
 		0F72C93026B156E8007CB470 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F72C94B26B26D9A007CB470 /* StoryStoryboard.storyboard */,
-				0F9870B126B8FD6F00609CB7 /* ChoicesPopUp.xib */,
-				0F72C95426B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard */,
-				0F72C99526B2B6DA007CB470 /* PausePopUp.xib */,
+				0F9870C026BA590600609CB7 /* ChapterSelectionStoryboard.storyboard */,
+				828DFA1826B993ED00F98C4B /* ConversationView.xib */,
+				828DFA1626B993EC00F98C4B /* InteractionCollectionViewCell.xib */,
+				828DFA1926B993ED00F98C4B /* InteractionView.xib */,
+				828DFA1B26B993ED00F98C4B /* PausePopUp.xib */,
+				828DFA1A26B993ED00F98C4B /* StoryStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,13 +128,23 @@
 		0F72C93126B156EF007CB470 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0F1E53FA26B5950D005FDB29 /* PausePopUpController.swift */,
-				0F72C95A26B274EA007CB470 /* ChapterSelectionViewController.swift */,
-				0F72C99226B2B22A007CB470 /* StoryViewController.swift */,
-				0F92885C26B6F63600CE7AD0 /* ChapterCell.swift */,
-				0F9870B426B8FF5600609CB7 /* ChoicesPopUpController.swift */,
+				828DFA2226B993F800F98C4B /* Custom Cells */,
+				828DFA2C26B9942300F98C4B /* PausePopUpController.swift */,
+				0F9870C326BA592300609CB7 /* ChapterSelectionViewController.swift */,
+				828DFA2B26B9942300F98C4B /* StoryViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		828DFA2226B993F800F98C4B /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F9870C626BA595100609CB7 /* ChapterCell.swift */,
+				828DFA2326B9940D00F98C4B /* ConversationView.swift */,
+				828DFA2526B9940E00F98C4B /* InteractionCollectionViewCell.swift */,
+				828DFA2426B9940E00F98C4B /* InteractionView.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,13 +204,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9870B226B8FD6F00609CB7 /* ChoicesPopUp.xib in Resources */,
+				828DFA2126B993ED00F98C4B /* PausePopUp.xib in Resources */,
+				828DFA1F26B993ED00F98C4B /* InteractionView.xib in Resources */,
+				0F9870C126BA590600609CB7 /* ChapterSelectionStoryboard.storyboard in Resources */,
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
-				0F72C99626B2B6DA007CB470 /* PausePopUp.xib in Resources */,
-				0F72C95526B26E6C007CB470 /* ChapterSelectionStoryboard.storyboard in Resources */,
+				828DFA1E26B993ED00F98C4B /* ConversationView.xib in Resources */,
+				828DFA2026B993ED00F98C4B /* StoryStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
-				0F72C94C26B26D9A007CB470 /* StoryStoryboard.storyboard in Resources */,
 				0F72C91F26B156D7007CB470 /* Main.storyboard in Resources */,
+				828DFA1C26B993ED00F98C4B /* InteractionCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,16 +223,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828DFA2726B9940E00F98C4B /* ConversationView.swift in Sources */,
+				0F9870C726BA595100609CB7 /* ChapterCell.swift in Sources */,
 				0F72C91C26B156D7007CB470 /* ViewController.swift in Sources */,
+				828DFA2926B9940E00F98C4B /* InteractionCollectionViewCell.swift in Sources */,
 				0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */,
-				0F72C99326B2B22A007CB470 /* StoryViewController.swift in Sources */,
+				828DFA2826B9940E00F98C4B /* InteractionView.swift in Sources */,
+				0F9870C426BA592300609CB7 /* ChapterSelectionViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
-				0F72C95B26B274EA007CB470 /* ChapterSelectionViewController.swift in Sources */,
-				0F9870B526B8FF5600609CB7 /* ChoicesPopUpController.swift in Sources */,
-				0F92885D26B6F63600CE7AD0 /* ChapterCell.swift in Sources */,
 				0F72C99026B2A55B007CB470 /* storyModel.swift in Sources */,
+				828DFA2D26B9942300F98C4B /* StoryViewController.swift in Sources */,
+				828DFA1526B993BB00F98C4B /* Storyline.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
-				0F1E53FB26B5950D005FDB29 /* PausePopUpController.swift in Sources */,
+				828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
