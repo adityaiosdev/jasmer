@@ -18,13 +18,13 @@
                     <rect key="frame" x="0.0" y="10" width="616" height="202"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-qa-7cg">
-                            <rect key="frame" x="20" y="14" width="576" height="188"/>
+                            <rect key="frame" x="20" y="12" width="576" height="190"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cem-ej-qyC">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="70" maxY="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
@@ -32,7 +32,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="KGC-qa-7cg" secondAttribute="trailing" constant="20" id="0Fp-Eh-edi"/>
                         <constraint firstAttribute="bottom" secondItem="KGC-qa-7cg" secondAttribute="bottom" id="8XQ-tT-84g"/>
-                        <constraint firstItem="KGC-qa-7cg" firstAttribute="top" secondItem="rhI-Yx-Hu8" secondAttribute="top" constant="14" id="M3M-Od-AMf"/>
+                        <constraint firstItem="KGC-qa-7cg" firstAttribute="top" secondItem="rhI-Yx-Hu8" secondAttribute="top" constant="12" id="M3M-Od-AMf"/>
                         <constraint firstItem="KGC-qa-7cg" firstAttribute="leading" secondItem="rhI-Yx-Hu8" secondAttribute="leading" constant="20" id="P9w-ZV-Cy8"/>
                     </constraints>
                 </view>
@@ -66,10 +66,10 @@
     </objects>
     <resources>
         <namedColor name="Blue">
-            <color red="0.45882352941176469" green="0.61960784313725492" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45899999141693115" green="0.62000000476837158" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ConversationBox">
-            <color red="0.32549019607843138" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32499998807907104" green="0.32199999690055847" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
