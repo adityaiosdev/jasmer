@@ -41,6 +41,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     var situation = 0
     var botView = ConversationView()
     var interactionView = InteractionView()
+    let cdm = CoreDataManager()
     
     let storylines = Storyline.initializeData()
     
@@ -48,8 +49,19 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let lastUpdates = cdm.getLastUpdate()
+        if lastUpdates.count == 0{
+            currentIndex = 0
+            currentSection = 0
+        }
+        else{
+            currentIndex = Int(lastUpdates[lastUpdates.count-1].index)
+            currentSection = Int(lastUpdates[lastUpdates.count-1].section)
+        }
+        
         backgroundImage.frame = UIScreen.main.bounds
         setupView()
+//        createBgOverlay()
         PausePopUpController.instance.delegate = self
     }
     
@@ -215,6 +227,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     
     func backToChapterSelection() {
         print("tes")
+        cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
         UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
@@ -223,6 +236,15 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     func resumeGame() {
         print("tes")
     }
+    
+//    func createBgOverlay(){
+//        let bgOverlay = UIImageView()
+//        bgOverlay.image = currentStory?.backgroundImage
+//        bgOverlay.image = currentStory?.backgroundImage?.withRenderingMode(.alwaysTemplate)
+//        bgOverlay.tintColor = UIColor(white: 0.5, alpha: 0.5)
+//        bgOverlay.frame = backgroundImage.bounds
+//        backgroundImage.addSubview(bgOverlay)
+//    }
     
     func checkTalkingPerson(){
         personImage1.isHidden = true
