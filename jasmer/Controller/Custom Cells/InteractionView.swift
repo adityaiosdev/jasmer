@@ -49,9 +49,13 @@ extension InteractionView: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "interactionCell", for: indexPath) as! InteractionCollectionViewCell
-        cell.interactionLabel.text = choices[indexPath.row]
-        cell.interactionLabel.sizeToFit()
-        cell.interactionLabel.frame.inset(by: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+//        cell.translatesAutoresizingMaskIntoConstraints = true
+//        cell.interactionLabel.translatesAutoresizingMaskIntoConstraints = true
+//        cell.interactionLabel.frame.size = CGSize(width: CGFloat((choices[indexPath.row].count)*20), height: 35)
+//        cell.interactionLabel.text = choices[indexPath.row]
+//        cell.interactionLabel.sizeToFit()
+//        cell.interactionLabel.frame.inset(by: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+        cell.initialSetup(choice: choices[indexPath.row])
         return cell
     }
     
@@ -66,7 +70,7 @@ extension InteractionView: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 45)
+        return CGSize(width: choices[indexPath.row].count * 12, height: 45)
     }
 }
 

@@ -32,7 +32,7 @@ struct Storyline{
     
     public static func initializeData() -> [[Storyline]]{
         let storylines: [[Storyline]] = [[
-            Storyline(personName: "Jason", conversationText: "Ma, aku berangkat ya!!!", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person1, category: .interaction, interactions: ["a":1, "b":3]),
+            Storyline(personName: "Jason", conversationText: "Ma, aku berangkat ya!!!", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person1, category: .conversation, interactions: [nil:nil]),
             Storyline(personName: "Mama Jason", conversationText: "Iya, salam dulu sini, nak.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person2, category: .conversation, interactions: [nil:nil]),
             Storyline(personName: "Jason", conversationText: "Oh ya, Ma, hari ini terakhir buat bayar buku.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person1, category: .conversation, interactions: [nil:nil]),
             Storyline(personName: "Mama Jason", conversationText: "Ya ampun hampir lupa, ini uangnya ya nak.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person2, category: .conversation, interactions: [nil:nil]),
@@ -47,7 +47,7 @@ struct Storyline{
             Storyline(personName: "Jason", conversationText: "Permisi pak, selamat siang. Saya ingin membayar uang buku.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Admin"), backgroundImage: UIImage(named: "ruanggurubg"), talkingPerson: .person1, category: .conversation, interactions: [nil:nil])
         ], [
             Storyline(personName: "Carlos", conversationText: "Jason!", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person2, category: .conversation, interactions: [nil:nil]),
-            Storyline(personName: "Jason", conversationText: nil, personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person1, category: .interaction, interactions: ["Hmm, ga ah, gila ya lo?" : 4, "Beneran, nih?" : 5, "Hmm, gimana ya..." : 6])
+            Storyline(personName: "Jason", conversationText: nil, personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person1, category: .interaction, interactions: ["Hmm, ga ah, gila ya lo?" : 0, "Beneran, nih?" : 5, "Hmm, gimana ya..." : 6])
         ]]
         
         return storylines

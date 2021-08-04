@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Office 1" translatesAutoresizingMaskIntoConstraints="NO" id="W04-pD-gap">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Office 1" translatesAutoresizingMaskIntoConstraints="NO" id="W04-pD-gap">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Carlos" translatesAutoresizingMaskIntoConstraints="NO" id="wP2-yd-kGm">
@@ -94,8 +94,10 @@
                     <connections>
                         <outlet property="backgroundImage" destination="W04-pD-gap" id="B0Z-Cx-ueU"/>
                         <outlet property="conversationBox" destination="l2S-aE-TFk" id="FXS-Kt-PLB"/>
+                        <outlet property="nextButton" destination="et8-c8-9hX" id="7ut-uG-IW8"/>
                         <outlet property="personImage1" destination="CS3-Uq-Oa3" id="aQr-vb-9W3"/>
                         <outlet property="personImage2" destination="wP2-yd-kGm" id="fIl-I2-JrC"/>
+                        <outlet property="previousButton" destination="Gsq-w3-SCz" id="3n3-Ps-fqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4u-MW-Z31" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
