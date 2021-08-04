@@ -10,24 +10,38 @@ import UIKit
 class StoryViewController: UIViewController , PausePopUpControllerDelegate, InteractionViewDelegate{
     
     func didTappedInteractions(selectedSection: Int) {
-        print("Story: \(selectedSection)")
+        if selectedSection < storylines.count{
+            interactionTapped = true
+            self.selectedSection = selectedSection
+            selectedIndex = 0
+            previousSection = currentSection
+            previousIndex = currentIndex
+            currentSection = selectedSection
+            currentIndex = 0
+            setupView()
+        }
     }
     
     //adding new branch adit
-    @IBOutlet weak var personNameLbl: UILabel!
-    @IBOutlet weak var conversationPersonLbl: UILabel!
     @IBOutlet weak var personImage1: UIImageView!
     @IBOutlet weak var personImage2: UIImageView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var conversationBox: UIView!
-    @IBOutlet weak var personNameBox: UIView!
-  
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var interactionTapped: Bool = false
+    var selectedSection = 0
+    var selectedIndex = 0
     var overlayView = UIImageView()
+    var previousSection: Int = 0
+    var previousIndex: Int = 0
     var currentIndex = 0
     var currentSection = 0
     var situation = 0
     var botView = ConversationView()
     var interactionView = InteractionView()
+    let cdm = CoreDataManager()
     
     let storylines = Storyline.initializeData()
     
@@ -35,8 +49,19 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let lastUpdates = cdm.getLastUpdate()
+        if lastUpdates.count == 0{
+            currentIndex = 0
+            currentSection = 0
+        }
+        else{
+            currentIndex = Int(lastUpdates[lastUpdates.count-1].index)
+            currentSection = Int(lastUpdates[lastUpdates.count-1].section)
+        }
+        
         backgroundImage.frame = UIScreen.main.bounds
         setupView()
+//        createBgOverlay()
         PausePopUpController.instance.delegate = self
     }
     
@@ -47,7 +72,9 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         print(currentSection)
         print(currentIndex)
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 {
+        print("Last section: \(previousSection)")
+        print("Last index: \(previousIndex)")
+        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && storylines[currentSection][currentIndex].category == .conversation {
             if currentSection == storylines.count - 1 && currentIndex == storylines[currentSection].count-1 {
                 currentSection = storylines.count - 1
                 currentIndex = storylines[currentSection].count-1
@@ -65,28 +92,47 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
-        print(currentSection)
-        print(currentIndex)
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0{
-            
-            if currentIndex >= 0 && currentSection > 0{
-                if currentIndex == 0 {
-                    currentSection -= 1
-                    currentIndex = storylines[currentSection].count-1
+        print("Press back: \(currentSection), \(currentIndex)")
+        print("Last section: \(previousSection)")
+        print("Last index: \(previousIndex)")
+        print("Previous category :\(storylines[previousSection][previousIndex].category)")
+        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 {
+//            previousSection = currentSection
+//            previousIndex = currentIndex
+            if currentIndex >= 0 && storylines[previousSection][previousIndex].category == .conversation{
+//                if storylines[currentSection][currentIndex].category == .conversation{
+                    if currentIndex >= 0 && currentSection > 0{
+                        if currentIndex == 0 {
+                            currentSection -= 1
+                            currentIndex = storylines[currentSection].count-1
+                        }
+                        else{
+                            currentIndex -= 1
+                        }
+                    }
+                    else if currentIndex == 0 && currentSection == 0{
+                        currentIndex = 0
+                        currentSection = 0
+                    }
+                    else{
+                        currentIndex -= 1
+                        
+                    }
+                previousSection = currentSection
+                previousIndex = currentIndex
+                setupView()
                 }
-                else{
-                    currentIndex -= 1
-                }
-            }
-            else if currentIndex == 0 && currentSection == 0{
-                currentIndex = 0
-                currentSection = 0
-            }
-            else{
-                currentIndex -= 1
+//            }
+            else if storylines[previousSection][previousIndex].category == .interaction {
+                currentSection = previousSection
+                currentIndex = previousIndex
+                previousSection = currentSection
+                previousIndex = currentIndex
+                setupView()
             }
         }
-        setupView()
+        print("Back released: \(currentSection), \(currentIndex)")
+        print("Current category :\(storylines[previousSection][previousIndex].category)")
     }
     
     func setupView(){
@@ -104,6 +150,8 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             botView.conversationBox.layer.borderWidth = 2
             botView.layer.cornerRadius = 10
             
+            previousButton.isHidden = false
+            nextButton.isHidden = false
             conversationBox.isHidden = false
             
             if currentStory?.backgroundImage != nil {
@@ -141,7 +189,10 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             interactionView.interactionBox.layer.borderColor = UIColor(named: "Blue")?.cgColor
             interactionView.interactionBox.layer.borderWidth = 2
             interactionView.layer.cornerRadius = 10
-            interactionView.isHidden = false
+            
+            previousButton.isHidden = true
+            nextButton.isHidden = true
+            conversationBox.isHidden = false
             
             if currentStory?.backgroundImage != nil{
                 backgroundImage.image = currentStory?.backgroundImage
@@ -160,22 +211,23 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             else{
                 self.conversationBox.isHidden = true
             }
-    
+            
             interactionView.translatesAutoresizingMaskIntoConstraints = true
             checkTalkingPerson()
             
             interactionView.interactionDelegate = self
             conversationBox.addSubview(interactionView)
-//            
-//            if interactionView.isSelected == true {
-//                print(interactionView.selectedSection)
-//            }
+            //
+            //            if interactionView.isSelected == true {
+            //                print(interactionView.selectedSection)
+            //            }
         }
         
     }
     
     func backToChapterSelection() {
         print("tes")
+        cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
         UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
@@ -184,6 +236,15 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     func resumeGame() {
         print("tes")
     }
+    
+//    func createBgOverlay(){
+//        let bgOverlay = UIImageView()
+//        bgOverlay.image = currentStory?.backgroundImage
+//        bgOverlay.image = currentStory?.backgroundImage?.withRenderingMode(.alwaysTemplate)
+//        bgOverlay.tintColor = UIColor(white: 0.5, alpha: 0.5)
+//        bgOverlay.frame = backgroundImage.bounds
+//        backgroundImage.addSubview(bgOverlay)
+//    }
     
     func checkTalkingPerson(){
         personImage1.isHidden = true
