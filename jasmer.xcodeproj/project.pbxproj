@@ -25,9 +25,10 @@
 		824F7D2C26BAA85D00DD05F4 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2926BAA85D00DD05F4 /* ConversationView.swift */; };
 		824F7D2D26BAA85D00DD05F4 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2A26BAA85D00DD05F4 /* InteractionView.swift */; };
 		824F7D2E26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2B26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift */; };
-		824F7D3026BAA87000DD05F4 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2F26BAA87000DD05F4 /* StoryViewController.swift */; };
 		824F7D3326BAA8A100DD05F4 /* Storyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3126BAA8A000DD05F4 /* Storyline.swift */; };
 		824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3226BAA8A100DD05F4 /* storyModel.swift */; };
+		824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */; };
+		824F7D3E26BAB5B000DD05F4 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */; };
 		828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2C26B9942300F98C4B /* PausePopUpController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +53,10 @@
 		824F7D2926BAA85D00DD05F4 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		824F7D2A26BAA85D00DD05F4 /* InteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		824F7D2B26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionCollectionViewCell.swift; sourceTree = "<group>"; };
-		824F7D2F26BAA87000DD05F4 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		824F7D3126BAA8A000DD05F4 /* Storyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyline.swift; sourceTree = "<group>"; };
 		824F7D3226BAA8A100DD05F4 /* storyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
+		824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		828DFA2C26B9942300F98C4B /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		0F72C92F26B156DF007CB470 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */,
 				824F7D3126BAA8A000DD05F4 /* Storyline.swift */,
 				824F7D3226BAA8A100DD05F4 /* storyModel.swift */,
 			);
@@ -128,10 +131,10 @@
 		0F72C93126B156EF007CB470 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				824F7D2F26BAA87000DD05F4 /* StoryViewController.swift */,
 				828DFA2226B993F800F98C4B /* Custom Cells */,
 				828DFA2C26B9942300F98C4B /* PausePopUpController.swift */,
 				0F9870C326BA592300609CB7 /* ChapterSelectionViewController.swift */,
+				824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,11 +233,12 @@
 				0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */,
 				0F9870C426BA592300609CB7 /* ChapterSelectionViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
-				824F7D3026BAA87000DD05F4 /* StoryViewController.swift in Sources */,
 				824F7D2D26BAA85D00DD05F4 /* InteractionView.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
 				824F7D2C26BAA85D00DD05F4 /* ConversationView.swift in Sources */,
 				824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */,
+				824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */,
+				824F7D3E26BAB5B000DD05F4 /* StoryViewController.swift in Sources */,
 				828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
