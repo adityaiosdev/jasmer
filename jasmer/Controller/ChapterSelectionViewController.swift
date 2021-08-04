@@ -9,7 +9,7 @@ import UIKit
 
 class ChapterSelectionViewController: UIViewController  {
     
-    let chapters = ["Jason", "JasonTransparent"]
+    let chapters = ["Jason", "JasonTransparent","EmakJason","EmakJason"]
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -18,12 +18,10 @@ class ChapterSelectionViewController: UIViewController  {
         chapterCollectionView.delegate = self
         chapterCollectionView.dataSource = self
         // Do any additional setup after loading the view.
+        
     }
     
     
-    @IBAction func chapterSelectedClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToStory", sender: self)
-    }
     /*
     // MARK: - Navigation
 
@@ -47,14 +45,40 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = chapterCollectionView.dequeueReusableCell(withReuseIdentifier: "chapterCell", for: indexPath) as! ChapterCell
+        if indexPath.row == 0 {
+            cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
+            cell.chapterCard.layer.opacity = 0.8
+            cell.chapterCard.layer.cornerRadius = 100
+            cell.chapterLabel.text = "Jason dan Es Doger"
+            cell.chapterLabel.layer.cornerRadius = 5
+            cell.chapterLock.isHidden = true
+            cell.layer.cornerRadius = 10
+            cell.layer.borderWidth = 4
+            cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }else {
         cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
+        cell.chapterCard.layer.opacity = 0.7
+        cell.chapterCard.layer.cornerRadius = 100
+        cell.chapterLabel.text = "Jason dan Es Doger"
+        cell.chapterLabel.layer.cornerRadius = 5
+        cell.chapterLock.isHidden = false
+        cell.chapterLock.layer.opacity = 1
+        cell.layer.cornerRadius = 10
+        cell.layer.borderWidth = 4
+        cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == chapterCollectionView && indexPath.row == 0 {
+            self.performSegue(withIdentifier: "goToStory", sender: self)
+        }
     }
     
 }
 
 extension ChapterSelectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 180, height: 200)
     }
 }
