@@ -61,9 +61,11 @@ class PausePopUpController: UIView {
         UIApplication.shared.keyWindow?.addSubview(pauseView)
     }
     @IBAction func backButtonClicked(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         pauseView.removeFromSuperview()
     }
     @IBAction func exitToChapterSelection(_ sender: UIButton){
         self.delegate?.backToChapterSelection()
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
     }
 }
