@@ -21,18 +21,20 @@
 		0F9870D226BAD87900609CB7 /* SettingPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */; };
 		0F9870D626BBAB5B00609CB7 /* buttonPressed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */; };
 		0F9870DD26BBAC6800609CB7 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */; };
-		824F7D2426BAA83B00DD05F4 /* InteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D1F26BAA83A00DD05F4 /* InteractionView.xib */; };
-		824F7D2526BAA83B00DD05F4 /* ConversationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2026BAA83A00DD05F4 /* ConversationView.xib */; };
-		824F7D2626BAA83B00DD05F4 /* InteractionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2126BAA83A00DD05F4 /* InteractionCollectionViewCell.xib */; };
 		824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */; };
-		824F7D2826BAA83B00DD05F4 /* StoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2326BAA83B00DD05F4 /* StoryStoryboard.storyboard */; };
-		824F7D2C26BAA85D00DD05F4 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2926BAA85D00DD05F4 /* ConversationView.swift */; };
-		824F7D2D26BAA85D00DD05F4 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2A26BAA85D00DD05F4 /* InteractionView.swift */; };
-		824F7D2E26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D2B26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift */; };
-		824F7D3326BAA8A100DD05F4 /* Storyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3126BAA8A000DD05F4 /* Storyline.swift */; };
 		824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3226BAA8A100DD05F4 /* storyModel.swift */; };
 		824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */; };
-		824F7D3E26BAB5B000DD05F4 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */; };
+		8265429E26BBCC0200AE9E4B /* Storyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8265429D26BBCC0200AE9E4B /* Storyline.swift */; };
+		826542A226BBCC2D00AE9E4B /* InteractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8265429F26BBCC2C00AE9E4B /* InteractionView.xib */; };
+		826542A326BBCC2D00AE9E4B /* ConversationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826542A026BBCC2C00AE9E4B /* ConversationView.xib */; };
+		826542A426BBCC2D00AE9E4B /* InteractionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826542A126BBCC2C00AE9E4B /* InteractionCollectionViewCell.xib */; };
+		826542A726BBCC4B00AE9E4B /* StoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826542A526BBCC4B00AE9E4B /* StoryStoryboard.storyboard */; };
+		826542A826BBCC4B00AE9E4B /* PostQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */; };
+		826542AC26BBCC6F00AE9E4B /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542A926BBCC6F00AE9E4B /* InteractionView.swift */; };
+		826542AD26BBCC6F00AE9E4B /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542AA26BBCC6F00AE9E4B /* ConversationView.swift */; };
+		826542AE26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542AB26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift */; };
+		826542B126BBCC9500AE9E4B /* PostQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542AF26BBCC9500AE9E4B /* PostQuizViewController.swift */; };
+		826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542B026BBCC9500AE9E4B /* StoryViewController.swift */; };
 		828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2C26B9942300F98C4B /* PausePopUpController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,18 +55,20 @@
 		0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPopUpController.swift; sourceTree = "<group>"; };
 		0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonPressed.wav; sourceTree = "<group>"; };
 		0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		824F7D1F26BAA83A00DD05F4 /* InteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionView.xib; sourceTree = "<group>"; };
-		824F7D2026BAA83A00DD05F4 /* ConversationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationView.xib; sourceTree = "<group>"; };
-		824F7D2126BAA83A00DD05F4 /* InteractionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionCollectionViewCell.xib; sourceTree = "<group>"; };
 		824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
-		824F7D2326BAA83B00DD05F4 /* StoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryStoryboard.storyboard; sourceTree = "<group>"; };
-		824F7D2926BAA85D00DD05F4 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
-		824F7D2A26BAA85D00DD05F4 /* InteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
-		824F7D2B26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionCollectionViewCell.swift; sourceTree = "<group>"; };
-		824F7D3126BAA8A000DD05F4 /* Storyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyline.swift; sourceTree = "<group>"; };
 		824F7D3226BAA8A100DD05F4 /* storyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
 		824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		8265429D26BBCC0200AE9E4B /* Storyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyline.swift; sourceTree = "<group>"; };
+		8265429F26BBCC2C00AE9E4B /* InteractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionView.xib; sourceTree = "<group>"; };
+		826542A026BBCC2C00AE9E4B /* ConversationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationView.xib; sourceTree = "<group>"; };
+		826542A126BBCC2C00AE9E4B /* InteractionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractionCollectionViewCell.xib; sourceTree = "<group>"; };
+		826542A526BBCC4B00AE9E4B /* StoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryStoryboard.storyboard; sourceTree = "<group>"; };
+		826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostQuizViewController.storyboard; sourceTree = "<group>"; };
+		826542A926BBCC6F00AE9E4B /* InteractionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		826542AA26BBCC6F00AE9E4B /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		826542AB26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionCollectionViewCell.swift; sourceTree = "<group>"; };
+		826542AF26BBCC9500AE9E4B /* PostQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostQuizViewController.swift; sourceTree = "<group>"; };
+		826542B026BBCC9500AE9E4B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		828DFA2C26B9942300F98C4B /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +121,8 @@
 		0F72C92F26B156DF007CB470 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8265429D26BBCC0200AE9E4B /* Storyline.swift */,
 				824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */,
-				824F7D3126BAA8A000DD05F4 /* Storyline.swift */,
 				824F7D3226BAA8A100DD05F4 /* storyModel.swift */,
 			);
 			path = Model;
@@ -127,12 +131,13 @@
 		0F72C93026B156E8007CB470 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				824F7D2026BAA83A00DD05F4 /* ConversationView.xib */,
-				824F7D2126BAA83A00DD05F4 /* InteractionCollectionViewCell.xib */,
-				824F7D1F26BAA83A00DD05F4 /* InteractionView.xib */,
+				826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */,
+				826542A526BBCC4B00AE9E4B /* StoryStoryboard.storyboard */,
+				826542A026BBCC2C00AE9E4B /* ConversationView.xib */,
+				826542A126BBCC2C00AE9E4B /* InteractionCollectionViewCell.xib */,
+				8265429F26BBCC2C00AE9E4B /* InteractionView.xib */,
 				824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */,
 				0F9870CB26BAD50700609CB7 /* SettingPopUp.xib */,
-				824F7D2326BAA83B00DD05F4 /* StoryStoryboard.storyboard */,
 				0F9870C026BA590600609CB7 /* ChapterSelectionStoryboard.storyboard */,
 			);
 			path = View;
@@ -144,7 +149,8 @@
 				828DFA2226B993F800F98C4B /* Custom Cells */,
 				828DFA2C26B9942300F98C4B /* PausePopUpController.swift */,
 				0F9870C326BA592300609CB7 /* ChapterSelectionViewController.swift */,
-				824F7D3D26BAB5B000DD05F4 /* StoryViewController.swift */,
+				826542AF26BBCC9500AE9E4B /* PostQuizViewController.swift */,
+				826542B026BBCC9500AE9E4B /* StoryViewController.swift */,
 				0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */,
 				0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */,
 			);
@@ -162,9 +168,9 @@
 		828DFA2226B993F800F98C4B /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				824F7D2926BAA85D00DD05F4 /* ConversationView.swift */,
-				824F7D2B26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift */,
-				824F7D2A26BAA85D00DD05F4 /* InteractionView.swift */,
+				826542AA26BBCC6F00AE9E4B /* ConversationView.swift */,
+				826542AB26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift */,
+				826542A926BBCC6F00AE9E4B /* InteractionView.swift */,
 				0F9870C626BA595100609CB7 /* ChapterCell.swift */,
 			);
 			path = "Custom Cells";
@@ -227,17 +233,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824F7D2426BAA83B00DD05F4 /* InteractionView.xib in Resources */,
 				0F9870CC26BAD50700609CB7 /* SettingPopUp.xib in Resources */,
+				826542A726BBCC4B00AE9E4B /* StoryStoryboard.storyboard in Resources */,
+				826542A326BBCC2D00AE9E4B /* ConversationView.xib in Resources */,
 				824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */,
-				824F7D2526BAA83B00DD05F4 /* ConversationView.xib in Resources */,
+				826542A426BBCC2D00AE9E4B /* InteractionCollectionViewCell.xib in Resources */,
 				0F9870C126BA590600609CB7 /* ChapterSelectionStoryboard.storyboard in Resources */,
-				824F7D2626BAA83B00DD05F4 /* InteractionCollectionViewCell.xib in Resources */,
+				826542A826BBCC4B00AE9E4B /* PostQuizViewController.storyboard in Resources */,
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
-				824F7D2826BAA83B00DD05F4 /* StoryStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
 				0F9870D626BBAB5B00609CB7 /* buttonPressed.wav in Resources */,
 				0F72C91F26B156D7007CB470 /* Main.storyboard in Resources */,
+				826542A226BBCC2D00AE9E4B /* InteractionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,21 +256,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F9870C726BA595100609CB7 /* ChapterCell.swift in Sources */,
-				824F7D2E26BAA85D00DD05F4 /* InteractionCollectionViewCell.swift in Sources */,
 				0F9870DD26BBAC6800609CB7 /* SoundPlayer.swift in Sources */,
+				8265429E26BBCC0200AE9E4B /* Storyline.swift in Sources */,
+				826542AC26BBCC6F00AE9E4B /* InteractionView.swift in Sources */,
 				0F72C91C26B156D7007CB470 /* ViewController.swift in Sources */,
-				824F7D3326BAA8A100DD05F4 /* Storyline.swift in Sources */,
+				826542B126BBCC9500AE9E4B /* PostQuizViewController.swift in Sources */,
 				0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */,
 				0F9870C426BA592300609CB7 /* ChapterSelectionViewController.swift in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
-				824F7D2D26BAA85D00DD05F4 /* InteractionView.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
-				824F7D2C26BAA85D00DD05F4 /* ConversationView.swift in Sources */,
 				824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */,
 				824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */,
-				824F7D3E26BAB5B000DD05F4 /* StoryViewController.swift in Sources */,
 				828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */,
+				826542AE26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift in Sources */,
 				0F9870D226BAD87900609CB7 /* SettingPopUpController.swift in Sources */,
+				826542AD26BBCC6F00AE9E4B /* ConversationView.swift in Sources */,
+				826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
