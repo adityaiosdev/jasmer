@@ -43,7 +43,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 let correctAlert = UIAlertController(title: "Benar!!", message: currentStory?.correctText, preferredStyle: .alert)
                 let cancelBtn = UIAlertAction(title: "Kembali", style: .cancel, handler: nil)
                 let nextBtn = UIAlertAction(title: "Lanjut", style: .default) { _ in
-//                    print(self.currentSection)
+                    //                    print(self.currentSection)
                     self.setupView()
                 }
                 correctAlert.addAction(cancelBtn)
@@ -129,90 +129,61 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-//        print(currentSection)
-//        print(currentIndex)
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && storylines[currentSection][currentIndex].category == .conversation {
-                    if currentSection == storylines.count - 1 && currentIndex == storylines[currentSection].count-1 {
-                        previousSection = currentSection
-                        previousIndex = currentIndex
-                        if currentIndex == 0{
-                            currentSection = storylines.count - 1
-                            currentIndex = storylines[currentSection].count-1
-                        }
-                        else{
-                            currentSection = storylines.count - 1
-                            currentIndex += 1
-                        }
-                        print("Last")
-                    }
-                    else if currentIndex == storylines[currentSection].count - 1 {
-                        previousSection = currentSection
-                        previousIndex = currentIndex
-                        currentSection += 1
-                        currentIndex = 0
-                    }
-                    else {
-                        previousSection = currentSection
-                        previousIndex = currentIndex
-                        currentIndex += 1
-                    }
-                }
-                setupView()
-                print("Last section: \(previousSection)")
-                print("Last index: \(previousIndex)")
+        //        print(currentSection)
+        //        print(currentIndex)
+        previousSection = currentSection
+        previousIndex = currentIndex
+        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
+            if currentIndex == storylines[currentSection].count - 1 {
+                guard currentStory?.moveToSection != nil else {return }
+                currentSection = (currentStory?.moveToSection)!
+                currentIndex = 0
+            }
+            else{
+                currentIndex += 1
+            }
+            setupView()
+            print(previousSection)
+            print(previousIndex)
+        }
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
-        print("Press back: \(currentSection), \(currentIndex)")
-        print("Previous category :\(storylines[previousSection][previousIndex].category)")
-        if isAlreadyChosen == true && currentSection == savedSection {
-            
+        previousSection = currentSection
+        previousIndex = currentIndex
+        let previousStory = storylines[previousSection][previousIndex]
+        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0{
+            if previousStory.category == .conversation{
+                if currentIndex >= 0 && currentSection > 0{
+                    previousButton.isHidden = false
+                    if currentIndex == 0{
+                        currentSection -= 1
+                        currentIndex = storylines[currentSection].count-1
+                    }
+                    else {
+                        currentIndex -= 1
+                    }
+                }
+                else if currentSection == 0 && currentIndex == 0{
+                    previousButton.isHidden = true
+                    currentSection = 0
+                    currentIndex = 0
+                }
+                else{
+                    previousButton.isHidden = true
+                    currentIndex -= 1
+                }
+            }
+            else if previousStory.category == .interaction || previousStory.category == .miniGames {
+                previousButton.isHidden = true
+                currentSection = selectedSection
+                currentIndex = selectedIndex
+            }
+            setupView()
         }
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 {
-                      if storylines[previousSection][previousIndex].category == .interaction || storylines[previousSection][previousIndex].category == .miniGames{
-                          currentSection = selectedSection
-                          currentIndex = selectedIndex
-                          setupView()
-                      }
-                      else if storylines[previousSection][previousIndex].category == .conversation{
-                          if currentIndex >= 0 && currentSection > 0{
-                              if currentIndex == 0 {
-      //                            previousSection = currentSection
-      //                            previousIndex = currentIndex
-                                  currentSection -= 1
-                                  currentIndex = storylines[currentSection].count-1
-                              }
-                              else{
-      //                            previousSection = currentSection
-      //                            previousIndex = currentIndex
-                                  currentIndex -= 1
-                              }
-                          }
-                          else if currentIndex == 0 && currentSection == 0{
-      //                        previousSection = currentSection
-      //                        previousIndex = currentIndex
-                              currentIndex = 0
-                              currentSection = 0
-                          }
-                          else{
-      //                        previousSection = currentSection
-      //                        previousIndex = currentIndex
-                              currentIndex -= 1
-                          }
-                          //                previousSection = currentSection
-                          //                previousIndex = currentIndex
-                          setupView()
-                      }
-                      
-                  }
-        print("Last section: \(previousSection)")
-        print("Last index: \(previousIndex)")
-        print("Back released: \(currentSection), \(currentIndex)")
     }
-              //        print("Current category :\(storylines[previousSection][previousIndex].category)")
     
     func setupView(){
-//        print("\(currentSection),\(currentIndex)")
         currentStory = storylines[currentSection][currentIndex]
         
         for view in conversationBox.subviews{
@@ -232,6 +203,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             botView.initialSetup()
             botView.frame = conversationBox.bounds
             botView.translatesAutoresizingMaskIntoConstraints = true
+            botView.nameLabel.isHidden = true
             
             previousButton.isHidden = false
             nextButton.isHidden = false
@@ -242,14 +214,22 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             }
             
             if currentStory?.personName != nil {
-                botView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*12), height: 30)
+                botView.nameLabel.isHidden = false
+                botView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*14), height: 30)
                 botView.nameLabel.textAlignment = .center
                 botView.nameLabel.text = currentStory?.personName
+                botView.nameLabel.font = UIFont(name: "Inter-Bold", size: 17)
             }
             
             if currentStory?.conversationText != nil{
                 botView.conversationLabel.text = currentStory?.conversationText
                 botView.conversationLabel.sizeToFit()
+                if currentStory?.needItalics == true {
+                    botView.conversationLabel.font = UIFont(name: "Inter-Italic", size: 17)
+                }
+                else{
+                    botView.conversationLabel.font = UIFont(name: "Inter-Medium", size: 17)
+                }
             }
             
             else{
@@ -286,9 +266,10 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             
             if currentStory?.personName != nil {
                 interactionView.nameLabel.isHidden = false
-                interactionView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*12), height: 30)
+                interactionView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*14), height: 30)
                 interactionView.nameLabel.textAlignment = .center
                 interactionView.nameLabel.text = currentStory?.personName
+                interactionView.nameLabel.font = UIFont(name: "Inter-Bold", size: 17)
             }
             
             if currentStory?.interactions != nil {
@@ -312,7 +293,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func backToChapterSelection() {
-//        print("tes")
+        //        print("tes")
         cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
@@ -320,7 +301,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func resumeGame() {
-//        print("tes")
+        //        print("tes")
     }
     
     //    func createBgOverlay(){

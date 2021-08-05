@@ -17,15 +17,15 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="VFG-Fa-P5x">
-                        <rect key="frame" x="0.0" y="12" width="50" height="35"/>
+                        <rect key="frame" x="0.0" y="7" width="64" height="35"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.69411764710000001" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" metaFont="system" size="17"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="8" tighteningFactorForTruncation="0.0"/>
+                                    <font key="NSFont" size="17" name="Inter-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="8" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
                         </attributedString>

@@ -29,7 +29,7 @@ class PostQuizViewController: UIViewController {
         questionView.initialSetup()
         questionView.frame = questionBox.bounds
         questionView.translatesAutoresizingMaskIntoConstraints = true
-        questionView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*12), height: 30)
+        questionView.nameLabel.frame.size = CGSize(width: CGFloat((currentStory?.personName!.count)!*14), height: 30)
         questionView.nameLabel.layer.cornerRadius = 10
         questionView.nameLabel.textAlignment = .center
         
