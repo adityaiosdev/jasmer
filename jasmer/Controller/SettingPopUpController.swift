@@ -24,7 +24,9 @@ class SettingPopUpController: UIView {
     @IBOutlet weak var alertView: UIView!
     static let instance = SettingPopUpController()
     @IBOutlet var settingView: UIView!
-
+    @IBOutlet weak var soundEffectsSwitch: UISwitch!
+    @IBOutlet weak var BGMSwitch: UISwitch!
+    
     weak var delegate: SettingPopUpControllerDelegate?
     
     override init(frame: CGRect) {
@@ -63,6 +65,15 @@ class SettingPopUpController: UIView {
     @IBAction func backBtnClicked(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         settingView.removeFromSuperview()
+    }
+    @IBAction func SoundEffectsSwitch(_ sender: Any) {
+        if soundEffectsSwitch.isOn == true{
+            SoundEffectsPlayer.shared.SFXAllowStatus = true
+        }else{
+            SoundEffectsPlayer.shared.SFXAllowStatus = false
+        }
+    }
+    @IBAction func BGMSwitch(_ sender: Any) {
     }
 }
 
