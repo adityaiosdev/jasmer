@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                     <rect key="frame" x="0.0" y="10" width="616" height="168"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lil-SF-mwr" userLabel="ConversationLabel">
-                            <rect key="frame" x="27" y="40" width="569" height="108"/>
+                            <rect key="frame" x="24" y="30" width="569" height="108"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label">
@@ -33,12 +33,6 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" name="ConversationBox"/>
-                    <constraints>
-                        <constraint firstItem="Lil-SF-mwr" firstAttribute="top" secondItem="kPB-Cw-dkU" secondAttribute="top" constant="40" id="GAC-G7-poZ"/>
-                        <constraint firstAttribute="trailing" secondItem="Lil-SF-mwr" secondAttribute="trailing" constant="20" id="I9z-20-GZY"/>
-                        <constraint firstItem="Lil-SF-mwr" firstAttribute="leading" secondItem="kPB-Cw-dkU" secondAttribute="leading" constant="27" id="XqP-ZE-bJF"/>
-                        <constraint firstAttribute="bottom" secondItem="Lil-SF-mwr" secondAttribute="bottom" constant="20" id="bGv-R6-4o4"/>
-                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4f-6e-hye">
                     <rect key="frame" x="20" y="-1" width="91" height="21"/>

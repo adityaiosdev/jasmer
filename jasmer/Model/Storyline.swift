@@ -38,9 +38,9 @@ struct Storyline{
     
     public static func initializeData() -> [[Storyline]]{
         let storylines: [[Storyline]] = [
-            [
-                Storyline(personName: nil, conversationText: nil, personImage1: nil, personImage2: nil, backgroundImage: UIImage(named: "hoegengQuiz"), talkingPerson: nil, category: .conversation, interactions: ["1955" : 3, "2021" : 3, "1945" : 3, "2001" : 3], correctText: "Saat ini Jason sedang berada di tahun 1955, tahun pertama kali diadakannya pemilu.", wrongText: "Pemilu pertama dilangsungkan pada tahun 1955. Jason sekarang berada di tahun tersebut.", correctAnswer: "1955")
-            ],
+//            [
+//                Storyline(personName: nil, conversationText: nil, personImage1: nil, personImage2: nil, backgroundImage: UIImage(named: "hoegengQuiz"), talkingPerson: nil, category: .conversation, interactions: ["1955" : 3, "2021" : 3, "1945" : 3, "2001" : 3], correctText: "Saat ini Jason sedang berada di tahun 1955, tahun pertama kali diadakannya pemilu.", wrongText: "Pemilu pertama dilangsungkan pada tahun 1955. Jason sekarang berada di tahun tersebut.", correctAnswer: "1955")
+//            ],
             [
             Storyline(personName: "Jason", conversationText: "Ma, aku berangkat ya!!!", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person1, category: .conversation, interactions: [nil:nil], correctText: nil, wrongText: nil, correctAnswer: nil),
             Storyline(personName: "Mama Jason", conversationText: "Iya, salam dulu sini, nak.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "MamaJason"), backgroundImage: UIImage(named: "homebg"), talkingPerson: .person2, category: .conversation, interactions: [nil:nil], correctText: nil, wrongText: nil, correctAnswer: nil),
@@ -57,7 +57,7 @@ struct Storyline{
             Storyline(personName: "Jason", conversationText: "Permisi pak, selamat siang. Saya ingin membayar uang buku.", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Admin"), backgroundImage: UIImage(named: "ruanggurubg"), talkingPerson: .person1, category: .conversation, interactions: [nil:nil], correctText: nil, wrongText: nil, correctAnswer: nil)
         ], [
             Storyline(personName: "Carlos", conversationText: "Jason!", personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person2, category: .conversation, interactions: [nil:nil], correctText: nil, wrongText: nil, correctAnswer: nil),
-            Storyline(personName: "Jason", conversationText: nil, personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person1, category: .interaction, interactions: ["Hmm, ga ah, gila ya lo?" : 0, "Beneran, nih?" : 5, "Hmm, gimana ya..." : 6], correctText: nil, wrongText: nil, correctAnswer: nil)
+            Storyline(personName: "Jason", conversationText: nil, personImage1: UIImage(named: "Jason"), personImage2: UIImage(named: "Carlos"), backgroundImage: UIImage(named: "smpbg"), talkingPerson: .person1, category: .interaction, interactions: ["Hmm, ga ah, gila ya lo?" : 2, "Beneran, nih?" : 5, "Hmm, gimana ya..." : 6], correctText: nil, wrongText: nil, correctAnswer: nil)
         ], [
             Storyline(personName: "Post Quiz", conversationText: "Apa yang bisa kamu terapkan setelah membaca cerita tersebut?", personImage1: nil, personImage2: nil, backgroundImage: UIImage(named: "homebg"), talkingPerson: nil, category: .postQuiz, interactions: ["Tidak menerima suap " : 1, "Jangan sembarangan membeli es doger" : 0, "Melakukan tindakan korupsi" : 0, "Jangan bicara dengan orang sembarangan" : 0], correctText: nil, wrongText: nil, correctAnswer: nil)
         ]
