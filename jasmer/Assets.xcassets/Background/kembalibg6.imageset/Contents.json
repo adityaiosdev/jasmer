@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Office 1.jpg",
+      "filename" : "Kembali.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Kembali@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Kembali@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
