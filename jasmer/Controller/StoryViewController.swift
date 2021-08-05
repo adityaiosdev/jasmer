@@ -12,11 +12,14 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     //MARK: -Delegate Functions
     func didTappedInteractions(selectedSection: Int) {
         if selectedSection < storylines.count{
+            isAlreadyChosen = true
             interactionTapped = true
             self.selectedSection = selectedSection
+            savedSection = selectedSection
             selectedIndex = 0
             previousSection = currentSection
             previousIndex = currentIndex
+            previousChosenSection = currentSection
             currentSection = selectedSection
             currentIndex = 0
             setupView()
@@ -40,7 +43,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 let correctAlert = UIAlertController(title: "Benar!!", message: currentStory?.correctText, preferredStyle: .alert)
                 let cancelBtn = UIAlertAction(title: "Kembali", style: .cancel, handler: nil)
                 let nextBtn = UIAlertAction(title: "Lanjut", style: .default) { _ in
-                    print(self.currentSection)
+//                    print(self.currentSection)
                     self.setupView()
                 }
                 correctAlert.addAction(cancelBtn)
@@ -72,6 +75,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     //MARK: -Variables
     var interactionTapped: Bool = false
     var selectedSection = 0
+    var savedSection = 0
     var selectedIndex = 0
     var overlayView = UIImageView()
     var previousSection: Int = 0
@@ -82,6 +86,8 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     var botView = ConversationView()
     var interactionView = InteractionView()
     var selectedAnswer: String = ""
+    var isAlreadyChosen: Bool = false
+    var previousChosenSection : Int = 0
     let cdm = CoreDataManager()
     
     let storylines = Storyline.initializeData()
@@ -91,6 +97,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     //MARK: -Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let lastUpdates = cdm.getLastUpdate()
         if lastUpdates.count == 0{
             currentIndex = 0
@@ -122,85 +129,90 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        print(currentSection)
-        print(currentIndex)
-        print("Last section: \(previousSection)")
-        print("Last index: \(previousIndex)")
+//        print(currentSection)
+//        print(currentIndex)
         if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && storylines[currentSection][currentIndex].category == .conversation {
-            if currentSection == storylines.count - 1 && currentIndex == storylines[currentSection].count-1 {
-                previousSection = currentSection
-                previousIndex = currentIndex
-                currentSection = storylines.count - 1
-                currentIndex = storylines[currentSection].count-1
-                print("Last")
-            }
-            else if currentIndex == storylines[currentSection].count - 1 {
-                previousSection = currentSection
-                previousIndex = currentIndex
-                currentSection += 1
-                currentIndex = 0
-            }
-            else {
-                previousSection = currentSection
-                previousIndex = currentIndex
-                currentIndex += 1
-            }
-        }
-        setupView()
+                    if currentSection == storylines.count - 1 && currentIndex == storylines[currentSection].count-1 {
+                        previousSection = currentSection
+                        previousIndex = currentIndex
+                        if currentIndex == 0{
+                            currentSection = storylines.count - 1
+                            currentIndex = storylines[currentSection].count-1
+                        }
+                        else{
+                            currentSection = storylines.count - 1
+                            currentIndex += 1
+                        }
+                        print("Last")
+                    }
+                    else if currentIndex == storylines[currentSection].count - 1 {
+                        previousSection = currentSection
+                        previousIndex = currentIndex
+                        currentSection += 1
+                        currentIndex = 0
+                    }
+                    else {
+                        previousSection = currentSection
+                        previousIndex = currentIndex
+                        currentIndex += 1
+                    }
+                }
+                setupView()
+                print("Last section: \(previousSection)")
+                print("Last index: \(previousIndex)")
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
         print("Press back: \(currentSection), \(currentIndex)")
         print("Previous category :\(storylines[previousSection][previousIndex].category)")
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 {
-            if storylines[previousSection][previousIndex].category == .interaction || storylines[previousSection][previousIndex].category == .miniGames{
-                 previousSection = currentSection
-                 previousIndex = currentIndex
-                 currentSection = selectedSection
-                 currentIndex = selectedIndex
-                 setupView()
-             }
-            //            previousSection = currentSection
-            //            previousIndex = currentIndex
-            else if storylines[previousSection][previousIndex].category == .conversation{
-                //                if storylines[currentSection][currentIndex].category == .conversation{
-                if currentIndex >= 0 && currentSection > 0{
-                    if currentIndex == 0 {
-                        previousSection = currentSection
-                        previousIndex = currentIndex
-                        currentSection -= 1
-                        currentIndex = storylines[currentSection].count-1
-                    }
-                    else{
-                        previousSection = currentSection
-                        previousIndex = currentIndex
-                        currentIndex -= 1
-                    }
-                }
-                else if currentIndex == 0 && currentSection == 0{
-                    previousSection = storylines.count - 1
-                    previousIndex = storylines[previousSection].count - 1
-                    currentIndex = 0
-                    currentSection = 0
-                }
-                else{
-                    previousSection = currentSection
-                    previousIndex = currentIndex
-                    currentIndex -= 1
-                }
-                setupView()
-            }
-            //            }
-          
+        if isAlreadyChosen == true && currentSection == savedSection {
+            
         }
+        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 {
+                      if storylines[previousSection][previousIndex].category == .interaction || storylines[previousSection][previousIndex].category == .miniGames{
+                          currentSection = selectedSection
+                          currentIndex = selectedIndex
+                          setupView()
+                      }
+                      else if storylines[previousSection][previousIndex].category == .conversation{
+                          if currentIndex >= 0 && currentSection > 0{
+                              if currentIndex == 0 {
+      //                            previousSection = currentSection
+      //                            previousIndex = currentIndex
+                                  currentSection -= 1
+                                  currentIndex = storylines[currentSection].count-1
+                              }
+                              else{
+      //                            previousSection = currentSection
+      //                            previousIndex = currentIndex
+                                  currentIndex -= 1
+                              }
+                          }
+                          else if currentIndex == 0 && currentSection == 0{
+      //                        previousSection = currentSection
+      //                        previousIndex = currentIndex
+                              currentIndex = 0
+                              currentSection = 0
+                          }
+                          else{
+      //                        previousSection = currentSection
+      //                        previousIndex = currentIndex
+                              currentIndex -= 1
+                          }
+                          //                previousSection = currentSection
+                          //                previousIndex = currentIndex
+                          setupView()
+                      }
+                      
+                  }
         print("Last section: \(previousSection)")
         print("Last index: \(previousIndex)")
         print("Back released: \(currentSection), \(currentIndex)")
-        //        print("Current category :\(storylines[previousSection][previousIndex].category)")
     }
+              //        print("Current category :\(storylines[previousSection][previousIndex].category)")
     
     func setupView(){
-        print("\(currentSection),\(currentIndex)")
+//        print("\(currentSection),\(currentIndex)")
         currentStory = storylines[currentSection][currentIndex]
         
         for view in conversationBox.subviews{
@@ -300,7 +312,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func backToChapterSelection() {
-        print("tes")
+//        print("tes")
         cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
@@ -308,7 +320,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func resumeGame() {
-        print("tes")
+//        print("tes")
     }
     
     //    func createBgOverlay(){

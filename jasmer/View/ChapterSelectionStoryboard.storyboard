@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuH-Rw-aJs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuH-Rw-aJs">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Chapter Selection View Controller-->
         <scene sceneID="0ib-EE-tYA">
@@ -22,11 +27,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-5I-dhz">
-                                <rect key="frame" x="385.5" y="30" width="125" height="55"/>
+                                <rect key="frame" x="390" y="30" width="116" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="13R-zX-BcZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="35"/>
                                 <state key="normal" title="Chapter">
                                     <color key="titleColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -60,9 +65,9 @@
                                                             <rect key="frame" x="62" y="59.5" width="128" height="128"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelChapterPanjang" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ht-Ds-B89">
-                                                            <rect key="frame" x="32" y="211.5" width="188" height="20.5"/>
+                                                            <rect key="frame" x="50" y="210" width="152" height="22"/>
                                                             <color key="backgroundColor" red="0.46392273899999997" green="0.61290216450000001" blue="0.86277562379999995" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -95,11 +100,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-w3-Rwm">
-                                <rect key="frame" x="52" y="35" width="97" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-w3-Rwm">
+                                <rect key="frame" x="774" y="40" width="48" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Settings">
+                                <state key="normal" image="settingBtn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -110,12 +114,14 @@
                         <viewLayoutGuide key="safeArea" id="LnD-uZ-bMY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LnD-uZ-bMY" firstAttribute="trailing" secondItem="lwu-w3-Rwm" secondAttribute="trailing" constant="30" id="CgB-pE-j1C"/>
                             <constraint firstItem="y9o-cO-19c" firstAttribute="top" secondItem="gH6-5I-dhz" secondAttribute="bottom" constant="30" id="S8y-89-zzG"/>
                             <constraint firstItem="gH6-5I-dhz" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="30" id="UJS-ld-3Rx"/>
                             <constraint firstItem="y9o-cO-19c" firstAttribute="trailing" secondItem="LnD-uZ-bMY" secondAttribute="trailing" constant="8" id="h9i-ul-FE4"/>
                             <constraint firstItem="y9o-cO-19c" firstAttribute="leading" secondItem="LnD-uZ-bMY" secondAttribute="leading" constant="8" id="hJu-Kd-ikB"/>
                             <constraint firstItem="gH6-5I-dhz" firstAttribute="centerX" secondItem="LnD-uZ-bMY" secondAttribute="centerX" id="hQb-BL-FR5"/>
                             <constraint firstItem="LnD-uZ-bMY" firstAttribute="bottom" secondItem="y9o-cO-19c" secondAttribute="bottom" constant="30" id="s90-Te-NHl"/>
+                            <constraint firstItem="lwu-w3-Rwm" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="40" id="teY-SM-APg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -141,6 +147,7 @@
     <resources>
         <image name="ChapterSelectionBg" width="2436" height="1125"/>
         <image name="lockicon" width="128" height="128"/>
+        <image name="settingBtn" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
