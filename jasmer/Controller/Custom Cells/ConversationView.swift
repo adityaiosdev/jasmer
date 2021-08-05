@@ -21,4 +21,12 @@ class ConversationView: UIView {
         super.init(coder: coder)
     }
     
+    public func initialSetup(){
+        nameLabel.layer.masksToBounds = true
+        nameLabel.layer.cornerRadius = 10
+        conversationBox.layer.cornerRadius = 10
+        conversationBox.layer.borderColor = UIColor(named: "Blue")?.cgColor
+        conversationBox.layer.borderWidth = 2
+    }
+    
 }
