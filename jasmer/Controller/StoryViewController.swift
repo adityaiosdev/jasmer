@@ -70,6 +70,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         print(currentSection)
         print(currentIndex)
         print("Last section: \(previousSection)")
@@ -92,6 +93,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         print("Press back: \(currentSection), \(currentIndex)")
         print("Last section: \(previousSection)")
         print("Last index: \(previousIndex)")

@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ChapterSelectionViewController: UIViewController  {
     
     let chapters = ["Jason", "JasonTransparent","EmakJason","EmakJason"]
+    var soundEffectsButtonClicked = AVAudioPlayer()
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -21,6 +23,10 @@ class ChapterSelectionViewController: UIViewController  {
         
     }
     
+    @IBAction func SettingBtnClicked(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
+        SettingPopUpController.instance.showAlert()
+    }
     
     /*
     // MARK: - Navigation
@@ -71,6 +77,7 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == chapterCollectionView && indexPath.row == 0 {
+            SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
             self.performSegue(withIdentifier: "goToStory", sender: self)
         }
     }
