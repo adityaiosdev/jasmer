@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "smpbg.png",
+      "filename" : "70A946A7-5741-4D1A-94EB-EF093529C34E_1_105_c 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "70A946A7-5741-4D1A-94EB-EF093529C34E_1_105_c 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "70A946A7-5741-4D1A-94EB-EF093529C34E_1_105_c 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
