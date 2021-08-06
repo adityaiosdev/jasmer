@@ -41,7 +41,7 @@ class LoadingViewController: UIViewController {
     }
     
     private func showOnboardingScreen(){
-        let OnboardingViewController = UIStoryboard(name: "TouchingBoxStoryboard", bundle: nil).instantiateViewController(identifier: "TouchingBoxStoryboard")
+        let OnboardingViewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "onboardingVC")
         if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
             window.rootViewController = OnboardingViewController
             UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)

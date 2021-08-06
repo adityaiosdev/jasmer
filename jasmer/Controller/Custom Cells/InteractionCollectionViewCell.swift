@@ -23,7 +23,7 @@ class InteractionCollectionViewCell: UICollectionViewCell {
     
     func setupForPostQuiz(choice: String){
         interactionLabel.translatesAutoresizingMaskIntoConstraints = true
-        interactionLabel.frame.size = CGSize(width: 335, height: 42)
+        interactionLabel.frame.size = CGSize(width: 340, height: 42)
         interactionLabel.textAlignment = .left
         interactionLabel.text = choice
         interactionLabel.layer.masksToBounds = true

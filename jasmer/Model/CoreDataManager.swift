@@ -30,7 +30,7 @@ class CoreDataManager{
             return try context.fetch(fetchRequest)
         }
         catch{
-            print("Error fetching quiz entries")
+            print("\(error.localizedDescription)")
         }
         return []
     }
