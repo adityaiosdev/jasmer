@@ -67,6 +67,8 @@
 		826542E826BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D626BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf */; };
 		826542E926BC569F00AE9E4B /* Inter-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D726BC569F00AE9E4B /* Inter-Italic.ttf */; };
 		828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2C26B9942300F98C4B /* PausePopUpController.swift */; };
+		B7D6676926BD32350004B868 /* FrontpageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D6676826BD32350004B868 /* FrontpageStoryboard.storyboard */; };
+		B7D6676B26BD32F10004B868 /* frontpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6676A26BD32F10004B868 /* frontpageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,8 @@
 		826542D626BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-LightItalic-BETA.ttf"; sourceTree = "<group>"; };
 		826542D726BC569F00AE9E4B /* Inter-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Italic.ttf"; sourceTree = "<group>"; };
 		828DFA2C26B9942300F98C4B /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
+		B7D6676826BD32350004B868 /* FrontpageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontpageStoryboard.storyboard; sourceTree = "<group>"; };
+		B7D6676A26BD32F10004B868 /* frontpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frontpageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 				0F98713D26BCF9F100609CB7 /* ChapterSelectionStoryboard.storyboard */,
 				0F98713B26BCF9F100609CB7 /* ClueOnboardingView.xib */,
 				0F98713C26BCF9F100609CB7 /* TouchingBoxStoryboard.storyboard */,
+				B7D6676826BD32350004B868 /* FrontpageStoryboard.storyboard */,
 				826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */,
 				826542A526BBCC4B00AE9E4B /* StoryStoryboard.storyboard */,
 				826542A026BBCC2C00AE9E4B /* ConversationView.xib */,
@@ -215,6 +220,7 @@
 			children = (
 				0F98714926BCFA5400609CB7 /* LoadingViewController.swift */,
 				0F98714426BCFA2B00609CB7 /* ChapterSelectionViewController.swift */,
+				B7D6676A26BD32F10004B868 /* frontpageViewController.swift */,
 				0F98714226BCFA2B00609CB7 /* ClueOnboardingViewController.swift */,
 				0F98714326BCFA2B00609CB7 /* TouchingBoxViewController.swift */,
 				828DFA2226B993F800F98C4B /* Custom Cells */,
@@ -348,6 +354,7 @@
 				0F98714026BCF9F100609CB7 /* ChapterSelectionStoryboard.storyboard in Resources */,
 				826542E726BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf in Resources */,
 				826542E126BC569F00AE9E4B /* Inter-SemiBold.ttf in Resources */,
+				B7D6676926BD32350004B868 /* FrontpageStoryboard.storyboard in Resources */,
 				826542D826BC569F00AE9E4B /* Inter-UI-BlackItalic.ttf in Resources */,
 				0F9870CC26BAD50700609CB7 /* SettingPopUp.xib in Resources */,
 				826542E426BC569F00AE9E4B /* Inter-Bold.ttf in Resources */,
@@ -408,6 +415,7 @@
 				0F98714A26BCFA5400609CB7 /* LoadingViewController.swift in Sources */,
 				826542AE26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift in Sources */,
 				0F98714526BCFA2B00609CB7 /* ClueOnboardingViewController.swift in Sources */,
+				B7D6676B26BD32F10004B868 /* frontpageViewController.swift in Sources */,
 				0F9870D226BAD87900609CB7 /* SettingPopUpController.swift in Sources */,
 				826542AD26BBCC6F00AE9E4B /* ConversationView.swift in Sources */,
 				826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */,
