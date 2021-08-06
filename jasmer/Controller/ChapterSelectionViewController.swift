@@ -8,9 +8,16 @@
 import UIKit
 import AVFoundation
 
-class ChapterSelectionViewController: UIViewController  {
+class ChapterSelectionViewController: UIViewController, StartGamePopUpControllerDelegate  {
+    func gotoStoryStoryboard() {
+        let storyboard = UIStoryboard(name: "StoryStoryboard" , bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier: "StoryStoryboard" )
+        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+    }
     
-    let chapters = ["Jason", "JasonTransparent","EmakJason","EmakJason"]
+    
+    @IBOutlet weak var chapterImage: UIImageView!
+    let chapters = ["thumbnailactive", "tugasekolahraka","budioren","malamminggubima"]
     var soundEffectsButtonClicked = AVAudioPlayer()
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
@@ -23,6 +30,7 @@ class ChapterSelectionViewController: UIViewController  {
         
     }
     
+   
     @IBAction func SettingBtnClicked(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         SettingPopUpController.instance.showAlert()
@@ -52,11 +60,9 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = chapterCollectionView.dequeueReusableCell(withReuseIdentifier: "chapterCell", for: indexPath) as! ChapterCell
         if indexPath.row == 0 {
-            cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
+            cell.chapterImage.image =  UIImage(named: chapters[indexPath.row])
             cell.chapterCard.layer.opacity = 0.8
             cell.chapterCard.layer.cornerRadius = 100
-            cell.chapterLabel.text = "Jason dan Es Doger"
-            cell.chapterLabel.layer.cornerRadius = 5
             cell.chapterLock.isHidden = true
             cell.layer.cornerRadius = 10
             cell.layer.borderWidth = 4
@@ -65,8 +71,6 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
         cell.chapterImage.image = UIImage(named: chapters[indexPath.row])
         cell.chapterCard.layer.opacity = 0.7
         cell.chapterCard.layer.cornerRadius = 100
-        cell.chapterLabel.text = "Jason dan Es Doger"
-        cell.chapterLabel.layer.cornerRadius = 5
         cell.chapterLock.isHidden = false
         cell.chapterLock.layer.opacity = 1
         cell.layer.cornerRadius = 10
@@ -78,7 +82,8 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == chapterCollectionView && indexPath.row == 0 {
             SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
-            self.performSegue(withIdentifier: "goToStory", sender: self)
+            StartGamePopUpController.instance.showAlert()
+//            self.performSegue(withIdentifier: "goToStory", sender: self)
         }
     }
     
@@ -86,6 +91,6 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
 
 extension ChapterSelectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 200)
+        return CGSize(width: 150, height:220)
     }
 }

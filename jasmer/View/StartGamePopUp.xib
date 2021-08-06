@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartGamePopUpController" customModule="jasmer" customModuleProvider="target">
+            <connections>
+                <outlet property="backtoChapterBtn" destination="kAM-T4-Qz8" id="xZZ-hg-dr6"/>
+                <outlet property="startAlertView" destination="MfY-un-ceV" id="XwN-0v-V9g"/>
+                <outlet property="startBtn" destination="ZW0-hk-rLc" id="ViM-UG-M1z"/>
+                <outlet property="startView" destination="iN0-l3-epB" id="pFl-2d-LLg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-un-ceV">
+                    <rect key="frame" x="282" y="105" width="280" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mulai Chapter Jason dan Es Doger " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypS-XC-fAv">
+                            <rect key="frame" x="40" y="40" width="200" height="40.666666666666657"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="gp3-zV-QP3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAM-T4-Qz8">
+                            <rect key="frame" x="30" y="130" width="90" height="35"/>
+                            <color key="backgroundColor" red="0.64430677889999999" green="0.69226968290000002" blue="0.77256095410000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Qgf-GJ-OBy"/>
+                                <constraint firstAttribute="width" constant="90" id="xqf-Ns-gja"/>
+                            </constraints>
+                            <state key="normal" title="Kembali">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="htc-Id-Wcu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZW0-hk-rLc">
+                            <rect key="frame" x="160" y="130" width="90" height="35"/>
+                            <color key="backgroundColor" red="0.64430677889999999" green="0.69226968290000002" blue="0.77256095410000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="6DF-im-eBB"/>
+                                <constraint firstAttribute="width" constant="90" id="p6U-K4-u4O"/>
+                            </constraints>
+                            <state key="normal" title="Mulai">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="startBtnClicked:" destination="-1" eventType="touchUpInside" id="tM7-2Z-O88"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.32546404000000001" green="0.32156211140000002" blue="0.32156899570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="COM-7u-llK"/>
+                        <constraint firstAttribute="bottom" secondItem="kAM-T4-Qz8" secondAttribute="bottom" constant="15" id="DZE-7N-WUh"/>
+                        <constraint firstAttribute="trailing" secondItem="ZW0-hk-rLc" secondAttribute="trailing" constant="30" id="QfU-4Y-sDs"/>
+                        <constraint firstItem="ypS-XC-fAv" firstAttribute="centerX" secondItem="MfY-un-ceV" secondAttribute="centerX" id="ZOd-ZA-vql"/>
+                        <constraint firstItem="ypS-XC-fAv" firstAttribute="top" secondItem="MfY-un-ceV" secondAttribute="top" constant="40" id="a6k-Uz-7fm"/>
+                        <constraint firstAttribute="width" constant="280" id="aWi-vl-ATD"/>
+                        <constraint firstItem="kAM-T4-Qz8" firstAttribute="leading" secondItem="MfY-un-ceV" secondAttribute="leading" constant="30" id="fcV-qK-3rx"/>
+                        <constraint firstAttribute="bottom" secondItem="ZW0-hk-rLc" secondAttribute="bottom" constant="15" id="zaU-sz-cY3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15000520475095563" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MfY-un-ceV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iie-j3-iT9"/>
+                <constraint firstItem="MfY-un-ceV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uHx-I6-dFN"/>
+            </constraints>
+            <point key="canvasLocation" x="138.6255924170616" y="121.53846153846153"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
