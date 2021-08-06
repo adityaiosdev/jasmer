@@ -41,8 +41,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Inter-MediumItalic.ttf</string>
+		<string>Inter-Bold.ttf</string>
 		<string>Rajdhani-Medium.ttf</string>
 		<string>Rajdhani-Bold.ttf</string>
+		<string>Inter-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

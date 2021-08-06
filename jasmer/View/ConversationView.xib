@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Inter-Bold.ttf">
             <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -22,22 +26,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPB-Cw-dkU" userLabel="ConversationBox">
                     <rect key="frame" x="0.0" y="10" width="616" height="168"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lil-SF-mwr" userLabel="ConversationLabel">
-                            <rect key="frame" x="30" y="29" width="546" height="124"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <attributedString key="attributedText">
-                                <fragment content="Label">
-                                    <attributes>
-                                        <color key="NSColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" metaFont="system" size="17"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tev-6r-IcS">
+                            <rect key="frame" x="25" y="20" width="566" height="128"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" name="ConversationBox"/>
+                    <constraints>
+                        <constraint firstItem="tev-6r-IcS" firstAttribute="top" secondItem="kPB-Cw-dkU" secondAttribute="top" constant="20" id="Bsf-Qp-suy"/>
+                        <constraint firstAttribute="trailing" secondItem="tev-6r-IcS" secondAttribute="trailing" constant="25" id="YSc-xh-005"/>
+                        <constraint firstAttribute="bottom" secondItem="tev-6r-IcS" secondAttribute="bottom" constant="20" id="vxx-d0-bk4"/>
+                        <constraint firstItem="tev-6r-IcS" firstAttribute="leading" secondItem="kPB-Cw-dkU" secondAttribute="leading" constant="25" id="wHd-qj-tcq"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4f-6e-hye">
                     <rect key="frame" x="20" y="-1" width="98" height="21"/>
@@ -59,7 +61,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="conversationBox" destination="kPB-Cw-dkU" id="cwy-F0-Qub"/>
-                <outlet property="conversationLabel" destination="Lil-SF-mwr" id="eKR-SE-Km5"/>
+                <outlet property="conversationLabel" destination="tev-6r-IcS" id="Z5D-Bp-1OT"/>
                 <outlet property="nameLabel" destination="v4f-6e-hye" id="nnN-lZ-Mcm"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
@@ -72,5 +74,8 @@
         <namedColor name="ConversationBox">
             <color red="0.32499998807907104" green="0.32199999690055847" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
