@@ -68,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homebg" width="1000" height="462"/>
+        <image name="homebg" width="812" height="375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

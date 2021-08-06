@@ -21,6 +21,11 @@
 		0F9870D226BAD87900609CB7 /* SettingPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */; };
 		0F9870D626BBAB5B00609CB7 /* buttonPressed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */; };
 		0F9870DD26BBAC6800609CB7 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */; };
+		0F9870EC26BC037300609CB7 /* Rajdhani-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870E426BC010900609CB7 /* Rajdhani-SemiBold.ttf */; };
+		0F9870EE26BC037500609CB7 /* Rajdhani-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870E726BC010900609CB7 /* Rajdhani-Regular.ttf */; };
+		0F9870F026BC037800609CB7 /* Rajdhani-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870E326BC010900609CB7 /* Rajdhani-Medium.ttf */; };
+		0F9870F226BC037A00609CB7 /* Rajdhani-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870E526BC010900609CB7 /* Rajdhani-Light.ttf */; };
+		0F9870F426BC037C00609CB7 /* Rajdhani-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9870E626BC010900609CB7 /* Rajdhani-Bold.ttf */; };
 		824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */; };
 		824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3226BAA8A100DD05F4 /* storyModel.swift */; };
 		824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */; };
@@ -35,6 +40,24 @@
 		826542AE26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542AB26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift */; };
 		826542B126BBCC9500AE9E4B /* PostQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542AF26BBCC9500AE9E4B /* PostQuizViewController.swift */; };
 		826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826542B026BBCC9500AE9E4B /* StoryViewController.swift */; };
+		826542D826BC569F00AE9E4B /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542C626BC569D00AE9E4B /* Inter-UI-BlackItalic.ttf */; };
+		826542D926BC569F00AE9E4B /* Inter-Light-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542C726BC569D00AE9E4B /* Inter-Light-BETA.ttf */; };
+		826542DA26BC569F00AE9E4B /* Inter-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542C826BC569D00AE9E4B /* Inter-ExtraBoldItalic.ttf */; };
+		826542DB26BC569F00AE9E4B /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542C926BC569D00AE9E4B /* Inter-Black.ttf */; };
+		826542DC26BC569F00AE9E4B /* Inter-ThinItalic-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CA26BC569D00AE9E4B /* Inter-ThinItalic-BETA.ttf */; };
+		826542DD26BC569F00AE9E4B /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CB26BC569D00AE9E4B /* Inter-ExtraBold.ttf */; };
+		826542DE26BC569F00AE9E4B /* Inter-Thin-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CC26BC569D00AE9E4B /* Inter-Thin-BETA.ttf */; };
+		826542DF26BC569F00AE9E4B /* Inter-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CD26BC569E00AE9E4B /* Inter-BoldItalic.ttf */; };
+		826542E026BC569F00AE9E4B /* Inter-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CE26BC569E00AE9E4B /* Inter-MediumItalic.ttf */; };
+		826542E126BC569F00AE9E4B /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542CF26BC569E00AE9E4B /* Inter-SemiBold.ttf */; };
+		826542E226BC569F00AE9E4B /* Inter-ExtraLight-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D026BC569E00AE9E4B /* Inter-ExtraLight-BETA.ttf */; };
+		826542E326BC569F00AE9E4B /* Inter-ExtraLightItalic-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D126BC569E00AE9E4B /* Inter-ExtraLightItalic-BETA.ttf */; };
+		826542E426BC569F00AE9E4B /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D226BC569E00AE9E4B /* Inter-Bold.ttf */; };
+		826542E526BC569F00AE9E4B /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D326BC569E00AE9E4B /* Inter-Medium.ttf */; };
+		826542E626BC569F00AE9E4B /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D426BC569E00AE9E4B /* Inter-Regular.ttf */; };
+		826542E726BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D526BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf */; };
+		826542E826BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D626BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf */; };
+		826542E926BC569F00AE9E4B /* Inter-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 826542D726BC569F00AE9E4B /* Inter-Italic.ttf */; };
 		828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DFA2C26B9942300F98C4B /* PausePopUpController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +78,11 @@
 		0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPopUpController.swift; sourceTree = "<group>"; };
 		0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonPressed.wav; sourceTree = "<group>"; };
 		0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		0F9870E326BC010900609CB7 /* Rajdhani-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Medium.ttf"; sourceTree = "<group>"; };
+		0F9870E426BC010900609CB7 /* Rajdhani-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-SemiBold.ttf"; sourceTree = "<group>"; };
+		0F9870E526BC010900609CB7 /* Rajdhani-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Light.ttf"; sourceTree = "<group>"; };
+		0F9870E626BC010900609CB7 /* Rajdhani-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Bold.ttf"; sourceTree = "<group>"; };
+		0F9870E726BC010900609CB7 /* Rajdhani-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-Regular.ttf"; sourceTree = "<group>"; };
 		824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 		824F7D3226BAA8A100DD05F4 /* storyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
 		824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -69,6 +97,24 @@
 		826542AB26BBCC6F00AE9E4B /* InteractionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionCollectionViewCell.swift; sourceTree = "<group>"; };
 		826542AF26BBCC9500AE9E4B /* PostQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostQuizViewController.swift; sourceTree = "<group>"; };
 		826542B026BBCC9500AE9E4B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		826542C626BC569D00AE9E4B /* Inter-UI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-BlackItalic.ttf"; sourceTree = "<group>"; };
+		826542C726BC569D00AE9E4B /* Inter-Light-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-BETA.ttf"; sourceTree = "<group>"; };
+		826542C826BC569D00AE9E4B /* Inter-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		826542C926BC569D00AE9E4B /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		826542CA26BC569D00AE9E4B /* Inter-ThinItalic-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ThinItalic-BETA.ttf"; sourceTree = "<group>"; };
+		826542CB26BC569D00AE9E4B /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		826542CC26BC569D00AE9E4B /* Inter-Thin-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin-BETA.ttf"; sourceTree = "<group>"; };
+		826542CD26BC569E00AE9E4B /* Inter-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-BoldItalic.ttf"; sourceTree = "<group>"; };
+		826542CE26BC569E00AE9E4B /* Inter-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-MediumItalic.ttf"; sourceTree = "<group>"; };
+		826542CF26BC569E00AE9E4B /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		826542D026BC569E00AE9E4B /* Inter-ExtraLight-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight-BETA.ttf"; sourceTree = "<group>"; };
+		826542D126BC569E00AE9E4B /* Inter-ExtraLightItalic-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLightItalic-BETA.ttf"; sourceTree = "<group>"; };
+		826542D226BC569E00AE9E4B /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		826542D326BC569E00AE9E4B /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		826542D426BC569E00AE9E4B /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		826542D526BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		826542D626BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-LightItalic-BETA.ttf"; sourceTree = "<group>"; };
+		826542D726BC569F00AE9E4B /* Inter-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Italic.ttf"; sourceTree = "<group>"; };
 		828DFA2C26B9942300F98C4B /* PausePopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +148,7 @@
 		0F72C91626B156D7007CB470 /* jasmer */ = {
 			isa = PBXGroup;
 			children = (
+				0F9870E226BC00FA00609CB7 /* Fonts */,
 				0F9870D426BBAA9800609CB7 /* Sound */,
 				0F72C92F26B156DF007CB470 /* Model */,
 				0F72C93026B156E8007CB470 /* View */,
@@ -163,6 +210,44 @@
 				0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		0F9870E226BC00FA00609CB7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				826542C526BC568000AE9E4B /* Inter */,
+				0F9870E626BC010900609CB7 /* Rajdhani-Bold.ttf */,
+				0F9870E526BC010900609CB7 /* Rajdhani-Light.ttf */,
+				0F9870E326BC010900609CB7 /* Rajdhani-Medium.ttf */,
+				0F9870E726BC010900609CB7 /* Rajdhani-Regular.ttf */,
+				0F9870E426BC010900609CB7 /* Rajdhani-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		826542C526BC568000AE9E4B /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				826542C926BC569D00AE9E4B /* Inter-Black.ttf */,
+				826542D226BC569E00AE9E4B /* Inter-Bold.ttf */,
+				826542CD26BC569E00AE9E4B /* Inter-BoldItalic.ttf */,
+				826542CB26BC569D00AE9E4B /* Inter-ExtraBold.ttf */,
+				826542C826BC569D00AE9E4B /* Inter-ExtraBoldItalic.ttf */,
+				826542D026BC569E00AE9E4B /* Inter-ExtraLight-BETA.ttf */,
+				826542D126BC569E00AE9E4B /* Inter-ExtraLightItalic-BETA.ttf */,
+				826542D726BC569F00AE9E4B /* Inter-Italic.ttf */,
+				826542C726BC569D00AE9E4B /* Inter-Light-BETA.ttf */,
+				826542D626BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf */,
+				826542D326BC569E00AE9E4B /* Inter-Medium.ttf */,
+				826542CE26BC569E00AE9E4B /* Inter-MediumItalic.ttf */,
+				826542D426BC569E00AE9E4B /* Inter-Regular.ttf */,
+				826542CF26BC569E00AE9E4B /* Inter-SemiBold.ttf */,
+				826542D526BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf */,
+				826542CC26BC569D00AE9E4B /* Inter-Thin-BETA.ttf */,
+				826542CA26BC569D00AE9E4B /* Inter-ThinItalic-BETA.ttf */,
+				826542C626BC569D00AE9E4B /* Inter-UI-BlackItalic.ttf */,
+			);
+			path = Inter;
 			sourceTree = "<group>";
 		};
 		828DFA2226B993F800F98C4B /* Custom Cells */ = {
@@ -233,18 +318,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826542DC26BC569F00AE9E4B /* Inter-ThinItalic-BETA.ttf in Resources */,
+				826542DD26BC569F00AE9E4B /* Inter-ExtraBold.ttf in Resources */,
+				0F9870EE26BC037500609CB7 /* Rajdhani-Regular.ttf in Resources */,
+				826542E726BC569F00AE9E4B /* Inter-SemiBoldItalic.ttf in Resources */,
+				826542E126BC569F00AE9E4B /* Inter-SemiBold.ttf in Resources */,
+				826542D826BC569F00AE9E4B /* Inter-UI-BlackItalic.ttf in Resources */,
 				0F9870CC26BAD50700609CB7 /* SettingPopUp.xib in Resources */,
+				826542E426BC569F00AE9E4B /* Inter-Bold.ttf in Resources */,
+				826542DA26BC569F00AE9E4B /* Inter-ExtraBoldItalic.ttf in Resources */,
+				0F9870EC26BC037300609CB7 /* Rajdhani-SemiBold.ttf in Resources */,
 				826542A726BBCC4B00AE9E4B /* StoryStoryboard.storyboard in Resources */,
+				826542E226BC569F00AE9E4B /* Inter-ExtraLight-BETA.ttf in Resources */,
+				826542E826BC569F00AE9E4B /* Inter-LightItalic-BETA.ttf in Resources */,
+				0F9870F226BC037A00609CB7 /* Rajdhani-Light.ttf in Resources */,
 				826542A326BBCC2D00AE9E4B /* ConversationView.xib in Resources */,
 				824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */,
+				826542E626BC569F00AE9E4B /* Inter-Regular.ttf in Resources */,
+				0F9870F426BC037C00609CB7 /* Rajdhani-Bold.ttf in Resources */,
 				826542A426BBCC2D00AE9E4B /* InteractionCollectionViewCell.xib in Resources */,
 				0F9870C126BA590600609CB7 /* ChapterSelectionStoryboard.storyboard in Resources */,
+				0F9870F026BC037800609CB7 /* Rajdhani-Medium.ttf in Resources */,
+				826542DB26BC569F00AE9E4B /* Inter-Black.ttf in Resources */,
 				826542A826BBCC4B00AE9E4B /* PostQuizViewController.storyboard in Resources */,
+				826542E326BC569F00AE9E4B /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				0F72C92726B156D8007CB470 /* LaunchScreen.storyboard in Resources */,
+				826542DE26BC569F00AE9E4B /* Inter-Thin-BETA.ttf in Resources */,
+				826542DF26BC569F00AE9E4B /* Inter-BoldItalic.ttf in Resources */,
+				826542D926BC569F00AE9E4B /* Inter-Light-BETA.ttf in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
 				0F9870D626BBAB5B00609CB7 /* buttonPressed.wav in Resources */,
+				826542E926BC569F00AE9E4B /* Inter-Italic.ttf in Resources */,
 				0F72C91F26B156D7007CB470 /* Main.storyboard in Resources */,
+				826542E026BC569F00AE9E4B /* Inter-MediumItalic.ttf in Resources */,
 				826542A226BBCC2D00AE9E4B /* InteractionView.xib in Resources */,
+				826542E526BC569F00AE9E4B /* Inter-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

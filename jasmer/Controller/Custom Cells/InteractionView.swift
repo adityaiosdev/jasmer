@@ -86,7 +86,7 @@ extension InteractionView: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: choices[indexPath.row].count * 12, height: 44)
-        return CGSize(width: 200, height: 44)
+        return CGSize(width: 220, height: 42)
     }
 }
 
