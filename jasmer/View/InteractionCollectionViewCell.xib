@@ -24,7 +24,7 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="17" name="Inter-Medium"/>
+                                    <font key="NSFont" size="15" name="Inter-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="8" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
