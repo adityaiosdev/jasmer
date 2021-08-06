@@ -54,10 +54,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNJ-eK-SQK">
-                                <rect key="frame" x="712.66666666666663" y="30" width="65.333333333333371" height="66"/>
+                                <rect key="frame" x="718" y="30" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="22A-y3-FC5"/>
-                                    <constraint firstAttribute="width" constant="65.329999999999998" id="7LB-Br-pEG"/>
+                                    <constraint firstAttribute="height" constant="60" id="22A-y3-FC5"/>
+                                    <constraint firstAttribute="width" constant="60" id="7LB-Br-pEG"/>
                                 </constraints>
                                 <state key="normal" image="pauseBtn"/>
                                 <connections>
@@ -127,7 +127,7 @@
         <image name="Jason" width="644" height="570"/>
         <image name="Office 1" width="2436" height="1125"/>
         <image name="nextBtn" width="65.5" height="65.5"/>
-        <image name="pauseBtn" width="65.5" height="66"/>
+        <image name="pauseBtn" width="298" height="302"/>
         <image name="prevBtn" width="65.5" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

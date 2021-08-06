@@ -225,7 +225,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 botView.conversationLabel.text = currentStory?.conversationText
                 botView.conversationLabel.sizeToFit()
                 if currentStory?.needItalics == true {
-                    botView.conversationLabel.font = UIFont(name: "Inter-Italic", size: 17)
+                    botView.conversationLabel.font = UIFont(name: "Inter-MediumItalic", size: 17)
                 }
                 else{
                     botView.conversationLabel.font = UIFont(name: "Inter-Medium", size: 17)
