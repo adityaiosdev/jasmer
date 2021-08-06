@@ -43,6 +43,7 @@
 	<array>
 		<string>Rajdhani-Medium.ttf</string>
 		<string>Rajdhani-Bold.ttf</string>
+		<string>Inter-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
