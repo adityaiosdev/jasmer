@@ -60,7 +60,24 @@ extension PostQuizViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(choices[indexPath.row])
+        let alert = UIAlertController(title: "Selamat, kamu telah menyelesaikan bab 1.", message: nil, preferredStyle: .alert)
+        let lihatBabBtn = UIAlertAction(title: "Lihat Bab", style: .default) { _ in
+            let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                window.rootViewController = MainViewController
+                UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
+        }
+        let lanjutBtn = UIAlertAction(title: "Lanjut", style: .default) { _ in
+            let MainViewController = UIStoryboard(name: "PageLocked", bundle: nil).instantiateViewController(identifier: "pageLocked")
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                window.rootViewController = MainViewController
+                UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
+        }
+        alert.addAction(lihatBabBtn)
+        alert.addAction(lanjutBtn)
+        present(alert, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
