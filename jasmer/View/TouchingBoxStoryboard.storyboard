@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zWc-BZ-xUM">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Touching Box View Controller-->
+        <scene sceneID="9g3-GU-4Bw">
+            <objects>
+                <viewController storyboardIdentifier="TouchingBoxStoryboard" id="zWc-BZ-xUM" customClass="TouchingBoxViewController" customModule="jasmer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvh-II-OQg">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homebg" id="9Ca-uR-kzX">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-K4-Yqq">
+                                <rect key="frame" x="354.5" y="182" width="267" height="206"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-pm-J0G">
+                                <rect key="frame" x="428" y="233" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="R2T-rI-EKG"/>
+                                    <constraint firstAttribute="height" constant="120" id="e6T-AU-jAE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="boxTouched:" destination="zWc-BZ-xUM" eventType="touchUpInside" id="p2W-w0-eYD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BJ8-yo-fTm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7iQ-pm-J0G" firstAttribute="centerX" secondItem="lvh-II-OQg" secondAttribute="centerX" constant="40" id="D8l-Rs-cDr"/>
+                            <constraint firstItem="BJ8-yo-fTm" firstAttribute="bottom" secondItem="6fS-K4-Yqq" secondAttribute="bottom" constant="5" id="EeQ-xZ-pWn"/>
+                            <constraint firstItem="6fS-K4-Yqq" firstAttribute="centerX" secondItem="lvh-II-OQg" secondAttribute="centerX" constant="40" id="Sn3-7j-C5f"/>
+                            <constraint firstItem="BJ8-yo-fTm" firstAttribute="bottom" secondItem="7iQ-pm-J0G" secondAttribute="bottom" constant="40" id="rrh-rM-AFp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homebg" destination="9Ca-uR-kzX" id="pxA-Y8-n6d"/>
+                        <outlet property="touchBoxImage" destination="6fS-K4-Yqq" id="dac-oa-mUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qV-sR-UUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.9375" y="8.6956521739130448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BoxOnboarding" width="267" height="206"/>
+        <image name="homebg" width="812" height="375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
