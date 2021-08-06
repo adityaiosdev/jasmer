@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "lockicon.png",
+      "filename" : "tugasekolahraka.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "lockicon@2x.png",
+      "filename" : "tugasekolahraka@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "lockicon@3x.png",
+      "filename" : "tugasekolahraka@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
