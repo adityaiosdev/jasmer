@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClueOnboardingViewController" customModule="jasmer" customModuleProvider="target">
             <connections>
@@ -39,7 +44,7 @@
                                 <constraint firstAttribute="width" constant="300" id="rTf-7p-1Ar"/>
                                 <constraint firstAttribute="height" constant="55" id="uhj-qV-GLO"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                             <state key="normal" title="Mulai Bermain">
                                 <color key="titleColor" systemColor="systemBackgroundColor"/>
                             </state>

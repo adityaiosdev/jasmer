@@ -8,20 +8,14 @@
 import UIKit
 
 class PageLockedViewController: UIViewController {
-
+    
+    @IBOutlet weak var backBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let nib = UINib(nibName: "Menu", bundle: nil)
-        let objects = nib.instantiate(withOwner: Menu.self, options: nil)
-        let mainMenuView = objects.first as! Menu
-        
-        mainMenuView.playButton.addTarget(self, action: #selector(didTappedPlay), for: .touchUpInside)
-        
-        mainMenuView.setupForLockedPage()
-        view.addSubview(mainMenuView)
+        backBtn.layer.cornerRadius = 10
     }
-    @objc func didTappedPlay(){
+    
+    @IBAction func didTappedBack(_ sender: UIButton) {
         let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
         if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
             window.rootViewController = MainViewController

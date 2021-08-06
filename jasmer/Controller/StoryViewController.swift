@@ -211,6 +211,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             
             if currentStory?.backgroundImage != nil {
                 backgroundImage.image = currentStory?.backgroundImage
+                createBgOverlay()
             }
             
             if currentStory?.personName != nil {
@@ -262,6 +263,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             
             if currentStory?.backgroundImage != nil{
                 backgroundImage.image = currentStory?.backgroundImage
+                createBgOverlay()
             }
             
             if currentStory?.personName != nil {
@@ -304,14 +306,17 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
         //        print("tes")
     }
     
-    //    func createBgOverlay(){
-    //        let bgOverlay = UIImageView()
-    //        bgOverlay.image = currentStory?.backgroundImage
-    //        bgOverlay.image = currentStory?.backgroundImage?.withRenderingMode(.alwaysTemplate)
-    //        bgOverlay.tintColor = UIColor(white: 0.5, alpha: 0.5)
-    //        bgOverlay.frame = backgroundImage.bounds
-    //        backgroundImage.addSubview(bgOverlay)
-    //    }
+    func createBgOverlay(){
+        for view in backgroundImage.subviews{
+            view.removeFromSuperview()
+        }
+        let bgOverlay = UIImageView()
+        bgOverlay.image = currentStory?.backgroundImage
+        bgOverlay.image = currentStory?.backgroundImage?.withRenderingMode(.alwaysTemplate)
+        bgOverlay.tintColor = UIColor(white: 0.5, alpha: 0.7)
+        bgOverlay.frame = backgroundImage.bounds
+        backgroundImage.addSubview(bgOverlay)
+    }
     
     func checkTalkingPerson(){
         personImage1.isHidden = true
