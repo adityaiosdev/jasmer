@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartGamePopUpController" customModule="jasmer" customModuleProvider="target">
             <connections>
@@ -25,11 +30,11 @@
                     <rect key="frame" x="282" y="105" width="280" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mulai Chapter Jason dan Es Doger " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypS-XC-fAv">
-                            <rect key="frame" x="40" y="40" width="200" height="40.666666666666657"/>
+                            <rect key="frame" x="30" y="40" width="220" height="51.333333333333343"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="gp3-zV-QP3"/>
+                                <constraint firstAttribute="width" constant="220" id="gp3-zV-QP3"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -40,6 +45,7 @@
                                 <constraint firstAttribute="height" constant="35" id="Qgf-GJ-OBy"/>
                                 <constraint firstAttribute="width" constant="90" id="xqf-Ns-gja"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
                             <state key="normal" title="Kembali">
                                 <color key="titleColor" systemColor="systemBackgroundColor"/>
                             </state>
@@ -54,6 +60,7 @@
                                 <constraint firstAttribute="height" constant="35" id="6DF-im-eBB"/>
                                 <constraint firstAttribute="width" constant="90" id="p6U-K4-u4O"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
                             <state key="normal" title="Mulai">
                                 <color key="titleColor" systemColor="systemBackgroundColor"/>
                             </state>

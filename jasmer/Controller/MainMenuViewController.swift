@@ -17,13 +17,14 @@ class MainMenuViewController: UIViewController {
         let mainMenuView = objects.first as! Menu
         
         mainMenuView.playButton.addTarget(self, action: #selector(didTappedPlay), for: .touchUpInside)
-        
+        mainMenuView.frame = view.bounds
         mainMenuView.setupForMainMenu()
         view.addSubview(mainMenuView)
     }
     
     @objc func didTappedPlay(){
-        let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
+        let MainViewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "onboardingVC")
         if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
             window.rootViewController = MainViewController
             UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)

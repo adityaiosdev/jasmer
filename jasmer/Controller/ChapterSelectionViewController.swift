@@ -86,6 +86,7 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
 //            self.performSegue(withIdentifier: "goToStory", sender: self)
         }
         else{
+            SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
             let MainViewController = UIStoryboard(name: "PageLocked", bundle: nil).instantiateViewController(identifier: "pageLocked")
             if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
                 window.rootViewController = MainViewController
