@@ -39,7 +39,7 @@ class ClueOnboardingViewController: UIView {
 //        customView.frame = self.bounds
 //        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         letterView.frame = UIScreen.main.bounds
-        startGameBtn.layer.cornerRadius = 5
+        startGameBtn.layer.cornerRadius = 10
 //
 //        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }

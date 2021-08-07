@@ -85,6 +85,13 @@ extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionV
             StartGamePopUpController.instance.showAlert()
 //            self.performSegue(withIdentifier: "goToStory", sender: self)
         }
+        else{
+            let MainViewController = UIStoryboard(name: "PageLocked", bundle: nil).instantiateViewController(identifier: "pageLocked")
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                window.rootViewController = MainViewController
+                UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
+        }
     }
     
 }
