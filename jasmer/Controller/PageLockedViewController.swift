@@ -16,6 +16,7 @@ class PageLockedViewController: UIViewController {
     }
     
     @IBAction func didTappedBack(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
         if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
             window.rootViewController = MainViewController

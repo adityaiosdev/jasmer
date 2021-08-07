@@ -78,6 +78,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func didTappedNextButton(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         if currentIndex >= 0 && currentIndex <= onboardingStory.count-1{
             if currentIndex == onboardingStory.count - 1{
                 let touchingBoxStoryboard = UIStoryboard(name: "TouchingBoxStoryboard", bundle: nil).instantiateViewController(identifier: "TouchingBoxStoryboard")
@@ -94,6 +95,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func didTappedBackButton(_ sender: UIButton) {
+        SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         if currentIndex >= 0 && currentIndex <= onboardingStory.count - 1{
             if currentIndex == 0{
                 previousButton.isHidden = true
