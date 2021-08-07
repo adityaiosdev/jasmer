@@ -13,8 +13,11 @@ class Menu: UIView {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
+    @IBOutlet weak var menuView: UIImageView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +25,7 @@ class Menu: UIView {
     }
     
     func setupForMainMenu(){
+        
         topImage.image = UIImage(named: "jasmerLogo")
         textLabel.text = """
             Belajar nilai - nilai moral
