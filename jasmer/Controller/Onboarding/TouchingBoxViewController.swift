@@ -41,7 +41,6 @@ class TouchingBoxViewController: UIViewController, ClueOnboardingViewControllerD
             }
     
     @IBAction func boxTouched(_ sender: UIButton) {
-        print("boxTouched")
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
         ClueOnboardingViewController.instance.showAlert()
     }
@@ -49,17 +48,7 @@ class TouchingBoxViewController: UIViewController, ClueOnboardingViewControllerD
         storageManager.setOnboardingSeen()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func gotoStartGame() {
-        print("tes")
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
         UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)

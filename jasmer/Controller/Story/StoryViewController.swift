@@ -43,7 +43,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 let correctAlert = UIAlertController(title: "Benar!!", message: currentStory?.correctText, preferredStyle: .alert)
                 let cancelBtn = UIAlertAction(title: "Kembali", style: .cancel, handler: nil)
                 let nextBtn = UIAlertAction(title: "Lanjut", style: .default) { _ in
-                    //                    print(self.currentSection)
+                    
                     self.setupView()
                 }
                 correctAlert.addAction(cancelBtn)
@@ -120,7 +120,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
         conversationBox.isHidden = true
         
         setupView()
-        //        createBgOverlay()
+        
         PausePopUpController.instance.delegate = self
     }
     
@@ -129,8 +129,6 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        //        print(currentSection)
-        //        print(currentIndex)
         previousSection = currentSection
         previousIndex = currentIndex
         if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
@@ -295,7 +293,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func backToChapterSelection() {
-        //        print("tes")
+        
         cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
@@ -303,7 +301,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func resumeGame() {
-        //        print("tes")
+        
     }
     
     func createBgOverlay(){
@@ -378,22 +376,6 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             }
         }
     }
-    //
-    //    func setUpPopUpSettingView(){
-    //        blurView.bounds = self.view.bounds
-    //        settingView.layer.cornerRadius = 10
-    //        // Do any additional setup after loading the view.
-    //
-    //    }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 extension UIApplication {

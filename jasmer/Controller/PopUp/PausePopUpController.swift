@@ -14,13 +14,7 @@ protocol PausePopUpControllerDelegate: class {
 
 class PausePopUpController: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
     static let instance = PausePopUpController()
     @IBOutlet var pauseView: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
@@ -38,20 +32,10 @@ class PausePopUpController: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     private func commonInit(){
-//        addSubview(customView)
-//        customView.frame = self.bounds
-//        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         pauseView.frame = UIScreen.main.bounds
-//
-//        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
     func showAlert(){
         print("Game Paused")
         resumeBtn.layer.cornerRadius = 10

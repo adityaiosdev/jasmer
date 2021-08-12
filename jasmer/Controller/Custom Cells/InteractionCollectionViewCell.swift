@@ -14,7 +14,6 @@ class InteractionCollectionViewCell: UICollectionViewCell {
     func initialSetup(choice: String){
         interactionLabel.translatesAutoresizingMaskIntoConstraints = true
         interactionLabel.frame.size = CGSize(width: 220, height: 35)
-//        interactionLabel.frame.inset(by: UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5))
         interactionLabel.textAlignment = .left
         interactionLabel.text = choice
         interactionLabel.layer.masksToBounds = true
