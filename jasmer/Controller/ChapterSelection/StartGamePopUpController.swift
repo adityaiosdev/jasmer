@@ -13,13 +13,6 @@ protocol StartGamePopUpControllerDelegate : class {
 
 class StartGamePopUpController: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     static let instance = StartGamePopUpController()
     @IBOutlet var startView: UIView!
     @IBOutlet weak var startAlertView: UIView!
@@ -38,25 +31,14 @@ class StartGamePopUpController: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     private func commonInit(){
-//        addSubview(customView)
-//        customView.frame = self.bounds
-//        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         startView.frame = UIScreen.main.bounds
         startAlertView.layer.cornerRadius = 10
         startAlertView.layer.borderWidth = 2
         startAlertView.layer.borderColor = #colorLiteral(red: 0.4568056464, green: 0.6181109548, blue: 0.8628262877, alpha: 1)
         backtoChapterBtn.layer.cornerRadius = 5
         startBtn.layer.cornerRadius = 5
-//
-//        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
     func showAlert(){
         print("Game Paused")
        

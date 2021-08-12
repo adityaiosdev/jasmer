@@ -33,7 +33,6 @@ class Menu: UIView {
             """
         playButton.layer.cornerRadius = 10
         playButton.setTitle("Mulai Bermain", for: .normal)
-//        playButton.addTarget(self, action: #selector(goToChapter), for: .touchUpInside)
     }
     
     func setupForLockedPage(){
@@ -42,12 +41,4 @@ class Menu: UIView {
         playButton.layer.cornerRadius = 10
         playButton.setTitle("Kembali ke halaman bab", for: .normal)
     }
-//
-//    @objc func goToChapter(){
-//        let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
-//        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-//            window.rootViewController = MainViewController
-//            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-//        }
-//    }
 }

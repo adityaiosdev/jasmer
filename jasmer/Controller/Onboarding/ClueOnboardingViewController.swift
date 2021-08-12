@@ -13,13 +13,6 @@ protocol ClueOnboardingViewControllerDelegate: class {
 
 class ClueOnboardingViewController: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     static let instance = ClueOnboardingViewController()
     @IBOutlet var letterView: UIView!
     weak var delegate: ClueOnboardingViewControllerDelegate?
@@ -35,21 +28,11 @@ class ClueOnboardingViewController: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     private func commonInit(){
-//        addSubview(customView)
-//        customView.frame = self.bounds
-//        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         letterView.frame = UIScreen.main.bounds
         startGameBtn.layer.cornerRadius = 10
-//
-//        pauseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
     func showAlert(){
         print("Game Paused")
         

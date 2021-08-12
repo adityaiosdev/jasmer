@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptj-XC-hAQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptj-XC-hAQ">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -95,10 +95,10 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.51390349859999995" green="0.63725233079999999" blue="0.86277329920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="7TF-za-vgi" secondAttribute="trailing" constant="-8" id="4aQ-6X-O7x"/>
-                                            <constraint firstItem="7TF-za-vgi" firstAttribute="top" secondItem="qSw-cF-oWU" secondAttribute="topMargin" constant="-8" id="8fc-pi-GI2"/>
-                                            <constraint firstItem="7TF-za-vgi" firstAttribute="leading" secondItem="qSw-cF-oWU" secondAttribute="leadingMargin" constant="-8" id="IC4-J5-I5r"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="7TF-za-vgi" secondAttribute="bottom" constant="-8" id="biY-0u-TzW"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="7TF-za-vgi" secondAttribute="trailing" constant="-8" id="1Ho-MT-eSJ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="7TF-za-vgi" secondAttribute="bottom" constant="-8" id="CMM-it-Pgf"/>
+                                            <constraint firstItem="7TF-za-vgi" firstAttribute="top" secondItem="qSw-cF-oWU" secondAttribute="topMargin" constant="-8" id="huk-dY-aRL"/>
+                                            <constraint firstItem="7TF-za-vgi" firstAttribute="leading" secondItem="qSw-cF-oWU" secondAttribute="leadingMargin" constant="-8" id="wGJ-LK-hRs"/>
                                         </constraints>
                                         <size key="customSize" width="200" height="247"/>
                                         <connections>
