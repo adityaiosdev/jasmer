@@ -11,6 +11,7 @@ class LoadingViewController: UIViewController {
 
     private var isOnboardingSeen : Bool!
     private let storageManager = StorageManager()
+    private let navigationManager = NavigationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,28 +26,11 @@ class LoadingViewController: UIViewController {
     private func showInitialScreen(){
         if isOnboardingSeen{
             //goto Main
-            showMainApp()
+            navigationManager.show(screen: .mainApp, inController: self)
         }else{
             //goto Onboarding
-            showOnboardingScreen()
+            navigationManager.show(screen: .onboarding, inController: self)
         }
     }
-    
-    private func showMainApp(){
-        let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection")
-        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-            window.rootViewController = MainViewController
-            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
-    }
-    
-    private func showOnboardingScreen(){
-        let OnboardingViewController = UIStoryboard(name: "MainMenuStoryboard", bundle: nil).instantiateViewController(identifier: "MainMenuViewController")
-        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-            window.rootViewController = OnboardingViewController
-            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
-    }
-    
 
 }

@@ -32,6 +32,7 @@
 		0F98714A26BCFA5400609CB7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98714926BCFA5400609CB7 /* LoadingViewController.swift */; };
 		0F98714D26BCFE2600609CB7 /* StartGamePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98714C26BCFE2600609CB7 /* StartGamePopUp.xib */; };
 		0F98715026BCFE4700609CB7 /* StartGamePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98714F26BCFE4700609CB7 /* StartGamePopUpController.swift */; };
+		0FC25FA726C65C8E00ACEF2F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC25FA626C65C8E00ACEF2F /* NavigationManager.swift */; };
 		824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */; };
 		824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3226BAA8A100DD05F4 /* storyModel.swift */; };
 		824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */; };
@@ -103,6 +104,7 @@
 		0F98714926BCFA5400609CB7 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		0F98714C26BCFE2600609CB7 /* StartGamePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGamePopUp.xib; sourceTree = "<group>"; };
 		0F98714F26BCFE4700609CB7 /* StartGamePopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePopUpController.swift; sourceTree = "<group>"; };
+		0FC25FA626C65C8E00ACEF2F /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 		824F7D3226BAA8A100DD05F4 /* storyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
 		824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				0F98713626BCF95D00609CB7 /* StorageManager.swift */,
 				824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */,
 				0F9870DC26BBAC6800609CB7 /* SoundPlayer.swift */,
+				0FC25FA626C65C8E00ACEF2F /* NavigationManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */,
 				0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */,
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
+				0FC25FA726C65C8E00ACEF2F /* NavigationManager.swift in Sources */,
 				824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */,
 				829FF08E26BD4A0B001D0326 /* Menu.swift in Sources */,
 				824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */,
