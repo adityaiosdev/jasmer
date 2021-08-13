@@ -22,6 +22,7 @@ class SettingPopUpController: UIView {
     @IBOutlet var settingView: UIView!
     @IBOutlet weak var soundEffectsSwitch: UISwitch!
     @IBOutlet weak var BGMSwitch: UISwitch!
+    @IBOutlet weak var backBtn: UIButton!
     
     weak var delegate: SettingPopUpControllerDelegate?
     
@@ -39,6 +40,7 @@ class SettingPopUpController: UIView {
         alertView.layer.cornerRadius = 10
         alertView.layer.borderWidth = 2
         alertView.layer.borderColor = #colorLiteral(red: 0.4208922386, green: 0.6182406545, blue: 0.8839692473, alpha: 1)
+        backBtn.layer.cornerRadius = 5
     }
 
     func showAlert(){

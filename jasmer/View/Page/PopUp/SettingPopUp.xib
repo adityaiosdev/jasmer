@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="BGMSwitch" destination="tQ3-PW-UJ4" id="cy6-ut-BEm"/>
                 <outlet property="alertView" destination="CLd-5z-KU7" id="tvm-Zx-rQf"/>
+                <outlet property="backBtn" destination="YNs-Ad-aRf" id="hZi-aC-gvf"/>
                 <outlet property="settingView" destination="iN0-l3-epB" id="lMU-2f-hdf"/>
                 <outlet property="soundEffectsSwitch" destination="t3A-dW-IfT" id="g7Z-DY-UjL"/>
             </connections>
@@ -73,7 +74,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNs-Ad-aRf">
-                    <rect key="frame" x="410.5" y="283" width="75" height="41"/>
+                    <rect key="frame" x="388" y="275" width="120" height="41"/>
+                    <color key="backgroundColor" red="0.64430677889999999" green="0.69226968290000002" blue="0.77256095410000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="SHk-GY-cht"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="22"/>
                     <state key="normal" title="Kembali">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +92,7 @@
             <color key="backgroundColor" red="0.46392273899999997" green="0.61290216450000001" blue="0.86277562379999995" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="CLd-5z-KU7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4tQ-Dx-e8B"/>
-                <constraint firstAttribute="bottom" secondItem="YNs-Ad-aRf" secondAttribute="bottom" constant="90" id="6fA-ab-adX"/>
+                <constraint firstAttribute="bottom" secondItem="YNs-Ad-aRf" secondAttribute="bottom" constant="98" id="6fA-ab-adX"/>
                 <constraint firstItem="YNs-Ad-aRf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FSz-74-FIt"/>
                 <constraint firstItem="kLx-4T-U4j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="p1B-AX-ULI"/>
                 <constraint firstItem="CLd-5z-KU7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qjc-7N-bwv"/>
