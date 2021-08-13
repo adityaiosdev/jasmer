@@ -44,7 +44,7 @@ class SettingPopUpController: UIView {
     func showAlert(){
         print("Game Paused")
         
-        UIApplication.shared.keyWindow?.addSubview(settingView)
+        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(settingView)
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
