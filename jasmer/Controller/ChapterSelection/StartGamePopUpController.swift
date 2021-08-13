@@ -42,7 +42,7 @@ class StartGamePopUpController: UIView {
     func showAlert(){
         print("Game Paused")
        
-        UIApplication.shared.keyWindow?.addSubview(startView)
+        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(startView)
     }
     @IBAction func backButtonClicked(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
