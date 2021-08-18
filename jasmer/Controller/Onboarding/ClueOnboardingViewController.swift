@@ -36,7 +36,7 @@ class ClueOnboardingViewController: UIView {
     func showAlert(){
         print("Game Paused")
         
-        UIApplication.shared.keyWindow?.addSubview(letterView)
+        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(letterView)
     }
 
     @IBAction func startGameBtn(_ sender: UIButton) {

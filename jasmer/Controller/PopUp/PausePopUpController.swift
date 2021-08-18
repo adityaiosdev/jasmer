@@ -42,7 +42,7 @@ class PausePopUpController: UIView {
         exitGameBtn.layer.cornerRadius = 10
         exitGameBtn.layer.borderWidth = 2
         exitGameBtn.layer.borderColor = #colorLiteral(red: 0.4395161271, green: 0.6066932678, blue: 0.8426690698, alpha: 1)
-        UIApplication.shared.keyWindow?.addSubview(pauseView)
+        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(pauseView)
     }
     @IBAction func backButtonClicked(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")

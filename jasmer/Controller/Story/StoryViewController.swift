@@ -379,7 +379,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     
 }
 extension UIApplication {
-    class func topViewController(viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    class func topViewController(viewController: UIViewController? = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController) -> UIViewController? {
         if let nav = viewController as? UINavigationController {
             return topViewController(viewController: nav.visibleViewController)
         }
