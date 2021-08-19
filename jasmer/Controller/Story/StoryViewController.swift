@@ -115,7 +115,6 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 currentSection = 0
             }
         }
-        
         backgroundImage.frame = UIScreen.main.bounds
         conversationBox.isHidden = true
         
