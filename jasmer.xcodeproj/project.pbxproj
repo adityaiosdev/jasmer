@@ -33,6 +33,8 @@
 		0F98714D26BCFE2600609CB7 /* StartGamePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98714C26BCFE2600609CB7 /* StartGamePopUp.xib */; };
 		0F98715026BCFE4700609CB7 /* StartGamePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98714F26BCFE4700609CB7 /* StartGamePopUpController.swift */; };
 		0FC25FA726C65C8E00ACEF2F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC25FA626C65C8E00ACEF2F /* NavigationManager.swift */; };
+		0FD6023826CD0B2700963A6B /* StartGameQuestionPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD6023726CD0B2700963A6B /* StartGameQuestionPopUp.xib */; };
+		0FD6023C26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD6023B26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift */; };
 		824F7D2726BAA83B00DD05F4 /* PausePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */; };
 		824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3226BAA8A100DD05F4 /* storyModel.swift */; };
 		824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */; };
@@ -105,6 +107,8 @@
 		0F98714C26BCFE2600609CB7 /* StartGamePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGamePopUp.xib; sourceTree = "<group>"; };
 		0F98714F26BCFE4700609CB7 /* StartGamePopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePopUpController.swift; sourceTree = "<group>"; };
 		0FC25FA626C65C8E00ACEF2F /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		0FD6023726CD0B2700963A6B /* StartGameQuestionPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGameQuestionPopUp.xib; sourceTree = "<group>"; };
+		0FD6023B26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameQuestionPopUpController.swift; sourceTree = "<group>"; };
 		824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PausePopUp.xib; sourceTree = "<group>"; };
 		824F7D3226BAA8A100DD05F4 /* storyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyModel.swift; sourceTree = "<group>"; };
 		824F7D3B26BAB59500DD05F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				0F98714C26BCFE2600609CB7 /* StartGamePopUp.xib */,
+				0FD6023726CD0B2700963A6B /* StartGameQuestionPopUp.xib */,
 				0F9870CB26BAD50700609CB7 /* SettingPopUp.xib */,
 				824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */,
 				826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */,
@@ -318,6 +323,7 @@
 				0F98714426BCFA2B00609CB7 /* ChapterSelectionViewController.swift */,
 				0F98714F26BCFE4700609CB7 /* StartGamePopUpController.swift */,
 				829FF09326BD4C99001D0326 /* PageLockedViewController.swift */,
+				0FD6023B26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift */,
 			);
 			path = ChapterSelection;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				826542E126BC569F00AE9E4B /* Inter-SemiBold.ttf in Resources */,
 				826542D826BC569F00AE9E4B /* Inter-UI-BlackItalic.ttf in Resources */,
 				0F9870CC26BAD50700609CB7 /* SettingPopUp.xib in Resources */,
+				0FD6023826CD0B2700963A6B /* StartGameQuestionPopUp.xib in Resources */,
 				829FF09226BD4C8A001D0326 /* PageLocked.storyboard in Resources */,
 				826542E426BC569F00AE9E4B /* Inter-Bold.ttf in Resources */,
 				826542DA26BC569F00AE9E4B /* Inter-ExtraBoldItalic.ttf in Resources */,
@@ -527,6 +534,7 @@
 				826542AD26BBCC6F00AE9E4B /* ConversationView.swift in Sources */,
 				829FF09426BD4C99001D0326 /* PageLockedViewController.swift in Sources */,
 				826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */,
+				0FD6023C26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift in Sources */,
 				0F98714626BCFA2B00609CB7 /* TouchingBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

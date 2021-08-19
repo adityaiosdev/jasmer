@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartGameQuestionPopUpController" customModule="jasmer" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="iZe-eV-GkB" id="62I-Pv-nJM"/>
+                <outlet property="continueGame" destination="d5X-Oq-uNd" id="c8E-u3-Phw"/>
+                <outlet property="newGame" destination="3jc-eC-wwh" id="tyw-af-nxU"/>
+                <outlet property="startAlertView" destination="ddY-Tc-A1X" id="c2K-ac-2Gk"/>
+                <outlet property="startView" destination="iN0-l3-epB" id="aoQ-BH-IK4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddY-Tc-A1X">
+                    <rect key="frame" x="308" y="117" width="280" height="180"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-eC-wwh">
+                            <rect key="frame" x="40" y="20" width="200" height="35"/>
+                            <color key="backgroundColor" red="0.63274532559999996" green="0.69206935169999995" blue="0.78040522339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="7Kd-Pu-hUX"/>
+                                <constraint firstAttribute="width" constant="200" id="UOs-do-Udz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
+                            <state key="normal" title="Permainan Baru">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="newGameBtnPressed:" destination="-1" eventType="touchUpInside" id="3qT-zy-9vs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5X-Oq-uNd">
+                            <rect key="frame" x="40" y="75" width="200" height="35"/>
+                            <color key="backgroundColor" red="0.63274532559999996" green="0.69206935169999995" blue="0.78040522339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="LkP-hV-QEd"/>
+                                <constraint firstAttribute="height" constant="35" id="zxD-uP-7yh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
+                            <state key="normal" title="Lanjut Permainan">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="continueGameBtnPressed:" destination="-1" eventType="touchUpInside" id="cZA-9M-ju6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZe-eV-GkB">
+                            <rect key="frame" x="40" y="130" width="200" height="35"/>
+                            <color key="backgroundColor" red="0.63274532559999996" green="0.69206935169999995" blue="0.78040522339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="JfM-nA-1pD"/>
+                                <constraint firstAttribute="width" constant="200" id="hmD-MY-ziu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
+                            <state key="normal" title="Kembali">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="hyX-0P-rO6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.32546404000000001" green="0.32156211140000002" blue="0.32156899570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="9pi-77-VDG"/>
+                        <constraint firstItem="iZe-eV-GkB" firstAttribute="centerX" secondItem="ddY-Tc-A1X" secondAttribute="centerX" id="Huf-GS-JYo"/>
+                        <constraint firstItem="3jc-eC-wwh" firstAttribute="centerX" secondItem="ddY-Tc-A1X" secondAttribute="centerX" id="JCc-EY-Flh"/>
+                        <constraint firstAttribute="width" constant="280" id="NU8-1A-hvd"/>
+                        <constraint firstItem="3jc-eC-wwh" firstAttribute="top" secondItem="ddY-Tc-A1X" secondAttribute="top" constant="20" id="XeR-eH-Qui"/>
+                        <constraint firstItem="iZe-eV-GkB" firstAttribute="top" secondItem="d5X-Oq-uNd" secondAttribute="bottom" constant="20" id="gNr-rq-y9h"/>
+                        <constraint firstItem="d5X-Oq-uNd" firstAttribute="top" secondItem="3jc-eC-wwh" secondAttribute="bottom" constant="20" id="nCo-bk-Hjb"/>
+                        <constraint firstItem="d5X-Oq-uNd" firstAttribute="centerX" secondItem="ddY-Tc-A1X" secondAttribute="centerX" id="uQT-Fr-EPb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14998975336946399" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="ddY-Tc-A1X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZAW-2R-G1W"/>
+                <constraint firstItem="ddY-Tc-A1X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gM4-2c-KUM"/>
+            </constraints>
+            <point key="canvasLocation" x="138.61607142857142" y="121.73913043478262"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zv1-IT-biw">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="35" y="-289"/>
+        </label>
+    </objects>
+</document>

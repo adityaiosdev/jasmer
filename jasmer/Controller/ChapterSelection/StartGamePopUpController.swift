@@ -50,10 +50,11 @@ class StartGamePopUpController: UIView {
     }
     @IBAction func startBtnClicked(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
-        self.delegate?.gotoStoryStoryboard()
-        let storyboard = UIStoryboard(name: "StoryStoryboard" , bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier: "StoryStoryboard" )
-        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+//        self.delegate?.gotoStoryStoryboard()
+//        let storyboard = UIStoryboard(name: "StoryStoryboard" , bundle: nil)
+//        let navigation = storyboard.instantiateViewController(identifier: "StoryStoryboard" )
+//        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+        StartGameQuestionPopUpController.instance.showAlert()
     }
 }
 
