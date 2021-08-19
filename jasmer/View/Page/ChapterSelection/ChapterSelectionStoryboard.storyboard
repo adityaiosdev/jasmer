@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptj-XC-hAQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptj-XC-hAQ">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -95,10 +95,10 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.51390349859999995" green="0.63725233079999999" blue="0.86277329920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="7TF-za-vgi" secondAttribute="trailing" constant="-8" id="1Ho-MT-eSJ"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="7TF-za-vgi" secondAttribute="bottom" constant="-8" id="CMM-it-Pgf"/>
-                                            <constraint firstItem="7TF-za-vgi" firstAttribute="top" secondItem="qSw-cF-oWU" secondAttribute="topMargin" constant="-8" id="huk-dY-aRL"/>
-                                            <constraint firstItem="7TF-za-vgi" firstAttribute="leading" secondItem="qSw-cF-oWU" secondAttribute="leadingMargin" constant="-8" id="wGJ-LK-hRs"/>
+                                            <constraint firstItem="7TF-za-vgi" firstAttribute="leading" secondItem="qSw-cF-oWU" secondAttribute="leadingMargin" constant="-8" id="QsX-Xm-3zg"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="7TF-za-vgi" secondAttribute="bottom" constant="-8" id="UKV-WW-ew1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="7TF-za-vgi" secondAttribute="trailing" constant="-8" id="Z6i-8k-1kK"/>
+                                            <constraint firstItem="7TF-za-vgi" firstAttribute="top" secondItem="qSw-cF-oWU" secondAttribute="topMargin" constant="-8" id="jy3-1x-JiW"/>
                                         </constraints>
                                         <size key="customSize" width="200" height="247"/>
                                         <connections>
@@ -123,6 +123,15 @@
                                     <action selector="SettingBtnClicked:" destination="yuH-Rw-aJs" eventType="touchUpInside" id="lLh-iY-iVu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-Ac-Sn1">
+                                <rect key="frame" x="367.66666666666669" y="50" width="109" height="30"/>
+                                <state key="normal" title="Ke Game Scene">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testBtn:" destination="yuH-Rw-aJs" eventType="touchUpInside" id="SR2-Ie-ekt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LnD-uZ-bMY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,7 +141,9 @@
                             <constraint firstItem="y9o-cO-19c" firstAttribute="top" secondItem="gH6-5I-dhz" secondAttribute="bottom" constant="20" id="Liy-Mx-jaF"/>
                             <constraint firstItem="y9o-cO-19c" firstAttribute="centerX" secondItem="Bgb-bN-cTR" secondAttribute="centerX" constant="40" id="Mzj-XP-rfQ"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" id="PNM-eJ-NkS"/>
+                            <constraint firstItem="Tqr-Ac-Sn1" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="50" id="SVk-lc-1oF"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="bottom" secondItem="Bgb-bN-cTR" secondAttribute="bottom" id="dcK-bG-Dz2"/>
+                            <constraint firstItem="Tqr-Ac-Sn1" firstAttribute="centerX" secondItem="Bgb-bN-cTR" secondAttribute="centerX" id="e1J-b1-mSP"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="trailing" secondItem="Bgb-bN-cTR" secondAttribute="trailing" id="nfn-Un-T6q"/>
                             <constraint firstItem="gH6-5I-dhz" firstAttribute="leading" secondItem="LnD-uZ-bMY" secondAttribute="leading" constant="55" id="s7m-7S-7zi"/>
                             <constraint firstItem="LnD-uZ-bMY" firstAttribute="bottom" secondItem="y9o-cO-19c" secondAttribute="bottom" constant="20" id="s90-Te-NHl"/>
@@ -145,11 +156,20 @@
                         <outlet property="chapterCollectionView" destination="y9o-cO-19c" id="eVy-Df-Eop"/>
                         <segue destination="0ZL-wK-l6H" kind="presentation" identifier="goToStory" id="7uD-EE-GjT"/>
                         <segue destination="Ezh-bC-7mq" kind="presentation" identifier="gotoTouchingBox" modalPresentationStyle="fullScreen" id="nA3-2S-McU"/>
+                        <segue destination="7bo-KJ-Zbm" kind="presentation" identifier="gotoGameScene" modalPresentationStyle="fullScreen" id="gIo-9J-aEV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaD-KM-7ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="571.20535714285711" y="42.028985507246382"/>
+        </scene>
+        <!--WalkingGameSceneStoryboard-->
+        <scene sceneID="IdG-ji-MAa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WalkingGameSceneStoryboard" id="7bo-KJ-Zbm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZU-Tf-pFU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="574"/>
         </scene>
         <!--TouchingBoxStoryboard-->
         <scene sceneID="oot-mv-HtL">

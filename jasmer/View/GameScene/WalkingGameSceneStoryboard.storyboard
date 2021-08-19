@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7zH-WL-0Ev">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walking Game Scene View Controller-->
+        <scene sceneID="BGx-M0-N7G">
+            <objects>
+                <viewController id="7zH-WL-0Ev" customClass="WalkingGameSceneViewController" customModule="jasmer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJ0-eN-fFa">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywj-Jf-ENk" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Veu-Bf-tTD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ywj-Jf-ENk" secondAttribute="trailing" id="1fs-4g-IED"/>
+                            <constraint firstItem="Ywj-Jf-ENk" firstAttribute="leading" secondItem="MJ0-eN-fFa" secondAttribute="leading" id="2lS-8m-6tO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ywj-Jf-ENk" secondAttribute="bottom" id="eYt-v0-PIk"/>
+                            <constraint firstItem="Ywj-Jf-ENk" firstAttribute="top" secondItem="MJ0-eN-fFa" secondAttribute="top" id="mKP-AA-gbZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="skview" destination="Ywj-Jf-ENk" id="3rx-3v-5z5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWa-gT-xS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

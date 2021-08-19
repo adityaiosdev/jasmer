@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F232E7E26CE741300B1A23E /* WalkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */; };
+		0F232E8426CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */; };
+		0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C92026B156D7007CB470 /* jasmer.xcdatamodeld */; };
@@ -80,6 +83,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameScene.swift; sourceTree = "<group>"; };
+		0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkingGameSceneStoryboard.storyboard; sourceTree = "<group>"; };
+		0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameSceneViewController.swift; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +171,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F232E5926CE60D300B1A23E /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */,
+				0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */,
+				0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
 		0F72C90B26B156D7007CB470 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +228,7 @@
 		0F72C93026B156E8007CB470 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F232E5926CE60D300B1A23E /* GameScene */,
 				0FC25F9226C5171000ACEF2F /* Page */,
 			);
 			path = View;
@@ -498,6 +515,7 @@
 				829FF07F26BD371A001D0326 /* Onboarding.storyboard in Resources */,
 				0F98713F26BCF9F100609CB7 /* TouchingBoxStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
+				0F232E8426CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard in Resources */,
 				0F9870D626BBAB5B00609CB7 /* buttonPressed.wav in Resources */,
 				826542E926BC569F00AE9E4B /* Inter-Italic.ttf in Resources */,
 				826542E026BC569F00AE9E4B /* Inter-MediumItalic.ttf in Resources */,
@@ -513,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F232E7E26CE741300B1A23E /* WalkingGameScene.swift in Sources */,
 				0F9870C726BA595100609CB7 /* ChapterCell.swift in Sources */,
 				0F9870DD26BBAC6800609CB7 /* SoundPlayer.swift in Sources */,
 				8265429E26BBCC0200AE9E4B /* Storyline.swift in Sources */,
@@ -527,6 +546,7 @@
 				0FC25FA726C65C8E00ACEF2F /* NavigationManager.swift in Sources */,
 				824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */,
 				829FF08E26BD4A0B001D0326 /* Menu.swift in Sources */,
+				0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */,
 				824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */,
 				828DFA2E26B9942300F98C4B /* PausePopUpController.swift in Sources */,
 				829FF09026BD4BC1001D0326 /* MainMenuViewController.swift in Sources */,
