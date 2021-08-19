@@ -60,7 +60,14 @@ class SettingPopUpController: UIView {
             SoundEffectsPlayer.shared.SFXAllowStatus = false
         }
     }
-    @IBAction func BGMSwitch(_ sender: Any) {
+    @IBAction func BGMSwitch(_ sender: UISwitch) {
+        if BGMSwitch.isOn == true{
+            SoundPlayer.shared.BGMAllowStatus = true
+            SoundPlayer.shared.startBackgroundMusic(bgmFIleName: "BGM")
+        }else{
+            SoundPlayer.shared.BGMAllowStatus = false
+            SoundPlayer.shared.stopBackgroundMusic()
+        }
     }
 }
 

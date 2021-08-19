@@ -26,6 +26,7 @@ class ChapterSelectionViewController: UIViewController, StartGamePopUpController
         
         chapterCollectionView.delegate = self
         chapterCollectionView.dataSource = self
+        SoundPlayer.shared.startBackgroundMusic(bgmFIleName: "")
         // Do any additional setup after loading the view.
         
     }
