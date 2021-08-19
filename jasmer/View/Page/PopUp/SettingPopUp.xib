@@ -57,7 +57,7 @@
                             <rect key="frame" x="212" y="112" width="49" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
-                                <action selector="BGMSwitch:" destination="-1" eventType="valueChanged" id="jok-Zp-uSu"/>
+                                <action selector="BGMSwitch:" destination="-1" eventType="valueChanged" id="oTo-UA-aqH"/>
                             </connections>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPr-H2-dVS">
