@@ -33,31 +33,45 @@
                     <rect key="frame" x="298" y="72" width="300" height="270"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDW-fm-QCo">
-                            <rect key="frame" x="37" y="96" width="114" height="26"/>
+                            <rect key="frame" x="37" y="66" width="114" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BGM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-eB-Xob">
-                            <rect key="frame" x="37" y="157" width="37" height="26"/>
+                            <rect key="frame" x="37" y="114" width="37" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t3A-dW-IfT">
-                            <rect key="frame" x="212" y="93" width="49" height="31"/>
+                            <rect key="frame" x="212" y="64" width="49" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="SoundEffectsSwitch:" destination="-1" eventType="valueChanged" id="8bO-Yl-Q6w"/>
                             </connections>
                         </switch>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQ3-PW-UJ4">
-                            <rect key="frame" x="212" y="152" width="49" height="31"/>
+                            <rect key="frame" x="212" y="112" width="49" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="BGMSwitch:" destination="-1" eventType="valueChanged" id="jok-Zp-uSu"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPr-H2-dVS">
+                            <rect key="frame" x="37" y="164" width="103" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Rajdhani-SemiBold" family="Rajdhani" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jt7-LE-Zga">
+                            <rect key="frame" x="212" y="162" width="49" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="BGMSwitch:" destination="-1" eventType="valueChanged" id="6Q7-xa-mj8"/>
                             </connections>
                         </switch>
                     </subviews>
@@ -68,7 +82,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengaturan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLx-4T-U4j">
-                    <rect key="frame" x="387.5" y="100" width="121.5" height="32"/>
+                    <rect key="frame" x="387.5" y="95" width="121.5" height="32"/>
                     <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -94,7 +108,7 @@
                 <constraint firstItem="CLd-5z-KU7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4tQ-Dx-e8B"/>
                 <constraint firstAttribute="bottom" secondItem="YNs-Ad-aRf" secondAttribute="bottom" constant="98" id="6fA-ab-adX"/>
                 <constraint firstItem="YNs-Ad-aRf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FSz-74-FIt"/>
-                <constraint firstItem="kLx-4T-U4j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="p1B-AX-ULI"/>
+                <constraint firstItem="kLx-4T-U4j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="95" id="p1B-AX-ULI"/>
                 <constraint firstItem="CLd-5z-KU7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qjc-7N-bwv"/>
                 <constraint firstItem="kLx-4T-U4j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yhJ-Bx-EuB"/>
             </constraints>
