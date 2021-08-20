@@ -25,6 +25,10 @@ class WalkingGameScene : SKScene{
         leftBtn.position = CGPoint (x: frame.midX - 320 , y: frame.midY)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)
+        personSprite = SKSpriteNode(imageNamed: "Rightleg")
+        personSprite.size = CGSize(width: 200, height: 200)
+        personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 100)
+        addChild(personSprite)
     
     }
     
@@ -38,18 +42,16 @@ class WalkingGameScene : SKScene{
         
     }
     
-    func walkingPerson (image1: String, image2: String, forTheKey: String){
+    func walkingPerson (image1: String, image2: String, image3: String, image4: String, forTheKey: String){
         
         let walkperson1 = SKTexture(imageNamed: image1)
         let walkperson2 = SKTexture(imageNamed: image2)
+        let walkperson3 = SKTexture(imageNamed: image3)
+        let walkperson4 = SKTexture(imageNamed: image4)
         walkperson1.filteringMode = .nearest
         walkperson2.filteringMode = .nearest
         
-        let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2], timePerFrame: 0.5)
-        personSprite = SKSpriteNode()
-        personSprite.size = CGSize(width: 200, height: 200)
-        personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 100)
-        addChild(personSprite)
+        let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2,walkperson3,walkperson4], timePerFrame: 0.5)
         let repeatForEver = SKAction.repeatForever(walkAnimation)
         let seq = SKAction.sequence([walkAnimation,repeatForEver])
         personSprite.run(seq, withKey : forTheKey)
@@ -60,11 +62,11 @@ class WalkingGameScene : SKScene{
               if nextBtn.contains(pointTouched) {
 //                background.run(repright, withKey:"MovingRight")
                 moveBackground(moveBy: -150, forTheKey: "MoveRight")
-                walkingPerson(image1: "Rightleg", image2: "Leftleg", forTheKey: "Right")
+                walkingPerson(image1: "Rightleg", image2: "Rightlegtrans", image3: "Leftleg", image4: "Leftlegtrans",forTheKey: "Right")
               }
             if leftBtn.contains(pointTouched) {
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
-                walkingPerson(image1: "Rightlegforleft", image2: "Leftlegforleft", forTheKey: "Left")
+                walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
          }
       }
