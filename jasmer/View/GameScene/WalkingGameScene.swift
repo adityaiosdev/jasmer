@@ -8,27 +8,65 @@
 import SpriteKit
 
 class WalkingGameScene : SKScene{
-    
+
+    //bg
     var background = SKSpriteNode(imageNamed: "Tes")
+
+    //button
     var nextBtn = SKSpriteNode(imageNamed: "nextBtn")
     var leftBtn = SKSpriteNode(imageNamed: "prevBtn")
+
+    //objects
+    var rumah = SKSpriteNode(imageNamed: "RumahTes")
+    var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
+    var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
+
+    //person
     var personSprite : SKSpriteNode!
+
     override func didMove(to view: SKView) {
         print("Halo")
+
+      background.zPosition = 0
         background.position = CGPoint(x: frame.midX, y: frame.midY)
         background.size = CGSize(width: background.size.width, height: frame.size.height)
         background.name = "bg"
         addChild(background)
+
+      nextBtn.zPosition = 100
         nextBtn.position = CGPoint (x: frame.midX + 320 , y: frame.midY)
         nextBtn.name = "nextBtn"
         addChild(nextBtn)
+      leftBtn.zPosition = 100
         leftBtn.position = CGPoint (x: frame.midX - 320 , y: frame.midY)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)
+
+        //player
         personSprite = SKSpriteNode(imageNamed: "Rightleg")
-        personSprite.size = CGSize(width: 200, height: 200)
-        personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 100)
+        personSprite.zPosition = 99
+        personSprite.size = CGSize(width: 1500/10, height: 2100/10)
+        personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 120)
         addChild(personSprite)
+
+        //objects
+        rumah.zPosition = 1
+        rumah.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        rumah.size = CGSize(width: 300, height: 300)
+        rumah.name = "rmh"
+        background.addChild(rumah)
+
+        sekolah.zPosition = 1
+        sekolah.position = CGPoint(x: frame.midX+1300, y: frame.midY-230)
+        sekolah.size = CGSize(width: 2532/5, height: 1170/5)
+        sekolah.name = "sekolah"
+        background.addChild(sekolah)
+
+        esDogerStand.zPosition = 1
+        esDogerStand.position = CGPoint(x: frame.midX+2300, y: frame.midY-255)
+        esDogerStand.size = CGSize(width: 150, height: 150)
+        esDogerStand.name = "esDogerStand"
+        background.addChild(esDogerStand)
     
     }
     
@@ -68,6 +106,47 @@ class WalkingGameScene : SKScene{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
+
+
+            //object touches
+            let objectTouched = touch.location(in: background)
+            if rumah.contains(objectTouched) {
+              //go to mom convo
+              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
+                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                    window.rootViewController = MainViewController
+                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                }
+              }
+            }
+
+            if sekolah.contains(objectTouched) {
+              //go to carlos convo
+              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
+                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                    window.rootViewController = MainViewController
+                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                }
+              }
+            }
+
+            if esDogerStand.contains(objectTouched) {
+              //go to esdoger convo
+              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
+                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                    window.rootViewController = MainViewController
+                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                }
+              }
+            }
+
+
+
+
+
          }
       }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
