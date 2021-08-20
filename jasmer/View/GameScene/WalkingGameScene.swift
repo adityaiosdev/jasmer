@@ -31,7 +31,7 @@ class WalkingGameScene : SKScene{
         let moveAction = SKAction.moveBy(x: moveBy, y: 0, duration: 1)
         let repeatForEver = SKAction.repeatForever(moveAction)
         let seq = SKAction.sequence([moveAction, repeatForEver])
-
+        background.run(seq, withKey: forTheKey)
         //run the action on your ship
 //        player.run(seq, withKey: forTheKey)
 }
@@ -39,11 +39,18 @@ class WalkingGameScene : SKScene{
           for touch: AnyObject in touches {
               let pointTouched = touch.location(in: self)
               if nextBtn.contains(pointTouched) {
-                  background.position.x -= 30
+//                background.run(repright, withKey:"MovingRight")
+                movePerson(moveBy: 150, forTheKey: "MoveRight")
               }
             if leftBtn.contains(pointTouched) {
-                background.position.x += 30
+                movePerson(moveBy: -150, forTheKey: "MoveLeft")
             }
          }
       }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        background.removeAction(forKey: "MovingRight")
+//        background.removeAction(forKey: "MovingLeft")
+        background.removeAction(forKey: "MoveRight")
+        background.removeAction(forKey: "MoveLeft")
+    }
 }
