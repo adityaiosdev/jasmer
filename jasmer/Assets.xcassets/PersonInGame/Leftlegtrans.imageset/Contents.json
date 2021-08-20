@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Leftlegforleft.png",
+      "filename" : "Leftlegtrans.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Leftlegforleft@2x.png",
+      "filename" : "Leftlegtrans@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Leftlegforleft@3x.png",
+      "filename" : "Leftlegtrans@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
