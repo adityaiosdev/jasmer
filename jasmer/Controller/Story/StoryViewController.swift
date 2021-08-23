@@ -92,11 +92,15 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     
     let storylines = Storyline.initializeData()
     
+    var backgroundPosition: CGPoint?
+    
     var currentStory: Storyline?
     
     //MARK: -Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(backgroundPosition)
         
         let lastUpdates = cdm.getLastUpdate()
         if lastUpdates.count == 0{
@@ -134,8 +138,9 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             if currentIndex == storylines[currentSection].count - 1 {
                 if (currentStory?.isLast)!{
                     let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
-                    let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" )
-                    UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+                    let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
+                    navigation?.backgroundPosition = backgroundPosition
+                    present(navigation!, animated: true, completion: nil)
                 }
                 else{
                 guard currentStory?.moveToSection != nil else {return }

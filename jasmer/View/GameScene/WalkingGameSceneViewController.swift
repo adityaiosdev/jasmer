@@ -9,6 +9,8 @@ import UIKit
 import SpriteKit
 
 class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDelegate {
+    var backgroundPosition: CGPoint?
+    
     let cdm = CoreDataManager()
     func backToChapterSelection() {
         let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
@@ -24,7 +26,9 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     @IBOutlet weak var skview: SKView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene: WalkingGameScene = WalkingGameScene(size: skview.frame.size)
+        let scene: WalkingGameScene = (WalkingGameScene(size: skview.frame.size) as? WalkingGameScene)!
+        scene.backgroundPosition = backgroundPosition
+        print(backgroundPosition)
         skview.presentScene(scene)
         // Do any additional setup after loading the view.
     }
