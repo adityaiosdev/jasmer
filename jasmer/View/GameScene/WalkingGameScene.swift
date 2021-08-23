@@ -29,7 +29,7 @@ class WalkingGameScene : SKScene{
 
       background.zPosition = 0
         background.position = CGPoint(x: frame.midX, y: frame.midY)
-        background.size = CGSize(width: background.size.width, height: frame.size.height)
+        background.size = CGSize(width: background.size.width, height: frame.size.height+10)
         background.name = "bg"
         addChild(background)
 
@@ -81,7 +81,6 @@ class WalkingGameScene : SKScene{
     }
     
     func walkingPerson (image1: String, image2: String, image3: String, image4: String, forTheKey: String){
-        
         let walkperson1 = SKTexture(imageNamed: image1)
         let walkperson2 = SKTexture(imageNamed: image2)
         let walkperson3 = SKTexture(imageNamed: image3)
@@ -96,6 +95,9 @@ class WalkingGameScene : SKScene{
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
           for touch: AnyObject in touches {
+            let cdm = CoreDataManager()
+            //object touches
+            let objectTouched = touch.location(in: background)
               let pointTouched = touch.location(in: self)
               if nextBtn.contains(pointTouched) {
 //                background.run(repright, withKey:"MovingRight")
@@ -106,10 +108,8 @@ class WalkingGameScene : SKScene{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
-            let cdm = CoreDataManager()
-            //object touches
-            let objectTouched = touch.location(in: background)
-            if rumah.contains(objectTouched) {
+            
+            if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
               //go to mom convo
               if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                 cdm.insertEntry(1, 0, currentIndex: 0)
@@ -121,9 +121,8 @@ class WalkingGameScene : SKScene{
               }
             }
 
-            if sekolah.contains(objectTouched) {
+            if sekolah.contains(objectTouched) && background.position.x <= frame.midX-1300-150 && background.position.x >= frame.midX-1300-150 - 2532/5-100{
               //go to carlos convo
-                
               if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                 cdm.insertEntry(1, 1, currentIndex: 0)
                 let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
@@ -134,7 +133,7 @@ class WalkingGameScene : SKScene{
               }
             }
 
-            if esDogerStand.contains(objectTouched) {
+            if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
               //go to esdoger convo
               if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                 let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
@@ -144,11 +143,6 @@ class WalkingGameScene : SKScene{
                 }
               }
             }
-
-
-
-
-
          }
       }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
