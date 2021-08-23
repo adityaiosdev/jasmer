@@ -18,7 +18,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywj-Jf-ENk" customClass="SKView">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-vR-VjC">
+                                        <rect key="frame" x="770" y="30" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ZAm-Cj-o18"/>
+                                            <constraint firstAttribute="width" constant="60" id="yrS-sM-m1C"/>
+                                        </constraints>
+                                        <state key="normal" image="pauseBtn"/>
+                                        <connections>
+                                            <action selector="pauseBtnClicked:" destination="7zH-WL-0Ev" eventType="touchUpInside" id="n72-SO-pqJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="iZt-vR-VjC" firstAttribute="top" secondItem="Ywj-Jf-ENk" secondAttribute="top" constant="30" id="26s-Yg-otQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="iZt-vR-VjC" secondAttribute="trailing" constant="66" id="k85-hB-25y"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Veu-Bf-tTD"/>
@@ -36,10 +53,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWa-gT-xS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="306"/>
+            <point key="canvasLocation" x="936.83035714285711" y="305.79710144927537"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pauseBtn" width="298" height="302"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

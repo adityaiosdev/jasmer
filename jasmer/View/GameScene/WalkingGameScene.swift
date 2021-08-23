@@ -33,12 +33,12 @@ class WalkingGameScene : SKScene{
         background.name = "bg"
         addChild(background)
 
-      nextBtn.zPosition = 100
-        nextBtn.position = CGPoint (x: frame.midX + 320 , y: frame.midY)
+        nextBtn.zPosition = 1
+        nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
         nextBtn.name = "nextBtn"
         addChild(nextBtn)
-      leftBtn.zPosition = 100
-        leftBtn.position = CGPoint (x: frame.midX - 320 , y: frame.midY)
+        leftBtn.zPosition = 100
+        leftBtn.position = CGPoint (x: frame.minX + 100 , y: frame.minY + 60)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)
 
@@ -89,7 +89,7 @@ class WalkingGameScene : SKScene{
         walkperson1.filteringMode = .nearest
         walkperson2.filteringMode = .nearest
         
-        let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2,walkperson3,walkperson4], timePerFrame: 0.5)
+        let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2,walkperson3,walkperson4], timePerFrame: 0.3)
         let repeatForEver = SKAction.repeatForever(walkAnimation)
         let seq = SKAction.sequence([walkAnimation,repeatForEver])
         personSprite.run(seq, withKey : forTheKey)
@@ -106,13 +106,13 @@ class WalkingGameScene : SKScene{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
-
-
+            let cdm = CoreDataManager()
             //object touches
             let objectTouched = touch.location(in: background)
             if rumah.contains(objectTouched) {
               //go to mom convo
               if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                cdm.insertEntry(1, 0, currentIndex: 0)
                 let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
                 if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
                     window.rootViewController = MainViewController
@@ -123,7 +123,9 @@ class WalkingGameScene : SKScene{
 
             if sekolah.contains(objectTouched) {
               //go to carlos convo
+                
               if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                cdm.insertEntry(1, 1, currentIndex: 0)
                 let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard")
                 if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
                     window.rootViewController = MainViewController
