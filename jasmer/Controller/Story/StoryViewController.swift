@@ -132,9 +132,16 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
         previousIndex = currentIndex
         if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
             if currentIndex == storylines[currentSection].count - 1 {
+                if (currentStory?.isLast)!{
+                    let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
+                    let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" )
+                    UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+                }
+                else{
                 guard currentStory?.moveToSection != nil else {return }
                 currentSection = (currentStory?.moveToSection)!
                 currentIndex = 0
+                }
             }
             else{
                 currentIndex += 1
@@ -190,6 +197,13 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
         conversationBox.isHidden = true
         botView.isHidden = true
         interactionView.isHidden = true
+        previousButton.isHidden = false
+        
+        if currentStory?.isFirst != nil {
+            if (currentStory?.isFirst)!{
+                previousButton.isHidden = true
+            }
+        }
         
         if currentStory?.category == .conversation{
             botView.isHidden = false
@@ -202,7 +216,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             botView.translatesAutoresizingMaskIntoConstraints = true
             botView.nameLabel.isHidden = true
             
-            previousButton.isHidden = false
+//            previousButton.isHidden = false
             nextButton.isHidden = false
             conversationBox.isHidden = false
             
