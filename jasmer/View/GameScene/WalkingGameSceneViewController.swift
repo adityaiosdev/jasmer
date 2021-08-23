@@ -8,7 +8,18 @@
 import UIKit
 import SpriteKit
 
-class WalkingGameSceneViewController: UIViewController {
+class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDelegate {
+    let cdm = CoreDataManager()
+    func backToChapterSelection() {
+        let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
+        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+    }
+    
+    func resumeGame() {
+        
+    }
+    
 
     @IBOutlet weak var skview: SKView!
     override func viewDidLoad() {
@@ -16,6 +27,10 @@ class WalkingGameSceneViewController: UIViewController {
         let scene: WalkingGameScene = WalkingGameScene(size: skview.frame.size)
         skview.presentScene(scene)
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func pauseBtnClicked(_ sender: UIButton) {
+        PausePopUpController.instance.showAlert()
     }
     
 

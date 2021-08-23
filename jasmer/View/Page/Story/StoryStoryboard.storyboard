@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,9 +77,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="W04-pD-gap" firstAttribute="trailing" secondItem="6Qv-Iv-VJB" secondAttribute="trailing" id="2hO-Km-Duj"/>
-                            <constraint firstItem="tNJ-eK-SQK" firstAttribute="top" secondItem="kVD-8W-0ih" secondAttribute="top" constant="30" id="DwR-un-XeD"/>
+                            <constraint firstItem="tNJ-eK-SQK" firstAttribute="top" secondItem="6Qv-Iv-VJB" secondAttribute="top" constant="30" id="DwR-un-XeD"/>
                             <constraint firstItem="l2S-aE-TFk" firstAttribute="top" secondItem="Gsq-w3-SCz" secondAttribute="bottom" constant="20" id="Gj1-cM-YLu"/>
-                            <constraint firstItem="kVD-8W-0ih" firstAttribute="trailing" secondItem="tNJ-eK-SQK" secondAttribute="trailing" constant="22" id="PUV-OJ-vqL"/>
+                            <constraint firstAttribute="trailing" secondItem="tNJ-eK-SQK" secondAttribute="trailing" constant="66" id="PUV-OJ-vqL"/>
                             <constraint firstItem="l2S-aE-TFk" firstAttribute="centerX" secondItem="kVD-8W-0ih" secondAttribute="centerX" id="RAQ-U4-o6Z"/>
                             <constraint firstItem="et8-c8-9hX" firstAttribute="centerY" secondItem="kVD-8W-0ih" secondAttribute="centerY" id="U1H-au-4tS"/>
                             <constraint firstItem="W04-pD-gap" firstAttribute="leading" secondItem="6Qv-Iv-VJB" secondAttribute="leading" id="UZI-Oe-cw2"/>
