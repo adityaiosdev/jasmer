@@ -26,8 +26,11 @@ class WalkingGameScene : SKScene{
     
     var backgroundPosition: CGPoint?
     
+    var nextSection: Int?
+    
     override func didMove(to view: SKView) {
         print("Halo")
+        print(nextSection)
         
         background.zPosition = 0
         
