@@ -136,10 +136,12 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
         previousIndex = currentIndex
         if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
             if currentIndex == storylines[currentSection].count - 1 {
+                print(currentStory?.moveToSection)
                 if (currentStory?.isLast)!{
                     let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
                     let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
                     navigation?.backgroundPosition = backgroundPosition
+                    navigation?.nextSection = currentStory?.moveToSection
                     present(navigation!, animated: true, completion: nil)
                 }
                 else{
