@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDz-hf-0kb">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,6 +72,15 @@
                                     <constraint firstAttribute="width" secondItem="l2S-aE-TFk" secondAttribute="height" multiplier="5.5" id="f3F-la-rcl"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-Ap-Ub4">
+                                <rect key="frame" x="61" y="13" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" image="Backicon"/>
+                                <connections>
+                                    <action selector="spriteKitBack:" destination="kDz-hf-0kb" eventType="touchUpInside" id="8WY-fX-3qF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kVD-8W-0ih"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,6 +107,7 @@
                         <outlet property="personImage1" destination="CS3-Uq-Oa3" id="aQr-vb-9W3"/>
                         <outlet property="personImage2" destination="wP2-yd-kGm" id="fIl-I2-JrC"/>
                         <outlet property="previousButton" destination="Gsq-w3-SCz" id="3n3-Ps-fqD"/>
+                        <outlet property="spriteKitButton" destination="SKg-Ap-Ub4" id="QwR-5a-4Ez"/>
                         <segue destination="rAX-bm-vXa" kind="presentation" identifier="goToPostQuiz" animates="NO" modalPresentationStyle="fullScreen" id="hlN-jP-efr"/>
                     </connections>
                 </viewController>
@@ -123,6 +133,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Backicon" width="52" height="52"/>
         <image name="Carlos" width="581.66668701171875" height="553"/>
         <image name="Jason" width="644" height="570"/>
         <image name="Office 1" width="2436" height="1125"/>
