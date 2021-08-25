@@ -313,11 +313,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func backToChapterSelection() {
-        
         cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
-        let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
-        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
     }
     
     func resumeGame() {

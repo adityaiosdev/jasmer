@@ -14,9 +14,11 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     
     let cdm = CoreDataManager()
     func backToChapterSelection() {
-        let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
-        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+        let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection") as? StoryViewController
+        if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+            window.rootViewController = MainViewController
+            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
     
     func resumeGame() {
