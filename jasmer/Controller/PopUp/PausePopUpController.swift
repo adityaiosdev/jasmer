@@ -50,6 +50,9 @@ class PausePopUpController: UIView {
     }
     @IBAction func exitToChapterSelection(_ sender: UIButton){
         self.delegate?.backToChapterSelection()
+        let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
+        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
     }
 }
