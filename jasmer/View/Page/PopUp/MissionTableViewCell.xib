@@ -52,6 +52,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="missionLabel" destination="C0x-ys-SMP" id="X32-m0-i3G"/>
+                <outlet property="radioBtn" destination="QXH-cz-GFs" id="viz-DQ-CE1"/>
             </connections>
             <point key="canvasLocation" x="236.95652173913047" y="136.94196428571428"/>
         </tableViewCell>

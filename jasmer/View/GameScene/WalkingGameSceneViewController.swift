@@ -30,7 +30,7 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene: WalkingGameScene = (WalkingGameScene(size: skview.frame.size) as? WalkingGameScene)!
-        scene.backgroundPosition = backgroundPosition
+//        scene.backgroundPosition = backgroundPosition
         scene.nextSection = nextSection
         print(backgroundPosition)
         skview.presentScene(scene)

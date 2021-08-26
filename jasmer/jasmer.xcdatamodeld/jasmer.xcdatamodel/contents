@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BackgroundPosition" representedClassName="BackgroundPosition" syncable="YES" codeGenerationType="class">
+        <attribute name="xPosition" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="yPosition" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="GameStatus" representedClassName="GameStatus" syncable="YES" codeGenerationType="class">
+        <attribute name="gameStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
     <entity name="LastUpdates" representedClassName="LastUpdates" syncable="YES" codeGenerationType="class">
         <attribute name="chapter" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="section" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="MissionObject" representedClassName="MissionObject" syncable="YES" codeGenerationType="class">
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="missionDetail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MissionStatement" inverseName="missionParent" inverseEntity="MissionStatement"/>
+    </entity>
+    <entity name="MissionStatement" representedClassName="MissionStatement" syncable="YES" codeGenerationType="class">
+        <attribute name="mission" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="missionParent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MissionObject" inverseName="missionDetail" inverseEntity="MissionObject"/>
+    </entity>
     <elements>
+        <element name="BackgroundPosition" positionX="-45" positionY="27" width="128" height="59"/>
+        <element name="GameStatus" positionX="162" positionY="126" width="128" height="44"/>
         <element name="LastUpdates" positionX="-45" positionY="0" width="128" height="74"/>
+        <element name="MissionObject" positionX="338.1165771484375" positionY="107.9328918457031" width="126.7982177734375" height="88"/>
+        <element name="MissionStatement" positionX="533.748291015625" positionY="183.0364990234375" width="128" height="88"/>
     </elements>
 </model>
