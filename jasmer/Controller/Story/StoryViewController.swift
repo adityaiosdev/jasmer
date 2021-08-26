@@ -71,6 +71,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     @IBOutlet weak var conversationBox: UIView!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var spriteKitButton: UIButton!
     
     //MARK: -Variables
     var interactionTapped: Bool = false
@@ -381,6 +382,14 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             personImage1.isHidden = true
             personImage2.isHidden = true
         }
+    }
+    
+    @IBAction func spriteKitBack(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
+        navigation?.backgroundPosition = backgroundPosition
+        navigation?.nextSection = currentStory?.moveToSection
+        present(navigation!, animated: true, completion: nil)
     }
     
     
