@@ -6,8 +6,13 @@
 //
 
 import SpriteKit
+import UIKit
 
-class WalkingGameScene : SKScene{
+class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
+    func resumeGame() {
+        print("Kembali")
+    }
+    
     
     //bg
     var background = SKSpriteNode(imageNamed: "Tes")
@@ -34,6 +39,7 @@ class WalkingGameScene : SKScene{
     override func didMove(to view: SKView) {
         print("Halo")
         print(nextSection)
+        WrongStoryPopUpController.instance.delegate = self
         
         background.zPosition = 0
         
@@ -196,15 +202,16 @@ class WalkingGameScene : SKScene{
             if sekolah.contains(objectTouched) && background.position.x <= frame.midX-1300-150 && background.position.x >= frame.midX-1300-150 - 2532/5-100{
                 //go to carlos convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntry(1, 1, currentIndex: 0)
-                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                    MainViewController?.backgroundPosition = background.position
-                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                        window.rootViewController = MainViewController
-                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    WrongStoryPopUpController.instance.showAlert()
+//                    cdm.insertEntry(1, 1, currentIndex: 0)
+//                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+//                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+//                        window.rootViewController = MainViewController
+//                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
                     }
                 }
-            }
+            
 
             if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
                 //go to esdoger convo
