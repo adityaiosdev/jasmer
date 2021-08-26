@@ -30,11 +30,25 @@
                                             <action selector="pauseBtnClicked:" destination="7zH-WL-0Ev" eventType="touchUpInside" id="n72-SO-pqJ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-MU-cKK">
+                                        <rect key="frame" x="66" y="30" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="7k1-1x-YTv"/>
+                                            <constraint firstAttribute="height" constant="60" id="bt5-2g-qX2"/>
+                                        </constraints>
+                                        <state key="normal" image="mission"/>
+                                        <connections>
+                                            <action selector="missionBtnClicked:" destination="7zH-WL-0Ev" eventType="touchUpInside" id="Khf-io-d0s"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="iZt-vR-VjC" firstAttribute="top" secondItem="Ywj-Jf-ENk" secondAttribute="top" constant="30" id="26s-Yg-otQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="iZt-vR-VjC" secondAttribute="trailing" constant="66" id="k85-hB-25y"/>
+                                    <constraint firstItem="jAQ-MU-cKK" firstAttribute="leading" secondItem="Ywj-Jf-ENk" secondAttribute="leading" constant="66" id="JYU-a2-0CF"/>
+                                    <constraint firstItem="iZt-vR-VjC" firstAttribute="trailing" secondItem="Ywj-Jf-ENk" secondAttribute="trailing" constant="-66" id="k85-hB-25y"/>
+                                    <constraint firstItem="jAQ-MU-cKK" firstAttribute="top" secondItem="iZt-vR-VjC" secondAttribute="top" id="wd8-IQ-x8e"/>
+                                    <constraint firstItem="jAQ-MU-cKK" firstAttribute="bottom" secondItem="iZt-vR-VjC" secondAttribute="bottom" id="xN7-Dv-1EV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -57,6 +71,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mission" width="36.666667938232422" height="37"/>
         <image name="pauseBtn" width="298" height="302"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
