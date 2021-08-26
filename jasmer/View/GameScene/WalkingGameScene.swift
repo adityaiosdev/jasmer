@@ -32,9 +32,11 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
     //person
     var personSprite : SKSpriteNode!
     
-    var backgroundPosition: CGPoint?
+//    var backgroundPosition: CGPoint?
     
     var nextSection: Int?
+    let cdm = CoreDataManager()
+    var backgroundPosition = [BackgroundPosition]()
     
     override func didMove(to view: SKView) {
         print("Halo")
@@ -43,17 +45,22 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         
         background.zPosition = 0
         
-        if backgroundPosition == nil {
+        backgroundPosition = cdm.getBackgroundPosition()
+        
+        if backgroundPosition.isEmpty{
+            print("BG Position empty")
             background.position = CGPoint(x: frame.midX, y: frame.midY)
         }
         else{
-            background.position = backgroundPosition!
+            print(backgroundPosition[0].xPosition)
+            let bgPosition = backgroundPosition[0]
+            background.position = CGPoint(x: CGFloat(bgPosition.xPosition), y: CGFloat(bgPosition.yPosition))
         }
         
         background.size = CGSize(width: background.size.width, height: frame.size.height+10)
         background.name = "bg"
         addChild(background)
-
+      
       //create pesawat hatta
 //        createPesawat()
         
@@ -189,9 +196,11 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntry(1, 0, currentIndex: 0)
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 0, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                    MainViewController?.backgroundPosition = background.position
+//                    MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
                         window.rootViewController = MainViewController
                         UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)

@@ -10,6 +10,7 @@ import UIKit
 class MissionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var missionLabel: UILabel!
+    @IBOutlet weak var radioBtn: UIImageView!
     
     func initializeData(mission: String){
         contentView.backgroundColor = .clear

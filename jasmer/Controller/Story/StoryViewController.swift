@@ -139,16 +139,33 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             if currentIndex == storylines[currentSection].count - 1 {
                 print(currentStory?.moveToSection)
                 if (currentStory?.isLast)!{
+                    let cdm = CoreDataManager()
+                    let missionObjects = cdm.getMission()
+                    var missionStatement = [MissionStatement]()
+                    if !missionObjects.isEmpty{
+                        missionStatement = cdm.getMissionStatement(for: missionObjects[0])
+                    }
+                    if !missionStatement.isEmpty{
+                        cdm.updateMission(missionStatement: missionStatement[0], newStatus: true)
+                        cdm.deleteOneMission(for: missionStatement[0])
+                        missionStatement = cdm.getMissionStatement(for: missionObjects[0])
+                        if missionStatement.isEmpty{
+                            print("No mission")
+                            cdm.deleteGameStatus()
+                            cdm.insertGameStatus()
+                        }
+                    }
+                    
                     let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
                     let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
-                    navigation?.backgroundPosition = backgroundPosition
+                    //                    navigation?.backgroundPosition = backgroundPosition
                     navigation?.nextSection = currentStory?.moveToSection
                     present(navigation!, animated: true, completion: nil)
                 }
                 else{
-                guard currentStory?.moveToSection != nil else {return }
-                currentSection = (currentStory?.moveToSection)!
-                currentIndex = 0
+                    guard currentStory?.moveToSection != nil else {return }
+                    currentSection = (currentStory?.moveToSection)!
+                    currentIndex = 0
                 }
             }
             else{
@@ -224,7 +241,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             botView.translatesAutoresizingMaskIntoConstraints = true
             botView.nameLabel.isHidden = true
             
-//            previousButton.isHidden = false
+            //            previousButton.isHidden = false
             nextButton.isHidden = false
             conversationBox.isHidden = false
             
@@ -314,7 +331,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     }
     
     func backToChapterSelection() {
-        cdm.insertEntry(1, currentSection, currentIndex: currentIndex)
+        cdm.insertEntryLastUpdates(1, currentSection, currentIndex: currentIndex)
     }
     
     func resumeGame() {
@@ -343,11 +360,11 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 personImage2.isHidden = false
                 personImage1.image = person1
                 personImage2.image = person2
-                overlayView.frame = personImage2.bounds
                 overlayView.image = person2
                 overlayView.image =  person2.withRenderingMode(.alwaysTemplate)
                 overlayView.contentMode = .scaleAspectFit
                 overlayView.tintColor = UIColor(white: 0.5, alpha: 0.5)
+                overlayView.frame = personImage2.bounds
                 personImage2.addSubview(overlayView)
             }
         }
@@ -358,11 +375,11 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 personImage2.isHidden = false
                 personImage1.image = person1
                 personImage2.image = person2
-                overlayView.frame = personImage1.bounds
                 overlayView.image = person1
                 overlayView.image =  person1.withRenderingMode(.alwaysTemplate)
                 overlayView.contentMode = .scaleAspectFill
                 overlayView.tintColor = UIColor(white: 0.5, alpha: 0.5)
+                overlayView.frame = personImage1.bounds
                 personImage1.addSubview(overlayView)
             }
         }
@@ -387,7 +404,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     @IBAction func spriteKitBack(_ sender: Any) {
         let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
-        navigation?.backgroundPosition = backgroundPosition
+        //        navigation?.backgroundPosition = backgroundPosition
         navigation?.nextSection = currentStory?.moveToSection
         present(navigation!, animated: true, completion: nil)
     }
