@@ -10,6 +10,8 @@
 		0F232E7E26CE741300B1A23E /* WalkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */; };
 		0F232E8426CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */; };
 		0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */; };
+		0F232EA326D721AD00B1A23E /* WrongStoryPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */; };
+		0F232EA726D7222100B1A23E /* WrongStoryPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C92026B156D7007CB470 /* jasmer.xcdatamodeld */; };
@@ -86,6 +88,8 @@
 		0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameScene.swift; sourceTree = "<group>"; };
 		0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkingGameSceneStoryboard.storyboard; sourceTree = "<group>"; };
 		0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameSceneViewController.swift; sourceTree = "<group>"; };
+		0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongStoryPopUpController.swift; sourceTree = "<group>"; };
+		0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongStoryPopUp.xib; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 				0F9870CB26BAD50700609CB7 /* SettingPopUp.xib */,
 				824F7D2226BAA83B00DD05F4 /* PausePopUp.xib */,
 				826542A626BBCC4B00AE9E4B /* PostQuizViewController.storyboard */,
+				0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			children = (
 				0F9870D126BAD87900609CB7 /* SettingPopUpController.swift */,
 				828DFA2C26B9942300F98C4B /* PausePopUpController.swift */,
+				0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 				826542D926BC569F00AE9E4B /* Inter-Light-BETA.ttf in Resources */,
 				0F98713E26BCF9F100609CB7 /* ClueOnboardingView.xib in Resources */,
 				829FF07F26BD371A001D0326 /* Onboarding.storyboard in Resources */,
+				0F232EA726D7222100B1A23E /* WrongStoryPopUp.xib in Resources */,
 				0F98713F26BCF9F100609CB7 /* TouchingBoxStoryboard.storyboard in Resources */,
 				0F72C92426B156D8007CB470 /* Assets.xcassets in Resources */,
 				0F232E8426CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard in Resources */,
@@ -545,6 +552,7 @@
 				0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */,
 				0FC25FA726C65C8E00ACEF2F /* NavigationManager.swift in Sources */,
 				824F7D3426BAA8A100DD05F4 /* storyModel.swift in Sources */,
+				0F232EA326D721AD00B1A23E /* WrongStoryPopUpController.swift in Sources */,
 				829FF08E26BD4A0B001D0326 /* Menu.swift in Sources */,
 				0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */,
 				824F7D3C26BAB59500DD05F4 /* CoreDataManager.swift in Sources */,
