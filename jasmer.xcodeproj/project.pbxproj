@@ -15,6 +15,8 @@
 		0F232EBC26D8B2F500B1A23E /* footstepSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EBB26D8B2F400B1A23E /* footstepSound.mp3 */; };
 		0F232EBF26D8B53700B1A23E /* CreditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EBE26D8B53700B1A23E /* CreditView.xib */; };
 		0F232EC226D8B55500B1A23E /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EC126D8B55500B1A23E /* CreditViewController.swift */; };
+		0F232EC526D8D94100B1A23E /* Hero1GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EC426D8D94100B1A23E /* Hero1GameScene.swift */; };
+		0F232EC826D8D98D00B1A23E /* Hero2GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EC726D8D98D00B1A23E /* Hero2GameScene.swift */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C92026B156D7007CB470 /* jasmer.xcdatamodeld */; };
@@ -101,6 +103,8 @@
 		0F232EBB26D8B2F400B1A23E /* footstepSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = footstepSound.mp3; sourceTree = "<group>"; };
 		0F232EBE26D8B53700B1A23E /* CreditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditView.xib; sourceTree = "<group>"; };
 		0F232EC126D8B55500B1A23E /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
+		0F232EC426D8D94100B1A23E /* Hero1GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero1GameScene.swift; sourceTree = "<group>"; };
+		0F232EC726D8D98D00B1A23E /* Hero2GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero2GameScene.swift; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */,
+				0F232EC426D8D94100B1A23E /* Hero1GameScene.swift */,
+				0F232EC726D8D98D00B1A23E /* Hero2GameScene.swift */,
 				0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */,
 				0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */,
 			);
@@ -567,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F232E7E26CE741300B1A23E /* WalkingGameScene.swift in Sources */,
+				0F232EC526D8D94100B1A23E /* Hero1GameScene.swift in Sources */,
 				0F9870C726BA595100609CB7 /* ChapterCell.swift in Sources */,
 				82C3519B26D737D5000B8BF2 /* MissionPopUpViewController.swift in Sources */,
 				0F9870DD26BBAC6800609CB7 /* SoundPlayer.swift in Sources */,
@@ -596,6 +603,7 @@
 				0F9870D226BAD87900609CB7 /* SettingPopUpController.swift in Sources */,
 				826542AD26BBCC6F00AE9E4B /* ConversationView.swift in Sources */,
 				829FF09426BD4C99001D0326 /* PageLockedViewController.swift in Sources */,
+				0F232EC826D8D98D00B1A23E /* Hero2GameScene.swift in Sources */,
 				826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */,
 				0FD6023C26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift in Sources */,
 				0F98714626BCFA2B00609CB7 /* TouchingBoxViewController.swift in Sources */,

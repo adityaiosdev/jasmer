@@ -8,9 +8,15 @@
 import UIKit
 import SpriteKit
 
+
+
 class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDelegate {
     var backgroundPosition: CGPoint?
     var nextSection: Int?
+    var currentStory : Storyline?
+    var currentIndex :Int?
+    var currentSection : Int?
+    var storylines = [[Storyline]]()
     
     let cdm = CoreDataManager()
     func backToChapterSelection() {
@@ -29,11 +35,45 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     @IBOutlet weak var skview: SKView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene: WalkingGameScene = (WalkingGameScene(size: skview.frame.size) as? WalkingGameScene)!
 //        scene.backgroundPosition = backgroundPosition
-        scene.nextSection = nextSection
-        print(backgroundPosition)
-        skview.presentScene(scene)
+        var spriteScene = cdm.getLastUpdate()
+        let lastUpdates = cdm.getLastUpdate()
+        storylines = Storyline.initializeData()
+        if lastUpdates.count == 0{
+            currentIndex = 0
+            currentSection = 0
+        }
+        else{
+            let savedIndex = Int(lastUpdates[lastUpdates.count-1].index)
+            let savedSection = Int(lastUpdates[lastUpdates.count-1].section)
+            if savedSection < storylines.count && savedIndex < storylines[savedSection].count {
+                currentSection = savedSection
+                currentIndex = savedIndex
+            }
+            else{
+                currentIndex = 0
+                currentSection = 0
+            }
+        }
+        currentStory = storylines[currentSection ?? 0][currentIndex ?? 0]
+        switch currentStory?.nextSprite {
+        case .present :
+            let scene: WalkingGameScene = (WalkingGameScene(size: skview.frame.size) as? WalkingGameScene)!
+            scene.nextSection = nextSection
+//            print(backgroundPosition)
+            skview.presentScene(scene)
+        case .hoegeng:
+            let sceneHero1 : Hero1GameScene = (Hero1GameScene(size: skview.frame.size) as? Hero1GameScene)!
+            sceneHero1.nextSection = nextSection
+//            print(backgroundPosition)
+            skview.presentScene(sceneHero1)
+        case .none:
+            print("halo")
+        case .some(.hatta):
+            print("halo")
+        case .some(.presentAfterPast):
+            print("halo")
+        }
         // Do any additional setup after loading the view.
     }
     
