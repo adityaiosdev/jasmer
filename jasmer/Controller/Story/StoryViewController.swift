@@ -160,6 +160,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                     let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
                     //                    navigation?.backgroundPosition = backgroundPosition
                     navigation?.nextSection = currentStory?.moveToSection
+                    navigation?.currentStory = currentStory
                     present(navigation!, animated: true, completion: nil)
                 }
                 else{
@@ -171,6 +172,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             else{
                 currentIndex += 1
             }
+            cdm.insertEntryLastUpdates(0, currentSection, currentIndex: currentIndex)
             setupView()
             print(previousSection)
             print(previousIndex)
