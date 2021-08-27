@@ -227,6 +227,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
                 //go to esdoger convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.insertEntryLastUpdates(1, 10, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
                     MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{

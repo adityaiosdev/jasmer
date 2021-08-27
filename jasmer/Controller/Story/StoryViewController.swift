@@ -362,7 +362,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                 personImage2.image = person2
                 overlayView.image = person2
                 overlayView.image =  person2.withRenderingMode(.alwaysTemplate)
-                overlayView.contentMode = .scaleAspectFit
+                overlayView.contentMode = .scaleAspectFill
                 overlayView.tintColor = UIColor(white: 0.5, alpha: 0.5)
                 overlayView.frame = personImage2.bounds
                 personImage2.addSubview(overlayView)
