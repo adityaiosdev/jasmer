@@ -12,6 +12,9 @@
 		0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */; };
 		0F232EA326D721AD00B1A23E /* WrongStoryPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */; };
 		0F232EA726D7222100B1A23E /* WrongStoryPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */; };
+		0F232EBC26D8B2F500B1A23E /* footstepSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EBB26D8B2F400B1A23E /* footstepSound.mp3 */; };
+		0F232EBF26D8B53700B1A23E /* CreditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F232EBE26D8B53700B1A23E /* CreditView.xib */; };
+		0F232EC226D8B55500B1A23E /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232EC126D8B55500B1A23E /* CreditViewController.swift */; };
 		0F72C91826B156D7007CB470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91726B156D7007CB470 /* AppDelegate.swift */; };
 		0F72C91A26B156D7007CB470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C91926B156D7007CB470 /* SceneDelegate.swift */; };
 		0F72C92226B156D7007CB470 /* jasmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F72C92026B156D7007CB470 /* jasmer.xcdatamodeld */; };
@@ -95,6 +98,9 @@
 		0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameSceneViewController.swift; sourceTree = "<group>"; };
 		0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongStoryPopUpController.swift; sourceTree = "<group>"; };
 		0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongStoryPopUp.xib; sourceTree = "<group>"; };
+		0F232EBB26D8B2F400B1A23E /* footstepSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = footstepSound.mp3; sourceTree = "<group>"; };
+		0F232EBE26D8B53700B1A23E /* CreditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditView.xib; sourceTree = "<group>"; };
+		0F232EC126D8B55500B1A23E /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
 		0F72C91426B156D7007CB470 /* jasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72C91726B156D7007CB470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72C91926B156D7007CB470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9870D526BBAB5B00609CB7 /* buttonPressed.wav */,
+				0F232EBB26D8B2F400B1A23E /* footstepSound.mp3 */,
 				0FD6026526CE3C2200963A6B /* BGM.mp3 */,
 			);
 			path = SoundFile;
@@ -333,6 +340,7 @@
 				0F232EA626D7222100B1A23E /* WrongStoryPopUp.xib */,
 				82C3519826D735A0000B8BF2 /* MissionPopUp.xib */,
 				8259A45426D748780067E5EC /* MissionTableViewCell.xib */,
+				0F232EBE26D8B53700B1A23E /* CreditView.xib */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 				828DFA2C26B9942300F98C4B /* PausePopUpController.swift */,
 				0F232EA226D721AD00B1A23E /* WrongStoryPopUpController.swift */,
 				82C3519A26D737D5000B8BF2 /* MissionPopUpViewController.swift */,
+				0F232EC126D8B55500B1A23E /* CreditViewController.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -509,7 +518,9 @@
 				0F9870CC26BAD50700609CB7 /* SettingPopUp.xib in Resources */,
 				0FD6023826CD0B2700963A6B /* StartGameQuestionPopUp.xib in Resources */,
 				829FF09226BD4C8A001D0326 /* PageLocked.storyboard in Resources */,
+				0F232EBF26D8B53700B1A23E /* CreditView.xib in Resources */,
 				826542E426BC569F00AE9E4B /* Inter-Bold.ttf in Resources */,
+				0F232EBC26D8B2F500B1A23E /* footstepSound.mp3 in Resources */,
 				826542DA26BC569F00AE9E4B /* Inter-ExtraBoldItalic.ttf in Resources */,
 				0F9870EC26BC037300609CB7 /* Rajdhani-SemiBold.ttf in Resources */,
 				829FF08A26BD492D001D0326 /* MainMenuStoryboard.storyboard in Resources */,
@@ -588,6 +599,7 @@
 				826542B226BBCC9500AE9E4B /* StoryViewController.swift in Sources */,
 				0FD6023C26CD0D1B00963A6B /* StartGameQuestionPopUpController.swift in Sources */,
 				0F98714626BCFA2B00609CB7 /* TouchingBoxViewController.swift in Sources */,
+				0F232EC226D8B55500B1A23E /* CreditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

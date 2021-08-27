@@ -127,7 +127,9 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         
         let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2,walkperson3,walkperson4], timePerFrame: 0.3)
         let repeatForEver = SKAction.repeatForever(walkAnimation)
+        let footstepSoundEffect = SKAction.repeatForever(SKAction.playSoundFileNamed("footstepSound.mp3", waitForCompletion: true))
         let seq = SKAction.sequence([walkAnimation,repeatForEver])
+        self.run(footstepSoundEffect, withKey: "footstepSoundEffect")
         personSprite.run(seq, withKey : forTheKey)
     }
 
@@ -242,5 +244,6 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         background.removeAction(forKey: "MoveLeft")
         personSprite.removeAction(forKey: "Right")
         personSprite.removeAction(forKey: "Left")
+        self.removeAction(forKey: "footstepSoundEffect")
     }
 }
