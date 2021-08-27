@@ -114,6 +114,8 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         esDogerStand.name = "esDogerStand"
         background.addChild(esDogerStand)
         
+        print("next section : \(nextSection)")
+        
 //        hoegengChibi.zPosition = 1
 //        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
 //        hoegengChibi.size = CGSize(width: 93, height: 140)
@@ -234,21 +236,22 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             if sekolah.contains(objectTouched) && background.position.x <= frame.midX-1300-150 && background.position.x >= frame.midX-1300-150 - 2532/5-100{
                 //go to carlos convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    WrongStoryPopUpController.instance.showAlert()
-//                    cdm.insertEntry(1, 1, currentIndex: 0)
-//                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-//                    MainViewController?.backgroundPosition = background.position
-//                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-//                        window.rootViewController = MainViewController
-//                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+//                    WrongStoryPopUpController.instance.showAlert()
+                    cdm.insertEntryLastUpdates(1, 1, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
                     }
                 }
+            }
             
 
             if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
                 //go to esdoger convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntryLastUpdates(1, 10, currentIndex: 0)
+                    cdm.insertEntryLastUpdates(1, nextSection ?? 0, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
                     MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
