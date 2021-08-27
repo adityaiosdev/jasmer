@@ -21,6 +21,12 @@ class WalkingGameScene : SKScene{
     var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
     var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
     
+    //kantor polisi
+    var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
+    
+    //pak hoegeng chibi
+    var hoegengChibi = SKSpriteNode(imageNamed: "hoegengChibi")
+    
     //person
     var personSprite : SKSpriteNode!
     
@@ -80,6 +86,18 @@ class WalkingGameScene : SKScene{
         esDogerStand.name = "esDogerStand"
         background.addChild(esDogerStand)
         
+        hoegengChibi.zPosition = 1
+        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
+        hoegengChibi.size = CGSize(width: 93, height: 140)
+        hoegengChibi.name = "hoegengChibi"
+        background.addChild(hoegengChibi)
+        
+        kantorPolisi.zPosition = 1
+        kantorPolisi.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        kantorPolisi.size = CGSize(width: 1824/4, height: 211)
+        kantorPolisi.name = "kantorPolisi"
+        background.addChild(kantorPolisi)
+             
     }
     
     func moveBackground (moveBy: CGFloat, forTheKey: String) {
