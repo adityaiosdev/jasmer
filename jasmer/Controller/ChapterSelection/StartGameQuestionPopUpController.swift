@@ -55,7 +55,14 @@ class StartGameQuestionPopUpController: UIView {
     }
     @IBAction func newGameBtnPressed(_ sender: UIButton) {
         SoundEffectsPlayer.shared.PlaySFX(SFXFileName: "buttonPressed")
-        cdm.insertEntry(1, 0, currentIndex: 0)
+        let missionList = Mission.initializeData()
+        cdm.deleteGameStatus()
+        cdm.deleteAllMission()
+        for mission in missionList{
+            cdm.insertEntryMission(for: mission)
+        }
+        cdm.deleteBackgroundPosition()
+        cdm.insertEntryLastUpdates(1, 0, currentIndex: 0)
         let storyboard = UIStoryboard(name: "StoryStoryboard" , bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier: "StoryStoryboard" )
         UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)

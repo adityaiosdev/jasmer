@@ -6,8 +6,13 @@
 //
 
 import SpriteKit
+import UIKit
 
-class WalkingGameScene : SKScene{
+class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
+    func resumeGame() {
+        print("Kembali")
+    }
+    
     
     //bg
     var background = SKSpriteNode(imageNamed: "Tes")
@@ -20,6 +25,7 @@ class WalkingGameScene : SKScene{
     var rumah = SKSpriteNode(imageNamed: "RumahTes")
     var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
     var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
+
     
     //kantor polisi
     var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
@@ -27,29 +33,46 @@ class WalkingGameScene : SKScene{
     //pak hoegeng chibi
     var hoegengChibi = SKSpriteNode(imageNamed: "hoegengChibi")
     
+=======
+
+  //bandara hatta
+//    var bandara = SKSpriteNode(imageNamed: "Bandara")
+
+
     //person
     var personSprite : SKSpriteNode!
     
-    var backgroundPosition: CGPoint?
+//    var backgroundPosition: CGPoint?
     
     var nextSection: Int?
+    let cdm = CoreDataManager()
+    var backgroundPosition = [BackgroundPosition]()
     
     override func didMove(to view: SKView) {
         print("Halo")
         print(nextSection)
+        WrongStoryPopUpController.instance.delegate = self
         
         background.zPosition = 0
         
-        if backgroundPosition == nil {
+        backgroundPosition = cdm.getBackgroundPosition()
+        
+        if backgroundPosition.isEmpty{
+            print("BG Position empty")
             background.position = CGPoint(x: frame.midX, y: frame.midY)
         }
         else{
-            background.position = backgroundPosition!
+            print(backgroundPosition[0].xPosition)
+            let bgPosition = backgroundPosition[0]
+            background.position = CGPoint(x: CGFloat(bgPosition.xPosition), y: CGFloat(bgPosition.yPosition))
         }
         
         background.size = CGSize(width: background.size.width, height: frame.size.height+10)
         background.name = "bg"
         addChild(background)
+      
+      //create pesawat hatta
+//        createPesawat()
         
         nextBtn.zPosition = 1
         nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
@@ -68,18 +91,24 @@ class WalkingGameScene : SKScene{
         addChild(personSprite)
         
         //objects
+//          bandara.zPosition = 1
+//          bandara.position = CGPoint(x: frame.midX-20, y: frame.midY-230)
+//          bandara.size = CGSize(width: 2532/5, height: 1170/5)
+//          bandara.name = "bandara"
+//          background.addChild(bandara)
+
         rumah.zPosition = 1
         rumah.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
         rumah.size = CGSize(width: 300, height: 300)
         rumah.name = "rmh"
         background.addChild(rumah)
-        
+
         sekolah.zPosition = 1
         sekolah.position = CGPoint(x: frame.midX+1300, y: frame.midY-230)
         sekolah.size = CGSize(width: 2532/5, height: 1170/5)
         sekolah.name = "sekolah"
         background.addChild(sekolah)
-        
+
         esDogerStand.zPosition = 1
         esDogerStand.position = CGPoint(x: frame.midX+2300, y: frame.midY-255)
         esDogerStand.size = CGSize(width: 150, height: 150)
@@ -120,9 +149,44 @@ class WalkingGameScene : SKScene{
         
         let walkAnimation = SKAction.animate(with: [walkperson1, walkperson2,walkperson3,walkperson4], timePerFrame: 0.3)
         let repeatForEver = SKAction.repeatForever(walkAnimation)
+        let footstepSoundEffect = SKAction.repeatForever(SKAction.playSoundFileNamed("footstepSound.mp3", waitForCompletion: true))
         let seq = SKAction.sequence([walkAnimation,repeatForEver])
+        self.run(footstepSoundEffect, withKey: "footstepSoundEffect")
         personSprite.run(seq, withKey : forTheKey)
     }
+
+  // animasi + create pesawat
+    func createPesawat() {
+        //texture
+        let pesawatTexture = SKTexture(imageNamed: "Pesawat")
+        let pesawatScale = 0.1 as CGFloat
+        pesawatTexture.filteringMode = .nearest
+
+        //pesawat sprite
+        let pesawatSprite = SKSpriteNode(texture: pesawatTexture)
+        pesawatSprite.setScale(pesawatScale)
+        //add to scene
+        background.addChild(pesawatSprite)
+
+        //animate pesawat
+        animatePesawat(sprite: pesawatSprite, textureWidth: pesawatScale)
+    }
+
+    func animatePesawat(sprite: SKSpriteNode, textureWidth: CGFloat) {
+
+        //pesawat
+        //    SKAction.mov
+        let movePesawat = SKAction.move(to: CGPoint(x: frame.minX-600, y: frame.maxY), duration: 10.0)
+        let rotatePesawat = SKAction.rotate(toAngle: CGFloat(-.pi/10.0), duration: 1, shortestUnitArc: true)
+
+        let resetPesawat = SKAction.move(to: CGPoint(x: frame.minX+540, y: frame.minY), duration: 0)
+        let pesawatLoop = SKAction.sequence([rotatePesawat, movePesawat, resetPesawat])
+
+        sprite.position = CGPoint(x: frame.midX-60, y: frame.midY-220)
+        sprite.run(SKAction.repeatForever(pesawatLoop))
+    }
+
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch: AnyObject in touches {
             let cdm = CoreDataManager()
@@ -138,36 +202,54 @@ class WalkingGameScene : SKScene{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
-            
+
+          //touches bandara
+//          if bandara.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
+//              //go to hatta convo
+//              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+//                cdm.insertEntry(1, 0, currentIndex: 0)
+//                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                MainViewController?.backgroundPosition = background.position
+//                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+//                  window.rootViewController = MainViewController
+//                  UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+//                }
+//              }
+//            }
+
             if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntry(1, 0, currentIndex: 0)
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 0, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                    MainViewController?.backgroundPosition = background.position
+//                    MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
                         window.rootViewController = MainViewController
                         UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
                     }
                 }
             }
-            
+
             if sekolah.contains(objectTouched) && background.position.x <= frame.midX-1300-150 && background.position.x >= frame.midX-1300-150 - 2532/5-100{
                 //go to carlos convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntry(1, 1, currentIndex: 0)
-                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                    MainViewController?.backgroundPosition = background.position
-                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                        window.rootViewController = MainViewController
-                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    WrongStoryPopUpController.instance.showAlert()
+//                    cdm.insertEntry(1, 1, currentIndex: 0)
+//                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+//                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+//                        window.rootViewController = MainViewController
+//                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
                     }
                 }
-            }
             
+
             if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
                 //go to esdoger convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.insertEntryLastUpdates(1, 10, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
                     MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
@@ -185,5 +267,6 @@ class WalkingGameScene : SKScene{
         background.removeAction(forKey: "MoveLeft")
         personSprite.removeAction(forKey: "Right")
         personSprite.removeAction(forKey: "Left")
+        self.removeAction(forKey: "footstepSoundEffect")
     }
 }

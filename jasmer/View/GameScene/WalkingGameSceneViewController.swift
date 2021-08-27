@@ -14,9 +14,11 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     
     let cdm = CoreDataManager()
     func backToChapterSelection() {
-        let storyboard = UIStoryboard(name: "ChapterSelectionStoryboard" , bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier: "ChapterSelection" )
-        UIApplication.topViewController()?.present(navigation, animated: true, completion: nil)
+        let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection") as? StoryViewController
+        if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+            window.rootViewController = MainViewController
+            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
     
     func resumeGame() {
@@ -28,7 +30,7 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene: WalkingGameScene = (WalkingGameScene(size: skview.frame.size) as? WalkingGameScene)!
-        scene.backgroundPosition = backgroundPosition
+//        scene.backgroundPosition = backgroundPosition
         scene.nextSection = nextSection
         print(backgroundPosition)
         skview.presentScene(scene)
@@ -39,15 +41,7 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
         PausePopUpController.instance.showAlert()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func missionBtnClicked(_ sender: UIButton) {
+        MissionPopUpViewController.instance.showPopUp()
     }
-    */
-
 }

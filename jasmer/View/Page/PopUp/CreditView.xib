@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditViewController" customModule="jasmer" customModuleProvider="target">
+            <connections>
+                <outlet property="creditView" destination="iN0-l3-epB" id="Ie5-wV-0JZ"/>
+                <outlet property="creditViewBox" destination="QAg-kx-5IU" id="Ugr-VT-Nq2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-kx-5IU">
+                    <rect key="frame" x="248" y="87" width="400" height="240"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-8z-dIJ">
+                            <rect key="frame" x="160" y="-45" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="M4K-lv-eEa"/>
+                                <constraint firstAttribute="height" constant="80" id="evx-a9-mIs"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kredit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZT-sa-NMt">
+                            <rect key="frame" x="174.5" y="45" width="51" height="26"/>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.32546404000000001" green="0.32156211140000002" blue="0.32156899570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="RYZ-8z-dIJ" firstAttribute="top" secondItem="QAg-kx-5IU" secondAttribute="top" constant="-45" id="0C4-DG-7FS"/>
+                        <constraint firstAttribute="width" constant="400" id="Df5-oE-DNi"/>
+                        <constraint firstItem="XZT-sa-NMt" firstAttribute="top" secondItem="RYZ-8z-dIJ" secondAttribute="bottom" constant="10" id="EWc-02-xTc"/>
+                        <constraint firstItem="XZT-sa-NMt" firstAttribute="centerX" secondItem="QAg-kx-5IU" secondAttribute="centerX" id="JBW-UA-tCt"/>
+                        <constraint firstAttribute="height" constant="240" id="OZu-ra-IRL"/>
+                        <constraint firstItem="RYZ-8z-dIJ" firstAttribute="centerX" secondItem="QAg-kx-5IU" secondAttribute="centerX" id="afu-P2-GMq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Musik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3U-X1-fJm">
+                    <rect key="frame" x="423" y="194" width="49" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15268621381544906" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="QAg-kx-5IU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XIo-z0-WEE"/>
+                <constraint firstItem="XZT-sa-NMt" firstAttribute="top" secondItem="RYZ-8z-dIJ" secondAttribute="bottom" constant="10" id="jAz-0a-Bbo"/>
+                <constraint firstItem="QAg-kx-5IU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pkc-oI-dch"/>
+                <constraint firstItem="XZT-sa-NMt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v5c-9i-Zti"/>
+            </constraints>
+            <point key="canvasLocation" x="83" y="85"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="credit" width="70" height="70"/>
+    </resources>
+</document>

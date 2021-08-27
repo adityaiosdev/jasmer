@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rajdhani-Bold.ttf">
+            <string>Rajdhani-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WrongStoryPopUpController" customModule="jasmer" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="Rph-Wn-KVA" id="Amr-88-ZYx"/>
+                <outlet property="backBtn" destination="rbz-Zy-pbE" id="VIx-Xq-n6p"/>
+                <outlet property="wrongstoryView" destination="iN0-l3-epB" id="7CX-nS-xGA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rph-Wn-KVA">
+                    <rect key="frame" x="328" y="117" width="240" height="180"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbz-Zy-pbE">
+                            <rect key="frame" x="75" y="125" width="90" height="35"/>
+                            <color key="backgroundColor" red="0.63274532559999996" green="0.69206935169999995" blue="0.78040522339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="H8q-1J-rBB"/>
+                                <constraint firstAttribute="height" constant="35" id="zjf-oh-eBA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
+                            <state key="normal" title="Kembali">
+                                <color key="titleColor" red="1" green="0.98613516115320499" blue="0.99653379028830125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="Efx-2w-CLB"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ups, Kamu salah mengikuti petunjuk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-2e-cte">
+                            <rect key="frame" x="0.0" y="40" width="240" height="43.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="Mcb-kw-zhH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.9861351612" blue="0.9965337903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.32546404000000001" green="0.32156211140000002" blue="0.32156899570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rbz-Zy-pbE" secondAttribute="bottom" constant="20" id="1gZ-dT-Nja"/>
+                        <constraint firstItem="rbz-Zy-pbE" firstAttribute="centerX" secondItem="Rph-Wn-KVA" secondAttribute="centerX" id="9I8-5T-IxM"/>
+                        <constraint firstAttribute="height" constant="180" id="BAe-wQ-JwE"/>
+                        <constraint firstItem="bng-2e-cte" firstAttribute="centerX" secondItem="Rph-Wn-KVA" secondAttribute="centerX" id="Cbv-NE-b10"/>
+                        <constraint firstItem="bng-2e-cte" firstAttribute="top" secondItem="Rph-Wn-KVA" secondAttribute="top" constant="40" id="cmE-g6-xMJ"/>
+                        <constraint firstAttribute="width" constant="240" id="mz3-YV-pvw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15472239370609842" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rph-Wn-KVA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bVR-rU-VBn"/>
+                <constraint firstItem="Rph-Wn-KVA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ji3-oq-Sco"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="122"/>
+        </view>
+    </objects>
+</document>
