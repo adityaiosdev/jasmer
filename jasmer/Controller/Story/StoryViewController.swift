@@ -90,6 +90,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     var isAlreadyChosen: Bool = false
     var previousChosenSection : Int = 0
     let cdm = CoreDataManager()
+    var storyViewControllerDelegate: StoryViewControllerDelegate?
     
     let storylines = Storyline.initializeData()
     
@@ -135,7 +136,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         previousSection = currentSection
         previousIndex = currentIndex
-        if currentSection < storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
+        if currentSection <= storylines.count && currentSection >= 0 && currentIndex >= 0 && currentStory?.category == .conversation{
             if currentIndex == storylines[currentSection].count - 1 {
                 print(currentStory?.moveToSection)
                 if (currentStory?.isLast)!{
@@ -144,24 +145,50 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                     var missionStatement = [MissionStatement]()
                     if !missionObjects.isEmpty{
                         missionStatement = cdm.getMissionStatement(for: missionObjects[0])
+                        storyViewControllerDelegate?.previousMissionCount(totalMission: missionStatement.count)
                     }
                     if !missionStatement.isEmpty{
-                        cdm.updateMission(missionStatement: missionStatement[0], newStatus: true)
+//                        cdm.updateMission(missionStatement: missionStatement[0], newStatus: true)
+//                        print("Previous : \(missionStatement[0].mission)")
                         cdm.deleteOneMission(for: missionStatement[0])
                         missionStatement = cdm.getMissionStatement(for: missionObjects[0])
+//                        print("After : \(missionStatement[0].mission)")
                         if missionStatement.isEmpty{
                             print("No mission")
                             cdm.deleteGameStatus()
-                            cdm.insertGameStatus()
+                            if currentStory?.currentSprite == .present{
+                                cdm.insertGameStatus(for: .present)
+                            }
+                            else if currentStory?.currentSprite == .hoegeng{
+                                cdm.insertGameStatus(for: .hoegeng)
+                            }
+                            else if currentStory?.currentSprite == .hatta{
+                                cdm.insertGameStatus(for: .hatta)
+                            }
+                            else if currentStory?.currentSprite == .presentAfterPast{
+                                cdm.insertGameStatus(for: .presentAfterPast)
+                            }
+                            checkLastMission(storyline: currentStory!)
                         }
                     }
+                    if currentStory?.currentSprite != currentStory?.nextSprite{
+                        cdm.deleteBackgroundPosition()
+                    }
                     
+                    if currentStory?.category == .postQuiz{
+                        let storyboard = UIStoryboard(name: "PostQuizViewController" , bundle: nil)
+                        let navigation = storyboard.instantiateViewController(identifier: "postQuiz" ) as? PostQuizViewController
+                        present(navigation!, animated: true, completion: nil)
+                    }
+                    else{
                     let storyboard = UIStoryboard(name: "WalkingGameSceneStoryboard" , bundle: nil)
                     let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
                     //                    navigation?.backgroundPosition = backgroundPosition
                     navigation?.nextSection = currentStory?.moveToSection
+                    print("Move to section: \(currentStory?.moveToSection)")
                     navigation?.currentStory = currentStory
                     present(navigation!, animated: true, completion: nil)
+                    }
                 }
                 else{
                     guard currentStory?.moveToSection != nil else {return }
@@ -172,6 +199,7 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             else{
                 currentIndex += 1
             }
+//            storyViewControllerDelegate?.nextStory(currentStory: currentStory!)
             cdm.insertEntryLastUpdates(0, currentSection, currentIndex: currentIndex)
             setupView()
             print(previousSection)
@@ -301,7 +329,9 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
             
             if currentStory?.backgroundImage != nil{
                 backgroundImage.image = currentStory?.backgroundImage
-                createBgOverlay()
+                for view in backgroundImage.subviews{
+                    view.removeFromSuperview()
+                }
             }
             
             if currentStory?.personName != nil {
@@ -437,4 +467,9 @@ extension UIApplication {
         }
         return viewController
     }
+}
+
+protocol StoryViewControllerDelegate: AnyObject{
+//    func nextStory(currentStory: Storyline)
+    func previousMissionCount(totalMission: Int)
 }

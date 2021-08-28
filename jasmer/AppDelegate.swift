@@ -41,8 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        else if gameStatus[0].gameStatus == true {
-            print("True: \(gameStatus[0].gameStatus)")
+        else if gameStatus[gameStatus.count-1].gameStatus == true {
             cdm.deleteAllMission()
         }
         //                storageManager.resetOnboarding()

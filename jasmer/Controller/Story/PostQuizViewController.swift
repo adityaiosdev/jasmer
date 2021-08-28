@@ -18,6 +18,9 @@ class PostQuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let cdm = CoreDataManager()
+        cdm.insertEntryLastUpdates(0, 24, currentIndex: 0)
+        
         postQuizCollectionView.delegate = self
         postQuizCollectionView.dataSource = self
         let cellNib = UINib(nibName: "InteractionCollectionViewCell", bundle: nil)
