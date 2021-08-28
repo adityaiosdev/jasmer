@@ -25,6 +25,10 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
     var rumah = SKSpriteNode(imageNamed: "RumahTes")
     var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
     var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
+    var ibuJason = SKSpriteNode(imageNamed: "Muther")
+    var carlos = SKSpriteNode(imageNamed: "Carloscibi")
+    var guru = SKSpriteNode(imageNamed: "Gurucibipresent")
+    var Mangdoger = SKSpriteNode(imageNamed: "Mangdoger")
 
     
     //kantor polisi
@@ -32,6 +36,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
     
     //pak hoegeng chibi
     var hoegengChibi = SKSpriteNode(imageNamed: "hoegengChibi")
+    
     
 
   //bandara hatta
@@ -88,7 +93,26 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         personSprite.size = CGSize(width: 1500/10, height: 2100/10)
         personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 120)
         addChild(personSprite)
-        
+        ibuJason.zPosition = 2
+        ibuJason.position = CGPoint(x: frame.midX - 20, y: frame.midY-280)
+        ibuJason.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        ibuJason.name = "ibuJason"
+        background.addChild(ibuJason)
+        carlos.zPosition = 2
+        carlos.position = CGPoint(x: frame.midX + 1100, y: frame.midY-280)
+        carlos.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        carlos.name = "carlos"
+        background.addChild(carlos)
+        guru.zPosition = 2
+        guru.position = CGPoint(x: frame.midX + 1400, y: frame.midY-280)
+        guru.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        guru.name = "guru"
+        background.addChild(guru)
+        Mangdoger.zPosition = 2
+        Mangdoger.position = CGPoint(x: frame.midX + 2200, y: frame.midY-280)
+        Mangdoger.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        Mangdoger.name = "MangDoger"
+        background.addChild(Mangdoger)
         //objects
 //          bandara.zPosition = 1
 //          bandara.position = CGPoint(x: frame.midX-20, y: frame.midY-230)
@@ -251,7 +275,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
                 //go to esdoger convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.insertEntryLastUpdates(1, nextSection ?? 0, currentIndex: 0)
+                    cdm.insertEntryLastUpdates(1, 10, currentIndex: 0)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
                     MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{

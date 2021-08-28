@@ -29,7 +29,7 @@ class Hero1GameScene : SKScene, WrongStoryPopUpControllerDelegate{
     var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
     
     //pak hoegeng chibi
-    var hoegengChibi = SKSpriteNode(imageNamed: "hoegengChibi")
+    var hoegengChibi = SKSpriteNode(imageNamed: "Hoegengcibi")
     
 
   //bandara hatta
@@ -113,13 +113,13 @@ class Hero1GameScene : SKScene, WrongStoryPopUpControllerDelegate{
 //        background.addChild(esDogerStand)
         
         hoegengChibi.zPosition = 1
-        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
-        hoegengChibi.size = CGSize(width: 93, height: 140)
+        hoegengChibi.position = CGPoint(x: frame.midX + 350, y: frame.midY-280)
+        hoegengChibi.size = CGSize(width: frame.size.height/4 , height: frame.size.height/4)
         hoegengChibi.name = "hoegengChibi"
         background.addChild(hoegengChibi)
         
         kantorPolisi.zPosition = 1
-        kantorPolisi.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        kantorPolisi.position = CGPoint(x: frame.midX + 900, y: frame.midY-220)
         kantorPolisi.size = CGSize(width: 1824/4, height: 211)
         kantorPolisi.name = "kantorPolisi"
         background.addChild(kantorPolisi)
@@ -199,12 +199,26 @@ class Hero1GameScene : SKScene, WrongStoryPopUpControllerDelegate{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
+            if hoegengChibi.contains(objectTouched){
+                //go to mom convo
+                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 11, currentIndex: 1)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                }
+            }
             if kantorPolisi.contains(objectTouched){
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                     cdm.deleteBackgroundPosition()
                     cdm.insertBackgroundPosition(bgPosition: background.position)
-                    cdm.insertEntryLastUpdates(1, 10, currentIndex: 0)
+                    cdm.insertEntryLastUpdates(1, 11, currentIndex: 2)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
 //                    MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
