@@ -18,17 +18,17 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
     //button
     var nextBtn = SKSpriteNode(imageNamed: "nextBtn")
     var leftBtn = SKSpriteNode(imageNamed: "prevBtn")
-
-// bandara hatta
+    
+    // bandara hatta
     var bandara = SKSpriteNode(imageNamed: "Bandara")
     var guruMasaLalu = SKSpriteNode(imageNamed: "Gurucibi")
     var hattaMasaLalu = SKSpriteNode(imageNamed: "Hattacibi")
-
-
+    
+    
     //person
     var personSprite : SKSpriteNode!
     
-//    var backgroundPosition: CGPoint?
+    //    var backgroundPosition: CGPoint?
     
     var nextSection: Int?
     let cdm = CoreDataManager()
@@ -56,9 +56,9 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
         background.size = CGSize(width: background.size.width, height: frame.size.height+10)
         background.name = "bg"
         addChild(background)
-      
-      //create pesawat hatta
-//        createPesawat()
+        
+        //create pesawat hatta
+        //        createPesawat()
         
         nextBtn.zPosition = 1
         nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
@@ -76,12 +76,12 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
         personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 120)
         addChild(personSprite)
         
-//        objects
-          bandara.zPosition = 1
-          bandara.position = CGPoint(x: frame.midX + 1050, y: frame.midY-230)
-          bandara.size = CGSize(width: 2532/5, height: 1170/5)
-          bandara.name = "bandara"
-          background.addChild(bandara)
+        //        objects
+        bandara.zPosition = 1
+        bandara.position = CGPoint(x: frame.midX + 1050, y: frame.midY-230)
+        bandara.size = CGSize(width: 2532/5, height: 1170/5)
+        bandara.name = "bandara"
+        background.addChild(bandara)
         print("next section : \(nextSection)")
         // gurumasalalu
         guruMasaLalu.zPosition = 1
@@ -94,18 +94,18 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
         hattaMasaLalu.size = CGSize(width: frame.size.height/4, height: frame.size.height/4)
         background.addChild(hattaMasaLalu)
         
-//        hoegengChibi.zPosition = 1
-//        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
-//        hoegengChibi.size = CGSize(width: 93, height: 140)
-//        hoegengChibi.name = "hoegengChibi"
-//        background.addChild(hoegengChibi)
-//
-//        kantorPolisi.zPosition = 1
-//        kantorPolisi.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
-//        kantorPolisi.size = CGSize(width: 1824/4, height: 211)
-//        kantorPolisi.name = "kantorPolisi"
-//        background.addChild(kantorPolisi)
-             
+        //        hoegengChibi.zPosition = 1
+        //        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
+        //        hoegengChibi.size = CGSize(width: 93, height: 140)
+        //        hoegengChibi.name = "hoegengChibi"
+        //        background.addChild(hoegengChibi)
+        //
+        //        kantorPolisi.zPosition = 1
+        //        kantorPolisi.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        //        kantorPolisi.size = CGSize(width: 1824/4, height: 211)
+        //        kantorPolisi.name = "kantorPolisi"
+        //        background.addChild(kantorPolisi)
+        
     }
     
     func moveBackground (moveBy: CGFloat, forTheKey: String) {
@@ -133,39 +133,39 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
         self.run(footstepSoundEffect, withKey: "footstepSoundEffect")
         personSprite.run(seq, withKey : forTheKey)
     }
-
-  // animasi + create pesawat
+    
+    // animasi + create pesawat
     func createPesawat() {
         //texture
         let pesawatTexture = SKTexture(imageNamed: "Pesawat")
         let pesawatScale = 0.1 as CGFloat
         pesawatTexture.filteringMode = .nearest
-
+        
         //pesawat sprite
         let pesawatSprite = SKSpriteNode(texture: pesawatTexture)
         pesawatSprite.setScale(pesawatScale)
         //add to scene
         background.addChild(pesawatSprite)
-
+        
         //animate pesawat
         animatePesawat(sprite: pesawatSprite, textureWidth: pesawatScale)
     }
-
+    
     func animatePesawat(sprite: SKSpriteNode, textureWidth: CGFloat) {
-
+        
         //pesawat
         //    SKAction.mov
         let movePesawat = SKAction.move(to: CGPoint(x: frame.minX-600, y: frame.maxY), duration: 10.0)
         let rotatePesawat = SKAction.rotate(toAngle: CGFloat(-.pi/10.0), duration: 1, shortestUnitArc: true)
-
+        
         let resetPesawat = SKAction.move(to: CGPoint(x: frame.minX+540, y: frame.minY), duration: 0)
         let pesawatLoop = SKAction.sequence([rotatePesawat, movePesawat, resetPesawat])
-
+        
         sprite.position = CGPoint(x: frame.midX-60, y: frame.midY-220)
         sprite.run(SKAction.repeatForever(pesawatLoop))
     }
-
-
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch: AnyObject in touches {
             let cdm = CoreDataManager()
@@ -181,53 +181,59 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
                 moveBackground(moveBy: 150, forTheKey: "MoveLeft")
                 walkingPerson(image1: "Rightlegforleft", image2: "Rightlegforlefttrans", image3: "Leftlegforleft", image4: "Leftlegforlefttrans", forTheKey: "Left")
             }
-
-          //touches bandara
-          if bandara.contains(objectTouched){
-              //go to hatta convo
-              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                cdm.insertEntryLastUpdates(1, 18, currentIndex: 5)
-                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                MainViewController?.backgroundPosition = background.position
-                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                  window.rootViewController = MainViewController
-                  UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            
+            //touches bandara
+            if bandara.contains(objectTouched){
+                //go to hatta convo
+                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 18, currentIndex: 5)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                    //              }
+                    //
                 }
-//              }
-//
             }
-        }
             // touches guru cibi
             if guruMasaLalu.contains(objectTouched){
                 //go to hatta convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                  cdm.insertEntryLastUpdates(1, 17, currentIndex: 0)
-                  let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                  MainViewController?.backgroundPosition = background.position
-                  if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                    window.rootViewController = MainViewController
-                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                  }
-  //              }
-  //
-              }
-          }
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 17, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                    //              }
+                    //
+                }
+            }
             // touches hatta
             if hattaMasaLalu.contains(objectTouched){
                 //go to hatta convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                  cdm.insertEntryLastUpdates(1, 19, currentIndex: 0)
-                  let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                  MainViewController?.backgroundPosition = background.position
-                  if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                    window.rootViewController = MainViewController
-                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                  }
-  //              }
-  //
-              }
-          }
-    }
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 19, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                    //              }
+                    //
+                }
+            }
+        }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        background.removeAction(forKey: "MovingRight")

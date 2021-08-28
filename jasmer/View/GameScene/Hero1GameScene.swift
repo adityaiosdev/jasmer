@@ -202,8 +202,7 @@ class Hero1GameScene : SKScene, WrongStoryPopUpControllerDelegate{
             if hoegengChibi.contains(objectTouched){
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                    cdm.deleteBackgroundPosition()
-                    cdm.insertBackgroundPosition(bgPosition: background.position)
+
                     cdm.insertEntryLastUpdates(1, 11, currentIndex: 1)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
 //                    MainViewController?.backgroundPosition = background.position

@@ -7,7 +7,33 @@
 
 import UIKit
 
-class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSource {
+class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSource, StoryViewControllerDelegate{
+    func previousMissionCount(totalMission: Int) {
+        previousMissionCount = totalMission
+        //        lastUpdates = cdm.getLastUpdate()
+        //        let lastUpdate = lastUpdates[lastUpdates.count-1]
+        //        checkLastMission(storyline: storylines[Int(lastUpdate.section)][Int(lastUpdate.index)])
+        //        missions = cdm.getMission()
+        //        if !missions.isEmpty{
+        //            missionStatement = cdm.getMissionStatement(for: missions[0])
+        //            if missionStatement.count != totalMission{
+        //                missionTableView.reloadData()
+        //        }
+        ////        DispatchQueue.main.async {
+        ////            self.missionTableView.reloadData()
+        ////        }
+        //        backgroundView.layer.cornerRadius = 15
+        //        let nib = UINib(nibName: "MissionTableViewCell", bundle: nil)
+        //        missionTableView.register(nib, forCellReuseIdentifier: "missionCell")
+        //        missionTableView.delegate = self
+        //        missionTableView.dataSource = self
+        //        missionTableView.backgroundColor = .clear
+        //        missionTableView.isUserInteractionEnabled = false
+        //        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(missionView)
+        //    }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if missionStatement.isEmpty {
             return 1
@@ -27,6 +53,7 @@ class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSo
             cell.radioBtn.isHidden = false
             cell.missionLabel.text = missionStatement[indexPath.row].mission
         }
+        self.missionTableView.reloadRows(at: [indexPath], with: .none)
         return cell
     }
     
@@ -41,7 +68,11 @@ class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSo
     let cdm = CoreDataManager()
     var missions = [MissionObject]()
     var missionStatement = [MissionStatement]()
-    //    let missions = Mission.initializeData()
+    var currentStory: Storyline?
+    var lastUpdates = [LastUpdates]()
+    let storylines = Storyline.initializeData()
+    var previousMissionCount = Int()
+        let missionList = Mission.initializeData()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,11 +89,35 @@ class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSo
     }
     
     func showPopUp(){
+        lastUpdates = cdm.getLastUpdate()
+        let lastUpdate = lastUpdates[lastUpdates.count-1]
+        checkLastMission(storyline: storylines[Int(lastUpdate.section)][Int(lastUpdate.index)])
         missions = cdm.getMission()
         if !missions.isEmpty{
             missionStatement = cdm.getMissionStatement(for: missions[0])
             self.missionTableView.reloadData()
+//            if storylines[Int(lastUpdate.section)][Int(lastUpdate.index)].currentSprite == .present{
+//                if missionStatement.count < missionList[0].missions.count{
+//                    self.missionTableView.reloadData()
+//                }
+//            }
+//            else if storylines[Int(lastUpdate.section)][Int(lastUpdate.index)].currentSprite == .hoegeng{
+//                if missionStatement.count < missionList[1].missions.count{
+//                    self.missionTableView.reloadData()
+//                }
+//            }
+//            else if storylines[Int(lastUpdate.section)][Int(lastUpdate.index)].currentSprite == .hatta{
+//                if missionStatement.count < missionList[2].missions.count{
+//                    self.missionTableView.reloadData()
+//                }
+//            }
+//            else if storylines[Int(lastUpdate.section)][Int(lastUpdate.index)].currentSprite == .presentAfterPast{
+//                if missionStatement.count < missionList[3].missions.count{
+//                    self.missionTableView.reloadData()
+//                }
+//            }
         }
+        
         backgroundView.layer.cornerRadius = 15
         let nib = UINib(nibName: "MissionTableViewCell", bundle: nil)
         missionTableView.register(nib, forCellReuseIdentifier: "missionCell")

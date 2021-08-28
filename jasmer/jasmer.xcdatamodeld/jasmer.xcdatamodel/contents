@@ -6,6 +6,10 @@
     </entity>
     <entity name="GameStatus" representedClassName="GameStatus" syncable="YES" codeGenerationType="class">
         <attribute name="gameStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="missionType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LastMission" representedClassName="LastMission" syncable="YES" codeGenerationType="class">
+        <attribute name="missionType" optional="YES" attributeType="String"/>
     </entity>
     <entity name="LastUpdates" representedClassName="LastUpdates" syncable="YES" codeGenerationType="class">
         <attribute name="chapter" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -24,9 +28,10 @@
     </entity>
     <elements>
         <element name="BackgroundPosition" positionX="-45" positionY="27" width="128" height="59"/>
-        <element name="GameStatus" positionX="162" positionY="126" width="128" height="44"/>
+        <element name="GameStatus" positionX="162" positionY="126" width="128" height="59"/>
+        <element name="LastMission" positionX="243" positionY="126" width="128" height="58"/>
         <element name="LastUpdates" positionX="-45" positionY="0" width="128" height="74"/>
         <element name="MissionObject" positionX="338.1165771484375" positionY="107.9328918457031" width="126.7982177734375" height="88"/>
-        <element name="MissionStatement" positionX="533.748291015625" positionY="183.0364990234375" width="128" height="88"/>
+        <element name="MissionStatement" positionX="533.748291015625" positionY="183.0364990234375" width="128" height="74"/>
     </elements>
 </model>

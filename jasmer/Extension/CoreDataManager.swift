@@ -42,9 +42,10 @@ class CoreDataManager{
     }
     
     //Insert Game Status
-    func insertGameStatus(){
+    func insertGameStatus(for missionType : MissionType){
         let gameStatus = GameStatus(context: context)
         gameStatus.gameStatus = true
+        gameStatus.missionType = missionType.rawValue
         
         appDelegate.saveContext()
     }
@@ -61,6 +62,13 @@ class CoreDataManager{
     //Update mission status
     func updateMission(missionStatement: MissionStatement, newStatus: Bool){
         missionStatement.status = newStatus
+        appDelegate.saveContext()
+    }
+    
+    //Insert last mission
+    func insertLastMission(missionType: MissionType){
+        let lastMission = LastMission(context: context)
+        lastMission.missionType = missionType.rawValue
         appDelegate.saveContext()
     }
     
@@ -112,6 +120,18 @@ class CoreDataManager{
     //Read Background Position
     func getBackgroundPosition() -> [BackgroundPosition]{
         let fetchRequest: NSFetchRequest<BackgroundPosition> = BackgroundPosition.fetchRequest()
+        do{
+            return try context.fetch(fetchRequest)
+        }
+        catch{
+            print("\(error.localizedDescription)")
+        }
+        return []
+    }
+    
+    //Read last mission
+    func getLastMission() -> [LastMission]{
+        let fetchRequest: NSFetchRequest<LastMission> = LastMission.fetchRequest()
         do{
             return try context.fetch(fetchRequest)
         }
