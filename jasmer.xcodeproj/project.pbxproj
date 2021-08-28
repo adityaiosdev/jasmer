@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F05731526DA33B900C1FA12 /* WalkingGameScenePresentAfterPast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05731426DA33B900C1FA12 /* WalkingGameScenePresentAfterPast.swift */; };
 		0F232E7E26CE741300B1A23E /* WalkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */; };
 		0F232E8426CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */; };
 		0F232E8826CE761E00B1A23E /* WalkingGameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F05731426DA33B900C1FA12 /* WalkingGameScenePresentAfterPast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameScenePresentAfterPast.swift; sourceTree = "<group>"; };
 		0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameScene.swift; sourceTree = "<group>"; };
 		0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkingGameSceneStoryboard.storyboard; sourceTree = "<group>"; };
 		0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGameSceneViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				0F232E7D26CE741200B1A23E /* WalkingGameScene.swift */,
 				0F232EC426D8D94100B1A23E /* Hero1GameScene.swift */,
 				0F232EC726D8D98D00B1A23E /* Hero2GameScene.swift */,
+				0F05731426DA33B900C1FA12 /* WalkingGameScenePresentAfterPast.swift */,
 				0F232E8326CE760700B1A23E /* WalkingGameSceneStoryboard.storyboard */,
 				0F232E8726CE761E00B1A23E /* WalkingGameSceneViewController.swift */,
 			);
@@ -582,6 +585,7 @@
 				0F98714726BCFA2B00609CB7 /* ChapterSelectionViewController.swift in Sources */,
 				0F98713726BCF95D00609CB7 /* StorageManager.swift in Sources */,
 				0F98715026BCFE4700609CB7 /* StartGamePopUpController.swift in Sources */,
+				0F05731526DA33B900C1FA12 /* WalkingGameScenePresentAfterPast.swift in Sources */,
 				826542AC26BBCC6F00AE9E4B /* InteractionView.swift in Sources */,
 				826542B126BBCC9500AE9E4B /* PostQuizViewController.swift in Sources */,
 				82C3519D26D73951000B8BF2 /* Mission.swift in Sources */,

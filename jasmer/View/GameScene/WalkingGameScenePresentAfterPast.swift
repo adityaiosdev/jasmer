@@ -1,14 +1,16 @@
 //
-//  Hero2GameScene.swift
+//  WalkingGameScene.swift
 //  jasmer
 //
-//  Created by Aditya Ramadhan on 27/08/21.
+//  Created by Aditya Ramadhan on 19/08/21.
 //
 
 import SpriteKit
 import UIKit
 
-class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
+
+
+class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDelegate{
     func resumeGame() {
         print("Kembali")
     }
@@ -18,11 +20,22 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
     //button
     var nextBtn = SKSpriteNode(imageNamed: "nextBtn")
     var leftBtn = SKSpriteNode(imageNamed: "prevBtn")
+    
+    //objects
+    var rumah = SKSpriteNode(imageNamed: "RumahTes")
+    var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
+    var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
 
-// bandara hatta
-    var bandara = SKSpriteNode(imageNamed: "Bandara")
-    var guruMasaLalu = SKSpriteNode(imageNamed: "Gurucibi")
-    var hattaMasaLalu = SKSpriteNode(imageNamed: "Hattacibi")
+    
+    //kantor polisi
+    var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
+    
+    //pak hoegeng chibi
+    var hoegengChibi = SKSpriteNode(imageNamed: "hoegengChibi")
+    
+
+  //bandara hatta
+//    var bandara = SKSpriteNode(imageNamed: "Bandara")
 
 
     //person
@@ -76,23 +89,32 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
         personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 120)
         addChild(personSprite)
         
-//        objects
-          bandara.zPosition = 1
-          bandara.position = CGPoint(x: frame.midX + 1050, y: frame.midY-230)
-          bandara.size = CGSize(width: 2532/5, height: 1170/5)
-          bandara.name = "bandara"
-          background.addChild(bandara)
+        //objects
+//          bandara.zPosition = 1
+//          bandara.position = CGPoint(x: frame.midX-20, y: frame.midY-230)
+//          bandara.size = CGSize(width: 2532/5, height: 1170/5)
+//          bandara.name = "bandara"
+//          background.addChild(bandara)
+
+        rumah.zPosition = 1
+        rumah.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        rumah.size = CGSize(width: 300, height: 300)
+        rumah.name = "rmh"
+        background.addChild(rumah)
+
+        sekolah.zPosition = 1
+        sekolah.position = CGPoint(x: frame.midX+1300, y: frame.midY-230)
+        sekolah.size = CGSize(width: 2532/5, height: 1170/5)
+        sekolah.name = "sekolah"
+        background.addChild(sekolah)
+
+        esDogerStand.zPosition = 1
+        esDogerStand.position = CGPoint(x: frame.midX+2300, y: frame.midY-255)
+        esDogerStand.size = CGSize(width: 150, height: 150)
+        esDogerStand.name = "esDogerStand"
+        background.addChild(esDogerStand)
+        
         print("next section : \(nextSection)")
-        // gurumasalalu
-        guruMasaLalu.zPosition = 1
-        guruMasaLalu.position = CGPoint(x: frame.midX + 350, y: frame.midY - 280 )
-        guruMasaLalu.size = CGSize(width: frame.size.height/4, height: frame.size.height/4)
-        background.addChild(guruMasaLalu)
-        // hatta
-        hattaMasaLalu.zPosition = 1
-        hattaMasaLalu.position = CGPoint(x: frame.midX + 1400, y: frame.midY - 280 )
-        hattaMasaLalu.size = CGSize(width: frame.size.height/4, height: frame.size.height/4)
-        background.addChild(hattaMasaLalu)
         
 //        hoegengChibi.zPosition = 1
 //        hoegengChibi.position = CGPoint(x: frame.midX-280, y: frame.midY-275)
@@ -183,51 +205,34 @@ class Hero2GameScene : SKScene, WrongStoryPopUpControllerDelegate{
             }
 
           //touches bandara
-          if bandara.contains(objectTouched){
-              //go to hatta convo
-              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                cdm.insertEntryLastUpdates(1, 18, currentIndex: 5)
-                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                MainViewController?.backgroundPosition = background.position
-                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                  window.rootViewController = MainViewController
-                  UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                }
+//          if bandara.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
+//              //go to hatta convo
+//              if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+//                cdm.insertEntry(1, 0, currentIndex: 0)
+//                let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                MainViewController?.backgroundPosition = background.position
+//                if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+//                  window.rootViewController = MainViewController
+//                  UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+//                }
 //              }
-//
+//            }
+
+            if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
+                //go to mom convo
+                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 23, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                }
             }
         }
-            // touches guru cibi
-            if guruMasaLalu.contains(objectTouched){
-                //go to hatta convo
-                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                  cdm.insertEntryLastUpdates(1, 17, currentIndex: 0)
-                  let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                  MainViewController?.backgroundPosition = background.position
-                  if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                    window.rootViewController = MainViewController
-                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                  }
-  //              }
-  //
-              }
-          }
-            // touches hatta
-            if hattaMasaLalu.contains(objectTouched){
-                //go to hatta convo
-                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
-                  cdm.insertEntryLastUpdates(1, 19, currentIndex: 0)
-                  let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
-                  MainViewController?.backgroundPosition = background.position
-                  if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
-                    window.rootViewController = MainViewController
-                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                  }
-  //              }
-  //
-              }
-          }
-    }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        background.removeAction(forKey: "MovingRight")
