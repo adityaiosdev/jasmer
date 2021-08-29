@@ -25,7 +25,7 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
     var rumah = SKSpriteNode(imageNamed: "RumahTes")
     var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
     var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
-
+    var Mangdoger = SKSpriteNode(imageNamed: "Mangdoger")
     
     //kantor polisi
     var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
@@ -97,22 +97,27 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
 //          background.addChild(bandara)
 
         rumah.zPosition = 1
-        rumah.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        rumah.position = CGPoint(x: frame.midX-2450, y: frame.midY-220)
         rumah.size = CGSize(width: 300, height: 300)
         rumah.name = "rmh"
         background.addChild(rumah)
 
         sekolah.zPosition = 1
-        sekolah.position = CGPoint(x: frame.midX+1300, y: frame.midY-230)
+        sekolah.position = CGPoint(x: frame.midX-1450, y: frame.midY-230)
         sekolah.size = CGSize(width: 2532/5, height: 1170/5)
         sekolah.name = "sekolah"
         background.addChild(sekolah)
 
         esDogerStand.zPosition = 1
-        esDogerStand.position = CGPoint(x: frame.midX+2300, y: frame.midY-255)
+        esDogerStand.position = CGPoint(x: frame.midX - 150, y: frame.midY-255)
         esDogerStand.size = CGSize(width: 150, height: 150)
         esDogerStand.name = "esDogerStand"
         background.addChild(esDogerStand)
+        Mangdoger.zPosition = 2
+        Mangdoger.position = CGPoint(x: frame.midX - 190, y: frame.midY-280)
+        Mangdoger.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        Mangdoger.name = "MangDoger"
+        background.addChild(Mangdoger)
         
         print("next section : \(nextSection)")
         
@@ -218,7 +223,7 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
 //              }
 //            }
 
-            if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
+            if rumah.contains(objectTouched){
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                     cdm.deleteBackgroundPosition()
@@ -232,6 +237,21 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
                     }
                 }
             }
+            if Mangdoger.contains(objectTouched) || esDogerStand.contains(objectTouched){
+                //go to jadi beli gak
+                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 15, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                }
+            }
+
         }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
