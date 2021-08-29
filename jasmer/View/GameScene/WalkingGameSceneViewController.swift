@@ -56,6 +56,7 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
             }
         }
         currentStory = storylines[currentSection ?? 0][currentIndex ?? 0]
+        print(storylines[currentSection ?? 0])
         print(currentStory?.nextSprite)
         
         switch currentStory?.nextSprite {
