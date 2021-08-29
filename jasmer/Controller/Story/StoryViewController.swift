@@ -185,6 +185,10 @@ class StoryViewController: UIViewController , PausePopUpControllerDelegate, Inte
                     let navigation = storyboard.instantiateViewController(identifier: "WalkingStoryboard" ) as? WalkingGameSceneViewController
                     //                    navigation?.backgroundPosition = backgroundPosition
                     navigation?.nextSection = currentStory?.moveToSection
+//                    if currentSection > 0 {
+//                        print("KEUBAH GAMBARNYA")
+////                        navigation?.capaianImage.isHidden = true
+//                    }
                     print("Move to section: \(currentStory?.moveToSection)")
                     navigation?.currentStory = currentStory
                     present(navigation!, animated: true, completion: nil)

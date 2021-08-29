@@ -12,12 +12,13 @@ import SpriteKit
 
 class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDelegate {
     var backgroundPosition: CGPoint?
+    var firststar : Bool?
     var nextSection: Int?
     var currentStory : Storyline?
     var currentIndex :Int?
     var currentSection : Int?
     var storylines = [[Storyline]]()
-    
+    @IBOutlet weak var capaianImage: UIImageView!
     let cdm = CoreDataManager()
     func backToChapterSelection() {
         let MainViewController = UIStoryboard(name: "ChapterSelectionStoryboard", bundle: nil).instantiateViewController(identifier: "ChapterSelection") as? StoryViewController
@@ -49,6 +50,9 @@ class WalkingGameSceneViewController: UIViewController,PausePopUpControllerDeleg
             if savedSection < storylines.count && savedIndex < storylines[savedSection].count {
                 currentSection = savedSection
                 currentIndex = savedIndex
+                if currentSection ?? 0 >= 11 {
+                    capaianImage.image = UIImage(named: "firststar")
+                }
             }
             else{
                 currentIndex = 0

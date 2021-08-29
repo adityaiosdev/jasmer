@@ -37,9 +37,6 @@ class ChapterSelectionViewController: UIViewController, StartGamePopUpController
         SettingPopUpController.instance.showAlert()
     }
  
-    @IBAction func testBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "gotoGameScene", sender: self)
-    }
     
 }
 extension ChapterSelectionViewController: UICollectionViewDelegate,UICollectionViewDataSource{
