@@ -26,6 +26,7 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
     var esDogerStand = SKSpriteNode(imageNamed: "EsDogerStand")
     var sekolah = SKSpriteNode(imageNamed: "SekolahTes")
     var Mangdoger = SKSpriteNode(imageNamed: "Mangdoger")
+    var carlos = SKSpriteNode(imageNamed: "Carloscibi")
     
     //kantor polisi
     var kantorPolisi = SKSpriteNode(imageNamed: "KantorPolisi")
@@ -73,11 +74,11 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
       //create pesawat hatta
 //        createPesawat()
         
-        nextBtn.zPosition = 1
+        nextBtn.zPosition = 101
         nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
         nextBtn.name = "nextBtn"
         addChild(nextBtn)
-        leftBtn.zPosition = 100
+        leftBtn.zPosition = 101
         leftBtn.position = CGPoint (x: frame.minX + 100 , y: frame.minY + 60)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)
@@ -107,6 +108,11 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
         sekolah.size = CGSize(width: 2532/5, height: 1170/5)
         sekolah.name = "sekolah"
         background.addChild(sekolah)
+        carlos.zPosition = 2
+        carlos.position = CGPoint(x: frame.midX - 1250, y: frame.midY-280)
+        carlos.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
+        carlos.name = "carlos"
+        background.addChild(carlos)
 
         esDogerStand.zPosition = 1
         esDogerStand.position = CGPoint(x: frame.midX - 150, y: frame.midY-255)
@@ -243,6 +249,20 @@ class WalkingGameScenePresentAfterPast : SKScene, WrongStoryPopUpControllerDeleg
                     cdm.deleteBackgroundPosition()
                     cdm.insertBackgroundPosition(bgPosition: background.position)
                     cdm.insertEntryLastUpdates(1, 15, currentIndex: 0)
+                    let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
+//                    MainViewController?.backgroundPosition = background.position
+                    if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{
+                        window.rootViewController = MainViewController
+                        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                    }
+                }
+            }
+            if carlos.contains(objectTouched){
+                //go to jadi beli gak
+                if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
+                    cdm.deleteBackgroundPosition()
+                    cdm.insertBackgroundPosition(bgPosition: background.position)
+                    cdm.insertEntryLastUpdates(1, 22, currentIndex: 1)
                     let MainViewController = UIStoryboard(name: "StoryStoryboard", bundle: nil).instantiateViewController(identifier: "StoryStoryboard") as? StoryViewController
 //                    MainViewController?.backgroundPosition = background.position
                     if let sceneDelegate = self.view?.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window{

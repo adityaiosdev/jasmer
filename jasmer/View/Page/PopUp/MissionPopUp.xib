@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,11 +30,11 @@
                     <rect key="frame" x="172" y="41" width="500" height="250"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misi Jason" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Maf-Be-rZJ">
-                            <rect key="frame" x="20" y="30" width="450" height="27"/>
+                            <rect key="frame" x="24.999999999999993" y="20" width="105.33333333333331" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="yyu-si-tL6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="24"/>
                             <color key="textColor" red="1" green="0.9861351612" blue="0.9965337903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -46,18 +46,19 @@
                             </constraints>
                         </imageView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="32" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TSl-iD-DH7">
-                            <rect key="frame" x="20" y="77" width="280" height="153"/>
+                            <rect key="frame" x="20" y="67" width="280" height="163"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iW-Jy-Gpt">
-                            <rect key="frame" x="445" y="8" width="39" height="30"/>
+                            <rect key="frame" x="430" y="20" width="50" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="0g3-nE-d2j"/>
-                                <constraint firstAttribute="width" constant="39" id="1Mr-Az-qec"/>
+                                <constraint firstAttribute="width" constant="50" id="1Mr-Az-qec"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="Rajdhani-Bold" family="Rajdhani" pointSize="17"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Close"/>
+                            <state key="normal" title="Tutup"/>
                             <connections>
                                 <action selector="didTappedCloseButton:" destination="-1" eventType="touchUpInside" id="jgI-qL-91i"/>
                             </connections>
@@ -67,16 +68,15 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="500" id="2WM-0d-S2f"/>
                         <constraint firstItem="TSl-iD-DH7" firstAttribute="top" secondItem="Maf-Be-rZJ" secondAttribute="bottom" constant="20" id="Av7-Qp-vh4"/>
-                        <constraint firstItem="Maf-Be-rZJ" firstAttribute="top" secondItem="Iw6-Kr-mDY" secondAttribute="top" constant="30" id="Ebp-Fd-8xk"/>
+                        <constraint firstItem="Maf-Be-rZJ" firstAttribute="top" secondItem="Iw6-Kr-mDY" secondAttribute="top" constant="20" id="Ebp-Fd-8xk"/>
                         <constraint firstAttribute="bottom" secondItem="Zkg-uW-13t" secondAttribute="bottomMargin" constant="2" id="SSQ-Xn-L44"/>
                         <constraint firstAttribute="trailing" secondItem="Zkg-uW-13t" secondAttribute="trailing" id="Sad-Qk-jdd"/>
-                        <constraint firstItem="4iW-Jy-Gpt" firstAttribute="top" secondItem="Iw6-Kr-mDY" secondAttribute="top" constant="8" id="WRE-CW-f0Z"/>
+                        <constraint firstItem="4iW-Jy-Gpt" firstAttribute="top" secondItem="Iw6-Kr-mDY" secondAttribute="top" constant="20" id="WRE-CW-f0Z"/>
                         <constraint firstAttribute="bottom" secondItem="TSl-iD-DH7" secondAttribute="bottom" constant="20" id="gdi-Is-ycN"/>
                         <constraint firstAttribute="height" constant="250" id="hPh-Ta-zF6"/>
-                        <constraint firstItem="Maf-Be-rZJ" firstAttribute="leading" secondItem="Iw6-Kr-mDY" secondAttribute="leading" constant="20" id="oZ6-40-rMz"/>
-                        <constraint firstAttribute="trailing" secondItem="4iW-Jy-Gpt" secondAttribute="trailing" constant="16" id="sK1-Lh-nMi"/>
+                        <constraint firstItem="Maf-Be-rZJ" firstAttribute="leading" secondItem="Iw6-Kr-mDY" secondAttribute="leading" constant="25" id="oZ6-40-rMz"/>
+                        <constraint firstAttribute="trailing" secondItem="4iW-Jy-Gpt" secondAttribute="trailing" constant="20" id="sK1-Lh-nMi"/>
                         <constraint firstItem="TSl-iD-DH7" firstAttribute="leading" secondItem="Iw6-Kr-mDY" secondAttribute="leading" constant="20" id="svB-3w-jM2"/>
-                        <constraint firstAttribute="trailing" secondItem="Maf-Be-rZJ" secondAttribute="trailing" constant="30" id="t1C-Gn-YIh"/>
                         <constraint firstItem="Zkg-uW-13t" firstAttribute="leading" secondItem="TSl-iD-DH7" secondAttribute="trailing" id="vpv-2G-b67"/>
                     </constraints>
                 </view>

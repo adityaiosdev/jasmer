@@ -71,11 +71,11 @@ class Hero1GameScene : SKScene, WrongStoryPopUpControllerDelegate{
       //create pesawat hatta
 //        createPesawat()
         
-        nextBtn.zPosition = 1
+        nextBtn.zPosition = 101
         nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
         nextBtn.name = "nextBtn"
         addChild(nextBtn)
-        leftBtn.zPosition = 100
+        leftBtn.zPosition = 101
         leftBtn.position = CGPoint (x: frame.minX + 100 , y: frame.minY + 60)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)

@@ -117,15 +117,6 @@
                                     <action selector="SettingBtnClicked:" destination="yuH-Rw-aJs" eventType="touchUpInside" id="lLh-iY-iVu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqr-Ac-Sn1">
-                                <rect key="frame" x="367.66666666666669" y="50" width="109" height="30"/>
-                                <state key="normal" title="Ke Game Scene">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="testBtn:" destination="yuH-Rw-aJs" eventType="touchUpInside" id="SR2-Ie-ekt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LnD-uZ-bMY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -135,9 +126,7 @@
                             <constraint firstItem="y9o-cO-19c" firstAttribute="top" secondItem="gH6-5I-dhz" secondAttribute="bottom" constant="20" id="Liy-Mx-jaF"/>
                             <constraint firstItem="y9o-cO-19c" firstAttribute="centerX" secondItem="Bgb-bN-cTR" secondAttribute="centerX" constant="40" id="Mzj-XP-rfQ"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" id="PNM-eJ-NkS"/>
-                            <constraint firstItem="Tqr-Ac-Sn1" firstAttribute="top" secondItem="LnD-uZ-bMY" secondAttribute="top" constant="50" id="SVk-lc-1oF"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="bottom" secondItem="Bgb-bN-cTR" secondAttribute="bottom" id="dcK-bG-Dz2"/>
-                            <constraint firstItem="Tqr-Ac-Sn1" firstAttribute="centerX" secondItem="Bgb-bN-cTR" secondAttribute="centerX" id="e1J-b1-mSP"/>
                             <constraint firstItem="taB-6G-tj1" firstAttribute="trailing" secondItem="Bgb-bN-cTR" secondAttribute="trailing" id="nfn-Un-T6q"/>
                             <constraint firstItem="gH6-5I-dhz" firstAttribute="leading" secondItem="LnD-uZ-bMY" secondAttribute="leading" constant="55" id="s7m-7S-7zi"/>
                             <constraint firstItem="LnD-uZ-bMY" firstAttribute="bottom" secondItem="y9o-cO-19c" secondAttribute="bottom" constant="20" id="s90-Te-NHl"/>

@@ -76,11 +76,11 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         //create pesawat hatta
         //        createPesawat()
         
-        nextBtn.zPosition = 1
+        nextBtn.zPosition = 101
         nextBtn.position = CGPoint (x: frame.minX + 180 , y: frame.minY + 60)
         nextBtn.name = "nextBtn"
         addChild(nextBtn)
-        leftBtn.zPosition = 100
+        leftBtn.zPosition = 101
         leftBtn.position = CGPoint (x: frame.minX + 100 , y: frame.minY + 60)
         leftBtn.name = "prevBtn"
         addChild(leftBtn)
@@ -92,22 +92,22 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         personSprite.position = CGPoint(x: frame.midX, y: frame.minY + 120)
         addChild(personSprite)
         ibuJason.zPosition = 2
-        ibuJason.position = CGPoint(x: frame.midX - 20, y: frame.midY-280)
+        ibuJason.position = CGPoint(x: frame.midX - 360, y: frame.midY-280)
         ibuJason.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
         ibuJason.name = "ibuJason"
         background.addChild(ibuJason)
         carlos.zPosition = 2
-        carlos.position = CGPoint(x: frame.midX + 1100, y: frame.midY-280)
+        carlos.position = CGPoint(x: frame.midX + 800, y: frame.midY-280)
         carlos.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
         carlos.name = "carlos"
         background.addChild(carlos)
         guru.zPosition = 2
-        guru.position = CGPoint(x: frame.midX + 1400, y: frame.midY-280)
+        guru.position = CGPoint(x: frame.midX + 1100, y: frame.midY-280)
         guru.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
         guru.name = "guru"
         background.addChild(guru)
         Mangdoger.zPosition = 2
-        Mangdoger.position = CGPoint(x: frame.midX + 2200, y: frame.midY-280)
+        Mangdoger.position = CGPoint(x: frame.midX + 1900, y: frame.midY-280)
         Mangdoger.size = CGSize(width: frame.size.height/4 , height: frame.size.height/3.5)
         Mangdoger.name = "MangDoger"
         background.addChild(Mangdoger)
@@ -119,19 +119,19 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
         //          background.addChild(bandara)
         
         rumah.zPosition = 1
-        rumah.position = CGPoint(x: frame.midX-20, y: frame.midY-220)
+        rumah.position = CGPoint(x: frame.midX-360, y: frame.midY-220)
         rumah.size = CGSize(width: 300, height: 300)
         rumah.name = "rmh"
         background.addChild(rumah)
         
         sekolah.zPosition = 1
-        sekolah.position = CGPoint(x: frame.midX+1300, y: frame.midY-230)
+        sekolah.position = CGPoint(x: frame.midX+960, y: frame.midY-230)
         sekolah.size = CGSize(width: 2532/5, height: 1170/5)
         sekolah.name = "sekolah"
         background.addChild(sekolah)
         
         esDogerStand.zPosition = 1
-        esDogerStand.position = CGPoint(x: frame.midX+2300, y: frame.midY-255)
+        esDogerStand.position = CGPoint(x: frame.midX+1900, y: frame.midY-255)
         esDogerStand.size = CGSize(width: 150, height: 150)
         esDogerStand.name = "esDogerStand"
         background.addChild(esDogerStand)
@@ -242,7 +242,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             //              }
             //            }
             
-            if rumah.contains(objectTouched) && background.position.x <= frame.midX-20-150 && background.position.x >= (frame.midX-20-150) - 300-100 {
+            if rumah.contains(objectTouched){
                 //go to mom convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                     cdm.deleteBackgroundPosition()
@@ -257,7 +257,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
                 }
             }
             
-            if sekolah.contains(objectTouched) && background.position.x <= frame.midX-1300-150 && background.position.x >= frame.midX-1300-150 - 2532/5-100{
+            if sekolah.contains(objectTouched) && background.position.x <= frame.midX-660-150 && background.position.x >= frame.midX-660-150 - 2532/5-100{
                 //go to carlos convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                     //                    WrongStoryPopUpController.instance.showAlert()
@@ -274,7 +274,7 @@ class WalkingGameScene : SKScene, WrongStoryPopUpControllerDelegate{
             }
             
             
-            if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-2300-150 && background.position.x >= frame.midX-2300-150-150-100{
+            if esDogerStand.contains(objectTouched) && background.position.x <= frame.midX-1900-150 && background.position.x >= frame.midX-1900-150-150-100{
                 //go to esdoger convo
                 if (!nextBtn.contains(pointTouched) && !leftBtn.contains(pointTouched)){
                     cdm.deleteBackgroundPosition()
