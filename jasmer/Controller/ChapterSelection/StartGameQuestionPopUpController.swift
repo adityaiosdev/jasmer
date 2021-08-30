@@ -59,6 +59,7 @@ class StartGameQuestionPopUpController: UIView {
         cdm.deleteGameStatus()
         cdm.deleteAllMission()
         cdm.insertEntryMission(for: missionList[0])
+        print(missionList[1])
         cdm.deleteBackgroundPosition()
         cdm.insertEntryLastUpdates(1, 0, currentIndex: 0)
         let storyboard = UIStoryboard(name: "StoryStoryboard" , bundle: nil)
