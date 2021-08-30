@@ -53,7 +53,7 @@ class MissionPopUpViewController: UIView, UITableViewDelegate, UITableViewDataSo
             cell.radioBtn.isHidden = false
             cell.missionLabel.text = missionStatement[indexPath.row].mission
         }
-        self.missionTableView.reloadRows(at: [indexPath], with: .none)
+//        self.missionTableView.reloadRows(at: [indexPath], with: .none)
         return cell
     }
     

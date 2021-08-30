@@ -15,7 +15,7 @@ struct Mission{
     
     public static func initializeData() -> [Mission]{
         let missions = [
-            Mission(imageName: "Jason", title: "Misi Jason", missions: ["Pergi ke rumah", "Berangkat ke sekolah", "Membeli Es Doger"], category: .present),
+            Mission(imageName: "Jason", title: "Misi Jason", missions: ["Membeli Es Doger", "Berangkat ke sekolah", "Berpamitan dengan orangtua"], category: .present),
             Mission(imageName: "Jason", title: "Misi Jason", missions: ["Pergi ke kantor polisi"], category: .hoegeng),
             Mission(imageName: "Jason", title: "Misi Jason", missions: ["Mencari orang terdekat", "Pergi ke bandara"], category: .hatta),
             Mission(imageName: "Jason", title: "Misi Jason", missions: ["Menemui penjual es doger", "Pulang ke rumah"], category: .presentAfterPast)
